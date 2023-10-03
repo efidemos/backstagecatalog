@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: sso
+  tags:
+    - provisioning
+    - keymanagement
+  links:
+    - url:  https://github.com/buzzfeed/sso
+      title: GitHub Repo
+      icon: github
+    - url:  https://github.com/buzzfeed/sso
+      title: Homepage
+spec:
+  type: keymanagement
+  lifecycle: external
+  owner: CNCF

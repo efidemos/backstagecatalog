@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: helm
+  tags:
+    - appdefinitionanddevelopment
+    - applicationdefinitionimagebuild
+  links:
+    - url:  https://github.com/helm/helm
+      title: GitHub Repo
+      icon: github
+    - url:  https://helm.sh/
+      title: Homepage
+spec:
+  type: applicationdefinitionimagebuild
+  lifecycle: external
+  owner: CNCF

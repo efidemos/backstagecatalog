@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: cloudarkkubeplus
+  tags:
+    - appdefinitionanddevelopment
+    - applicationdefinitionimagebuild
+  links:
+    - url:  https://github.com/cloud-ark/kubeplus
+      title: GitHub Repo
+      icon: github
+    - url:  https://cloudark.io/helm-chart-as-a-service
+      title: Homepage
+spec:
+  type: applicationdefinitionimagebuild
+  lifecycle: external
+  owner: CNCF

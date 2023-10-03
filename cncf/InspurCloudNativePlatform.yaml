@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: inspurcloudnativeplatform
+  tags:
+    - platform
+    - certifiedkuberneteshosted
+  links:
+    - url:  https://www.example.com/
+      title: GitHub Repo
+      icon: github
+    - url:  https://cloud.inspur.com/product/
+      title: Homepage
+spec:
+  type: certifiedkuberneteshosted
+  lifecycle: external
+  owner: CNCF

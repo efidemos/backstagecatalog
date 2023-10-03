@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: sysdig
+  tags:
+    - observabilityandanalysis
+    - monitoring
+  links:
+    - url:  https://github.com/draios/sysdig
+      title: GitHub Repo
+      icon: github
+    - url:  https://sysdig.com/opensource/
+      title: Homepage
+spec:
+  type: monitoring
+  lifecycle: external
+  owner: CNCF

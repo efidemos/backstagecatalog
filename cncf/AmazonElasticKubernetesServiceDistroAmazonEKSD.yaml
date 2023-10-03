@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: amazonelastickubernetesservicedistroamazoneksd
+  tags:
+    - platform
+    - certifiedkubernetesdistribution
+  links:
+    - url:  https://github.com/aws/eks-distro
+      title: GitHub Repo
+      icon: github
+    - url:  https://aws.amazon.com/eks/eks-distro
+      title: Homepage
+spec:
+  type: certifiedkubernetesdistribution
+  lifecycle: external
+  owner: CNCF

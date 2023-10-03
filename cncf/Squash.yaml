@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: squash
+  tags:
+    - appdefinitionanddevelopment
+    - applicationdefinitionimagebuild
+  links:
+    - url:  https://github.com/solo-io/squash
+      title: GitHub Repo
+      icon: github
+    - url:  https://squash.solo.io/
+      title: Homepage
+spec:
+  type: applicationdefinitionimagebuild
+  lifecycle: external
+  owner: CNCF

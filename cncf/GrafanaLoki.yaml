@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: grafanaloki
+  tags:
+    - observabilityandanalysis
+    - logging
+  links:
+    - url:  https://github.com/grafana/loki
+      title: GitHub Repo
+      icon: github
+    - url:  https://grafana.com/oss/loki
+      title: Homepage
+spec:
+  type: logging
+  lifecycle: external
+  owner: CNCF

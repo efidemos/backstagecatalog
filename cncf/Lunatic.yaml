@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: lunatic
+  tags:
+    - wasm
+    - runtimes
+  links:
+    - url:  https://github.com/lunatic-solutions/lunatic
+      title: GitHub Repo
+      icon: github
+    - url:  https://lunatic.solutions/
+      title: Homepage
+spec:
+  type: runtimes
+  lifecycle: external
+  owner: CNCF

@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: buildpacks
+  tags:
+    - appdefinitionanddevelopment
+    - applicationdefinitionimagebuild
+  links:
+    - url:  https://github.com/buildpacks/pack
+      title: GitHub Repo
+      icon: github
+    - url:  https://buildpacks.io/
+      title: Homepage
+spec:
+  type: applicationdefinitionimagebuild
+  lifecycle: external
+  owner: CNCF

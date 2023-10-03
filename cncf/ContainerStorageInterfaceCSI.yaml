@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: containerstorageinterfacecsi
+  tags:
+    - runtime
+    - cloudnativestorage
+  links:
+    - url:  https://github.com/container-storage-interface/spec
+      title: GitHub Repo
+      icon: github
+    - url:  https://github.com/container-storage-interface
+      title: Homepage
+spec:
+  type: cloudnativestorage
+  lifecycle: external
+  owner: CNCF

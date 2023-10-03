@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: perconaserverformysql
+  tags:
+    - appdefinitionanddevelopment
+    - database
+  links:
+    - url:  https://github.com/percona/percona-server
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.percona.com/software/mysql-database/percona-server
+      title: Homepage
+spec:
+  type: database
+  lifecycle: external
+  owner: CNCF

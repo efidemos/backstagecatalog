@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: wasilogging
+  tags:
+    - wasm
+    - debuggingobservability
+  links:
+    - url:  https://github.com/WebAssembly/wasi-logging
+      title: GitHub Repo
+      icon: github
+    - url:  https://github.com/WebAssembly/wasi-logging
+      title: Homepage
+spec:
+  type: debuggingobservability
+  lifecycle: external
+  owner: CNCF

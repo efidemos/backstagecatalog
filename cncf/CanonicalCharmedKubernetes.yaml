@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: canonicalcharmedkubernetes
+  tags:
+    - platform
+    - certifiedkubernetesdistribution
+  links:
+    - url:  https://github.com/charmed-kubernetes/bundle
+      title: GitHub Repo
+      icon: github
+    - url:  https://ubuntu.com/kubernetes
+      title: Homepage
+spec:
+  type: certifiedkubernetesdistribution
+  lifecycle: external
+  owner: CNCF

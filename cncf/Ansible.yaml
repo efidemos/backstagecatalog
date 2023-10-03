@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ansible
+  tags:
+    - provisioning
+    - automationconfiguration
+  links:
+    - url:  https://github.com/ansible/ansible
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.ansible.com/
+      title: Homepage
+spec:
+  type: automationconfiguration
+  lifecycle: external
+  owner: CNCF

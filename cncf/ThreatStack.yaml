@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: threatstack
+  tags:
+    - serverless
+    - security
+  links:
+    - url:  https://www.example.com/
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.threatstack.com/
+      title: Homepage
+spec:
+  type: security
+  lifecycle: external
+  owner: CNCF

@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: parsec
+  tags:
+    - provisioning
+    - securitycompliance
+  links:
+    - url:  https://github.com/parallaxsecond/parsec
+      title: GitHub Repo
+      icon: github
+    - url:  https://parsec.community/
+      title: Homepage
+spec:
+  type: securitycompliance
+  lifecycle: external
+  owner: CNCF

@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: alvistackvagrantboxpackagingforkubernetes
+  tags:
+    - platform
+    - certifiedkubernetesinstaller
+  links:
+    - url:  https://github.com/alvistack/vagrant-kubernetes
+      title: GitHub Repo
+      icon: github
+    - url:  https://github.com/alvistack/vagrant-kubernetes
+      title: Homepage
+spec:
+  type: certifiedkubernetesinstaller
+  lifecycle: external
+  owner: CNCF

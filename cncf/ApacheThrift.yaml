@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: apachethrift
+  tags:
+    - orchestrationmanagement
+    - remoteprocedurecall
+  links:
+    - url:  https://github.com/apache/thrift
+      title: GitHub Repo
+      icon: github
+    - url:  https://thrift.apache.org/
+      title: Homepage
+spec:
+  type: remoteprocedurecall
+  lifecycle: external
+  owner: CNCF

@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: quay
+  tags:
+    - provisioning
+    - containerregistry
+  links:
+    - url:  https://github.com/quay/quay
+      title: GitHub Repo
+      icon: github
+    - url:  https://quay.io/
+      title: Homepage
+spec:
+  type: containerregistry
+  lifecycle: external
+  owner: CNCF

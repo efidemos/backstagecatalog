@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ibmstorage
+  tags:
+    - runtime
+    - cloudnativestorage
+  links:
+    - url:  https://www.example.com/
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.ibm.com/storage/containers
+      title: Homepage
+spec:
+  type: cloudnativestorage
+  lifecycle: external
+  owner: CNCF

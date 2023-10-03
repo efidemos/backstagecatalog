@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: cloudtty
+  tags:
+    - appdefinitionanddevelopment
+    - applicationdefinitionimagebuild
+  links:
+    - url:  https://github.com/cloudtty/cloudtty
+      title: GitHub Repo
+      icon: github
+    - url:  https://cloudtty.github.io/cloudtty/
+      title: Homepage
+spec:
+  type: applicationdefinitionimagebuild
+  lifecycle: external
+  owner: CNCF

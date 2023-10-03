@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: scale
+  tags:
+    - wasm
+    - applicationframeworks
+  links:
+    - url:  https://github.com/loopholelabs/scale
+      title: GitHub Repo
+      icon: github
+    - url:  https://scale.sh/
+      title: Homepage
+spec:
+  type: applicationframeworks
+  lifecycle: external
+  owner: CNCF

@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: arangodb
+  tags:
+    - appdefinitionanddevelopment
+    - database
+  links:
+    - url:  https://github.com/arangodb/arangodb
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.arangodb.com/
+      title: Homepage
+spec:
+  type: database
+  lifecycle: external
+  owner: CNCF

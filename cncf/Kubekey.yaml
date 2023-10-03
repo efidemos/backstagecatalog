@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: kubekey
+  tags:
+    - platform
+    - certifiedkubernetesinstaller
+  links:
+    - url:  https://github.com/kubesphere/kubekey
+      title: GitHub Repo
+      icon: github
+    - url:  https://kubesphere.io/docs/installing-on-linux/introduction/kubekey
+      title: Homepage
+spec:
+  type: certifiedkubernetesinstaller
+  lifecycle: external
+  owner: CNCF

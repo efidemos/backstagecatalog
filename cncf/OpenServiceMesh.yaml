@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: openservicemesh
+  tags:
+    - orchestrationmanagement
+    - servicemesh
+  links:
+    - url:  https://github.com/openservicemesh/osm
+      title: GitHub Repo
+      icon: github
+    - url:  https://openservicemesh.io/
+      title: Homepage
+spec:
+  type: servicemesh
+  lifecycle: external
+  owner: CNCF

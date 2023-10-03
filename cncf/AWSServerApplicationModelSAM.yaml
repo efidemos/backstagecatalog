@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: awsserverapplicationmodelsam
+  tags:
+    - serverless
+    - framework
+  links:
+    - url:  https://github.com/aws/serverless-application-model
+      title: GitHub Repo
+      icon: github
+    - url:  https://aws.amazon.com/serverless/sam/
+      title: Homepage
+spec:
+  type: framework
+  lifecycle: external
+  owner: CNCF

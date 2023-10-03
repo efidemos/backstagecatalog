@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: falco
+  tags:
+    - provisioning
+    - securitycompliance
+  links:
+    - url:  https://github.com/falcosecurity/falco
+      title: GitHub Repo
+      icon: github
+    - url:  https://falco.org/
+      title: Homepage
+spec:
+  type: securitycompliance
+  lifecycle: external
+  owner: CNCF

@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: flux
+  tags:
+    - appdefinitionanddevelopment
+    - continuousintegrationdelivery
+  links:
+    - url:  https://github.com/fluxcd/flux2
+      title: GitHub Repo
+      icon: github
+    - url:  https://fluxcd.io/
+      title: Homepage
+spec:
+  type: continuousintegrationdelivery
+  lifecycle: external
+  owner: CNCF

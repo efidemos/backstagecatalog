@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: veritasinfoscaleforkubernetes
+  tags:
+    - runtime
+    - cloudnativestorage
+  links:
+    - url:  https://www.example.com/
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.veritas.com/availability/infoscale-kubernetes
+      title: Homepage
+spec:
+  type: cloudnativestorage
+  lifecycle: external
+  owner: CNCF

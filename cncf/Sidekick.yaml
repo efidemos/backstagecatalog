@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: sidekick
+  tags:
+    - observabilityandanalysis
+    - monitoring
+  links:
+    - url:  https://github.com/runsidekick/sidekick
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.runsidekick.com/
+      title: Homepage
+spec:
+  type: monitoring
+  lifecycle: external
+  owner: CNCF

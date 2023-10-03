@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: koordinator
+  tags:
+    - orchestrationmanagement
+    - schedulingorchestration
+  links:
+    - url:  https://github.com/koordinator-sh/koordinator
+      title: GitHub Repo
+      icon: github
+    - url:  https://koordinator.sh
+      title: Homepage
+spec:
+  type: schedulingorchestration
+  lifecycle: external
+  owner: CNCF

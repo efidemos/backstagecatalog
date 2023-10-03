@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: sops
+  tags:
+    - provisioning
+    - securitycompliance
+  links:
+    - url:  https://github.com/getsops/sops
+      title: GitHub Repo
+      icon: github
+    - url:  https://github.com/getsops
+      title: Homepage
+spec:
+  type: securitycompliance
+  lifecycle: external
+  owner: CNCF

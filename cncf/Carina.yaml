@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: carina
+  tags:
+    - runtime
+    - cloudnativestorage
+  links:
+    - url:  https://github.com/carina-io/carina
+      title: GitHub Repo
+      icon: github
+    - url:  http://www.opencarina.com
+      title: Homepage
+spec:
+  type: cloudnativestorage
+  lifecycle: external
+  owner: CNCF

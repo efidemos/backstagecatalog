@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: netflixeureka
+  tags:
+    - orchestrationmanagement
+    - coordinationservicediscovery
+  links:
+    - url:  https://github.com/Netflix/eureka
+      title: GitHub Repo
+      icon: github
+    - url:  https://github.com/Netflix/eureka
+      title: Homepage
+spec:
+  type: coordinationservicediscovery
+  lifecycle: external
+  owner: CNCF

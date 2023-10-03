@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: kiali
+  tags:
+    - observabilityandanalysis
+    - monitoring
+  links:
+    - url:  https://github.com/kiali/kiali
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.kiali.io/
+      title: Homepage
+spec:
+  type: monitoring
+  lifecycle: external
+  owner: CNCF

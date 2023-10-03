@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: skipper
+  tags:
+    - orchestrationmanagement
+    - serviceproxy
+  links:
+    - url:  https://github.com/zalando/skipper
+      title: GitHub Repo
+      icon: github
+    - url:  https://opensource.zalando.com/skipper/
+      title: Homepage
+spec:
+  type: serviceproxy
+  lifecycle: external
+  owner: CNCF

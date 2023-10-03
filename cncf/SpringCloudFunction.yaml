@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: springcloudfunction
+  tags:
+    - serverless
+    - framework
+  links:
+    - url:  https://github.com/spring-cloud/spring-cloud-function
+      title: GitHub Repo
+      icon: github
+    - url:  https://spring.io/projects/spring-cloud-function
+      title: Homepage
+spec:
+  type: framework
+  lifecycle: external
+  owner: CNCF

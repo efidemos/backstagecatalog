@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: volcano
+  tags:
+    - orchestrationmanagement
+    - schedulingorchestration
+  links:
+    - url:  https://github.com/volcano-sh/volcano
+      title: GitHub Repo
+      icon: github
+    - url:  https://volcano.sh/
+      title: Homepage
+spec:
+  type: schedulingorchestration
+  lifecycle: external
+  owner: CNCF

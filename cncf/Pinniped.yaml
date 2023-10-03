@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: pinniped
+  tags:
+    - provisioning
+    - keymanagement
+  links:
+    - url:  https://github.com/vmware-tanzu/pinniped
+      title: GitHub Repo
+      icon: github
+    - url:  https://pinniped.dev
+      title: Homepage
+spec:
+  type: keymanagement
+  lifecycle: external
+  owner: CNCF

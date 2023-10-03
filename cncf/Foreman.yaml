@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: foreman
+  tags:
+    - provisioning
+    - automationconfiguration
+  links:
+    - url:  https://github.com/theforeman/foreman
+      title: GitHub Repo
+      icon: github
+    - url:  https://theforeman.org/
+      title: Homepage
+spec:
+  type: automationconfiguration
+  lifecycle: external
+  owner: CNCF

@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: springcloudsleuth
+  tags:
+    - observabilityandanalysis
+    - tracing
+  links:
+    - url:  https://github.com/spring-cloud/spring-cloud-sleuth
+      title: GitHub Repo
+      icon: github
+    - url:  https://spring.io/projects/spring-cloud-sleuth
+      title: Homepage
+spec:
+  type: tracing
+  lifecycle: external
+  owner: CNCF

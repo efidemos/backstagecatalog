@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: chefinspec
+  tags:
+    - provisioning
+    - securitycompliance
+  links:
+    - url:  https://github.com/inspec/inspec
+      title: GitHub Repo
+      icon: github
+    - url:  https://community.chef.io/tools/chef-inspec
+      title: Homepage
+spec:
+  type: securitycompliance
+  lifecycle: external
+  owner: CNCF

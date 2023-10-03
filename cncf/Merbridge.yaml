@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: merbridge
+  tags:
+    - orchestrationmanagement
+    - servicemesh
+  links:
+    - url:  https://github.com/merbridge/merbridge
+      title: GitHub Repo
+      icon: github
+    - url:  https://merbridge.io/
+      title: Homepage
+spec:
+  type: servicemesh
+  lifecycle: external
+  owner: CNCF

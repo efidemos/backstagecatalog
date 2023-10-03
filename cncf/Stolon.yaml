@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: stolon
+  tags:
+    - appdefinitionanddevelopment
+    - database
+  links:
+    - url:  https://github.com/sorintlab/stolon
+      title: GitHub Repo
+      icon: github
+    - url:  https://sorintoss.io/projects/
+      title: Homepage
+spec:
+  type: database
+  lifecycle: external
+  owner: CNCF

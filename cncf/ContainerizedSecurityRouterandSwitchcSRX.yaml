@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: containerizedsecurityrouterandswitchcsrx
+  tags:
+    - special
+    - certifiedcnfs
+  links:
+    - url:  https://www.example.com/
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.juniper.net/us/en/products/security/srx-series/csrx-containerized-firewall.html
+      title: Homepage
+spec:
+  type: certifiedcnfs
+  lifecycle: external
+  owner: CNCF

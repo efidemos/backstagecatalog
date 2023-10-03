@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: webassemblylanguageruntimesforpythonandphpbyvmwarelabs
+  tags:
+    - wasm
+    - languages
+  links:
+    - url:  https://github.com/vmware-labs/webassembly-language-runtimes
+      title: GitHub Repo
+      icon: github
+    - url:  https://wasmlabs.dev/projects/wasm-language-runtimes/
+      title: Homepage
+spec:
+  type: languages
+  lifecycle: external
+  owner: CNCF

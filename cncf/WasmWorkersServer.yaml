@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: wasmworkersserver
+  tags:
+    - wasm
+    - applicationframeworks
+  links:
+    - url:  https://github.com/vmware-labs/wasm-workers-server
+      title: GitHub Repo
+      icon: github
+    - url:  https://workers.wasmlabs.dev/
+      title: Homepage
+spec:
+  type: applicationframeworks
+  lifecycle: external
+  owner: CNCF

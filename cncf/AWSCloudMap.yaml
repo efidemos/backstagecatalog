@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: awscloudmap
+  tags:
+    - orchestrationmanagement
+    - coordinationservicediscovery
+  links:
+    - url:  https://www.example.com/
+      title: GitHub Repo
+      icon: github
+    - url:  https://aws.amazon.com/cloud-map/
+      title: Homepage
+spec:
+  type: coordinationservicediscovery
+  lifecycle: external
+  owner: CNCF

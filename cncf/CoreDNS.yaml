@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: coredns
+  tags:
+    - orchestrationmanagement
+    - coordinationservicediscovery
+  links:
+    - url:  https://github.com/coredns/coredns
+      title: GitHub Repo
+      icon: github
+    - url:  https://coredns.io/
+      title: Homepage
+spec:
+  type: coordinationservicediscovery
+  lifecycle: external
+  owner: CNCF

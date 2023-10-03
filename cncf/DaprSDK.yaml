@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: daprsdk
+  tags:
+    - wasm
+    - applicationframeworks
+  links:
+    - url:  https://github.com/second-state/dapr-sdk-wasmedge
+      title: GitHub Repo
+      icon: github
+    - url:  https://github.com/second-state/dapr-sdk-wasmedge
+      title: Homepage
+spec:
+  type: applicationframeworks
+  lifecycle: external
+  owner: CNCF

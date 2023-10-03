@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: amazonelastickubernetesserviceanywhereamazoneksanywhere
+  tags:
+    - platform
+    - certifiedkubernetesinstaller
+  links:
+    - url:  https://github.com/aws/eks-anywhere
+      title: GitHub Repo
+      icon: github
+    - url:  https://aws.amazon.com/eks/eks-anywhere
+      title: Homepage
+spec:
+  type: certifiedkubernetesinstaller
+  lifecycle: external
+  owner: CNCF

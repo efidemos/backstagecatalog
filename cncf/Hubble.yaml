@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: hubble
+  tags:
+    - observabilityandanalysis
+    - monitoring
+  links:
+    - url:  https://github.com/cilium/hubble
+      title: GitHub Repo
+      icon: github
+    - url:  https://github.com/cilium/hubble
+      title: Homepage
+spec:
+  type: monitoring
+  lifecycle: external
+  owner: CNCF

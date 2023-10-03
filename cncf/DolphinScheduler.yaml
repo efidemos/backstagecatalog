@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: dolphinscheduler
+  tags:
+    - orchestrationmanagement
+    - schedulingorchestration
+  links:
+    - url:  https://github.com/apache/dolphinscheduler
+      title: GitHub Repo
+      icon: github
+    - url:  https://dolphinscheduler.apache.org
+      title: Homepage
+spec:
+  type: schedulingorchestration
+  lifecycle: external
+  owner: CNCF

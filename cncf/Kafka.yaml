@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: kafka
+  tags:
+    - appdefinitionanddevelopment
+    - streamingmessaging
+  links:
+    - url:  https://github.com/apache/kafka
+      title: GitHub Repo
+      icon: github
+    - url:  https://kafka.apache.org/
+      title: Homepage
+spec:
+  type: streamingmessaging
+  lifecycle: external
+  owner: CNCF

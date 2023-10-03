@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: veinmindtools
+  tags:
+    - provisioning
+    - securitycompliance
+  links:
+    - url:  https://github.com/chaitin/veinmind-tools
+      title: GitHub Repo
+      icon: github
+    - url:  https://veinmind.chaitin.com/
+      title: Homepage
+spec:
+  type: securitycompliance
+  lifecycle: external
+  owner: CNCF

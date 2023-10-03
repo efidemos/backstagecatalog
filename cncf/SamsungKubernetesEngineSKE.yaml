@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: samsungkubernetesengineske
+  tags:
+    - platform
+    - certifiedkuberneteshosted
+  links:
+    - url:  https://www.example.com/
+      title: GitHub Repo
+      icon: github
+    - url:  https://cloud.samsungsds.com/serviceportal/product/container/k8sEngine.html
+      title: Homepage
+spec:
+  type: certifiedkuberneteshosted
+  lifecycle: external
+  owner: CNCF

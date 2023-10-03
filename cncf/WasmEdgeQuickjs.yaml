@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: wasmedgequickjs
+  tags:
+    - wasm
+    - languages
+  links:
+    - url:  https://github.com/second-state/wasmedge-quickjs
+      title: GitHub Repo
+      icon: github
+    - url:  https://github.com/second-state/wasmedge-quickjs
+      title: Homepage
+spec:
+  type: languages
+  lifecycle: external
+  owner: CNCF

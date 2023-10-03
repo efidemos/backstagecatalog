@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: logstash
+  tags:
+    - observabilityandanalysis
+    - logging
+  links:
+    - url:  https://github.com/elastic/logstash
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.elastic.co/logstash
+      title: Homepage
+spec:
+  type: logging
+  lifecycle: external
+  owner: CNCF

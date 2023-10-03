@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: cfengine
+  tags:
+    - provisioning
+    - automationconfiguration
+  links:
+    - url:  https://github.com/cfengine/core
+      title: GitHub Repo
+      icon: github
+    - url:  https://cfengine.com/
+      title: Homepage
+spec:
+  type: automationconfiguration
+  lifecycle: external
+  owner: CNCF

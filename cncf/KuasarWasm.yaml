@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: kuasarwasm
+  tags:
+    - wasm
+    - orchestrationmanagement
+  links:
+    - url:  https://github.com/kuasar-io/kuasar
+      title: GitHub Repo
+      icon: github
+    - url:  https://kuasar.io/
+      title: Homepage
+spec:
+  type: orchestrationmanagement
+  lifecycle: external
+  owner: CNCF

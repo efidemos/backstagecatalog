@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: extism
+  tags:
+    - wasm
+    - applicationframeworks
+  links:
+    - url:  https://github.com/extism/extism
+      title: GitHub Repo
+      icon: github
+    - url:  https://extism.org
+      title: Homepage
+spec:
+  type: applicationframeworks
+  lifecycle: external
+  owner: CNCF

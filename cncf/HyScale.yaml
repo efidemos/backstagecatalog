@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: hyscale
+  tags:
+    - appdefinitionanddevelopment
+    - continuousintegrationdelivery
+  links:
+    - url:  https://github.com/hyscale/hyscale
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.hyscale.io
+      title: Homepage
+spec:
+  type: continuousintegrationdelivery
+  lifecycle: external
+  owner: CNCF

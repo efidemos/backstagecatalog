@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: genode
+  tags:
+    - wasm
+    - edgebaremetal
+  links:
+    - url:  https://github.com/genodelabs/genode
+      title: GitHub Repo
+      icon: github
+    - url:  https://genode.org/
+      title: Homepage
+spec:
+  type: edgebaremetal
+  lifecycle: external
+  owner: CNCF

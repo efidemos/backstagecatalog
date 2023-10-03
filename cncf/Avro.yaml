@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: avro
+  tags:
+    - orchestrationmanagement
+    - remoteprocedurecall
+  links:
+    - url:  https://github.com/apache/avro
+      title: GitHub Repo
+      icon: github
+    - url:  https://avro.apache.org/
+      title: Homepage
+spec:
+  type: remoteprocedurecall
+  lifecycle: external
+  owner: CNCF

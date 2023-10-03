@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: katacontainers
+  tags:
+    - runtime
+    - containerruntime
+  links:
+    - url:  https://github.com/kata-containers/kata-containers
+      title: GitHub Repo
+      icon: github
+    - url:  https://katacontainers.io
+      title: Homepage
+spec:
+  type: containerruntime
+  lifecycle: external
+  owner: CNCF

@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: kubebench
+  tags:
+    - provisioning
+    - securitycompliance
+  links:
+    - url:  https://github.com/aquasecurity/kube-bench
+      title: GitHub Repo
+      icon: github
+    - url:  https://github.com/aquasecurity/kube-bench
+      title: Homepage
+spec:
+  type: securitycompliance
+  lifecycle: external
+  owner: CNCF

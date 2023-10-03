@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: googlestackdriver
+  tags:
+    - observabilityandanalysis
+    - monitoring
+  links:
+    - url:  https://www.example.com/
+      title: GitHub Repo
+      icon: github
+    - url:  https://cloud.google.com/products/operations
+      title: Homepage
+spec:
+  type: monitoring
+  lifecycle: external
+  owner: CNCF

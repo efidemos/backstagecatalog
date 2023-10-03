@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: akri
+  tags:
+    - provisioning
+    - automationconfiguration
+  links:
+    - url:  https://github.com/project-akri/akri
+      title: GitHub Repo
+      icon: github
+    - url:  https://docs.akri.sh
+      title: Homepage
+spec:
+  type: automationconfiguration
+  lifecycle: external
+  owner: CNCF

@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: openebs
+  tags:
+    - runtime
+    - cloudnativestorage
+  links:
+    - url:  https://github.com/openebs/openebs
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.openebs.io/
+      title: Homepage
+spec:
+  type: cloudnativestorage
+  lifecycle: external
+  owner: CNCF

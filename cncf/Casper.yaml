@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: casper
+  tags:
+    - wasm
+    - decentralizedplatforms
+  links:
+    - url:  https://github.com/casper-network/casper-node
+      title: GitHub Repo
+      icon: github
+    - url:  https://casper.network/
+      title: Homepage
+spec:
+  type: decentralizedplatforms
+  lifecycle: external
+  owner: CNCF

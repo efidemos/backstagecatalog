@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: k8sgpt
+  tags:
+    - observabilityandanalysis
+    - monitoring
+  links:
+    - url:  https://github.com/k8sgpt-ai/k8sgpt
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.k8sgpt.ai
+      title: Homepage
+spec:
+  type: monitoring
+  lifecycle: external
+  owner: CNCF

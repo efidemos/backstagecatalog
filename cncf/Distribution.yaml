@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: distribution
+  tags:
+    - provisioning
+    - containerregistry
+  links:
+    - url:  https://github.com/distribution/distribution
+      title: GitHub Repo
+      icon: github
+    - url:  https://github.com/distribution/distribution
+      title: Homepage
+spec:
+  type: containerregistry
+  lifecycle: external
+  owner: CNCF

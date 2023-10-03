@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: inspektorgadget
+  tags:
+    - observabilityandanalysis
+    - monitoring
+  links:
+    - url:  https://github.com/inspektor-gadget/inspektor-gadget
+      title: GitHub Repo
+      icon: github
+    - url:  https://inspektor-gadget.io/
+      title: Homepage
+spec:
+  type: monitoring
+  lifecycle: external
+  owner: CNCF

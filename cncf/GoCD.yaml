@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: gocd
+  tags:
+    - appdefinitionanddevelopment
+    - continuousintegrationdelivery
+  links:
+    - url:  https://github.com/gocd/gocd
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.gocd.org/
+      title: Homepage
+spec:
+  type: continuousintegrationdelivery
+  lifecycle: external
+  owner: CNCF

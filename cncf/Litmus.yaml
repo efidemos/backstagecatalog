@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: litmus
+  tags:
+    - observabilityandanalysis
+    - chaosengineering
+  links:
+    - url:  https://github.com/litmuschaos/litmus
+      title: GitHub Repo
+      icon: github
+    - url:  https://litmuschaos.io/
+      title: Homepage
+spec:
+  type: chaosengineering
+  lifecycle: external
+  owner: CNCF

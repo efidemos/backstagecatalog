@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: magellano
+  tags:
+    - platform
+    - certifiedkubernetesdistribution
+  links:
+    - url:  https://github.com/mia-platform/distribution
+      title: GitHub Repo
+      icon: github
+    - url:  https://mia-platform.eu/
+      title: Homepage
+spec:
+  type: certifiedkubernetesdistribution
+  lifecycle: external
+  owner: CNCF

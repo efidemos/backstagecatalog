@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: flatcarcontainerlinux
+  tags:
+    - wasm
+    - edgebaremetal
+  links:
+    - url:  https://github.com/flatcar/Flatcar
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.flatcar.org/
+      title: Homepage
+spec:
+  type: edgebaremetal
+  lifecycle: external
+  owner: CNCF

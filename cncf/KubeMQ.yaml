@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: kubemq
+  tags:
+    - appdefinitionanddevelopment
+    - streamingmessaging
+  links:
+    - url:  https://github.com/kubemq-io/kubemq-community
+      title: GitHub Repo
+      icon: github
+    - url:  https://kubemq.io/
+      title: Homepage
+spec:
+  type: streamingmessaging
+  lifecycle: external
+  owner: CNCF

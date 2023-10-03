@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: alluxio
+  tags:
+    - runtime
+    - cloudnativestorage
+  links:
+    - url:  https://github.com/alluxio/alluxio
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.alluxio.io/
+      title: Homepage
+spec:
+  type: cloudnativestorage
+  lifecycle: external
+  owner: CNCF

@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: wasmer
+  tags:
+    - wasm
+    - runtimes
+  links:
+    - url:  https://github.com/wasmerio/wasmer
+      title: GitHub Repo
+      icon: github
+    - url:  https://wasmer.io
+      title: Homepage
+spec:
+  type: runtimes
+  lifecycle: external
+  owner: CNCF

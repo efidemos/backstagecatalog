@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: kiosk
+  tags:
+    - provisioning
+    - automationconfiguration
+  links:
+    - url:  https://github.com/loft-sh/kiosk
+      title: GitHub Repo
+      icon: github
+    - url:  https://github.com/loft-sh/kiosk
+      title: Homepage
+spec:
+  type: automationconfiguration
+  lifecycle: external
+  owner: CNCF

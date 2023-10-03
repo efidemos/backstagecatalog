@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: oraclecontainerengine
+  tags:
+    - platform
+    - certifiedkuberneteshosted
+  links:
+    - url:  https://www.example.com/
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.oracle.com/cloud-native/container-engine-kubernetes
+      title: Homepage
+spec:
+  type: certifiedkuberneteshosted
+  lifecycle: external
+  owner: CNCF

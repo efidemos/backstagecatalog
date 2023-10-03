@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: beam
+  tags:
+    - appdefinitionanddevelopment
+    - streamingmessaging
+  links:
+    - url:  https://github.com/apache/beam
+      title: GitHub Repo
+      icon: github
+    - url:  https://beam.apache.org/
+      title: Homepage
+spec:
+  type: streamingmessaging
+  lifecycle: external
+  owner: CNCF

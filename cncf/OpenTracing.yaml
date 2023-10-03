@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: opentracing
+  tags:
+    - observabilityandanalysis
+    - tracing
+  links:
+    - url:  https://github.com/opentracing/opentracing-go
+      title: GitHub Repo
+      icon: github
+    - url:  https://opentracing.io/
+      title: Homepage
+spec:
+  type: tracing
+  lifecycle: external
+  owner: CNCF

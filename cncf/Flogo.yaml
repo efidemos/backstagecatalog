@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: flogo
+  tags:
+    - serverless
+    - framework
+  links:
+    - url:  https://github.com/TIBCOSoftware/flogo
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.flogo.io
+      title: Homepage
+spec:
+  type: framework
+  lifecycle: external
+  owner: CNCF

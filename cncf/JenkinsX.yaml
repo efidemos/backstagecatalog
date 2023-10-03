@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: jenkinsx
+  tags:
+    - appdefinitionanddevelopment
+    - continuousintegrationdelivery
+  links:
+    - url:  https://github.com/jenkins-x/jx
+      title: GitHub Repo
+      icon: github
+    - url:  https://jenkins-x.io/
+      title: Homepage
+spec:
+  type: continuousintegrationdelivery
+  lifecycle: external
+  owner: CNCF

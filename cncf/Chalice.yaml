@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: chalice
+  tags:
+    - serverless
+    - framework
+  links:
+    - url:  https://github.com/aws/chalice
+      title: GitHub Repo
+      icon: github
+    - url:  https://aws.amazon.com/blogs/developer/chalice-1-0-0-ga-release/
+      title: Homepage
+spec:
+  type: framework
+  lifecycle: external
+  owner: CNCF

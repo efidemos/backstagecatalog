@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: azurekubernetesserviceaks
+  tags:
+    - platform
+    - certifiedkuberneteshosted
+  links:
+    - url:  https://www.example.com/
+      title: GitHub Repo
+      icon: github
+    - url:  https://azure.microsoft.com/en-us/services/kubernetes-service/
+      title: Homepage
+spec:
+  type: certifiedkuberneteshosted
+  lifecycle: external
+  owner: CNCF

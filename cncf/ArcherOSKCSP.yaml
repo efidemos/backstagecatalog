@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: archeroskcsp
+  tags:
+    - special
+    - kubernetescertifiedserviceprovider
+  links:
+    - url:  https://www.example.com/
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.archeros.com/nav/1451
+      title: Homepage
+spec:
+  type: kubernetescertifiedserviceprovider
+  lifecycle: external
+  owner: CNCF

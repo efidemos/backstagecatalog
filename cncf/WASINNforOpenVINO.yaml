@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: wasinnforopenvino
+  tags:
+    - wasm
+    - aimachinelearning
+  links:
+    - url:  https://github.com/WebAssembly/wasi-nn
+      title: GitHub Repo
+      icon: github
+    - url:  https://wasmedge.org/docs/develop/rust/wasinn/openvino
+      title: Homepage
+spec:
+  type: aimachinelearning
+  lifecycle: external
+  owner: CNCF

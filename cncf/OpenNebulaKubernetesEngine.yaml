@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: opennebulakubernetesengine
+  tags:
+    - platform
+    - certifiedkubernetesinstaller
+  links:
+    - url:  https://www.example.com/
+      title: GitHub Repo
+      icon: github
+    - url:  https://marketplace.opennebula.io/appliance/b5033eba-cd31-487e-892a-035cd70441ef
+      title: Homepage
+spec:
+  type: certifiedkubernetesinstaller
+  lifecycle: external
+  owner: CNCF

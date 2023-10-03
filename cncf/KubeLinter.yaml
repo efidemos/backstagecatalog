@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: kubelinter
+  tags:
+    - provisioning
+    - securitycompliance
+  links:
+    - url:  https://github.com/stackrox/kube-linter
+      title: GitHub Repo
+      icon: github
+    - url:  https://docs.kubelinter.io/
+      title: Homepage
+spec:
+  type: securitycompliance
+  lifecycle: external
+  owner: CNCF

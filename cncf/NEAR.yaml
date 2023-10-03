@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: near
+  tags:
+    - wasm
+    - decentralizedplatforms
+  links:
+    - url:  https://github.com/nearprotocol/nearcore
+      title: GitHub Repo
+      icon: github
+    - url:  https://near.org/
+      title: Homepage
+spec:
+  type: decentralizedplatforms
+  lifecycle: external
+  owner: CNCF

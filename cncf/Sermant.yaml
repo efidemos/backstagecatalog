@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: sermant
+  tags:
+    - orchestrationmanagement
+    - servicemesh
+  links:
+    - url:  https://github.com/huaweicloud/Sermant
+      title: GitHub Repo
+      icon: github
+    - url:  https://sermant.io/
+      title: Homepage
+spec:
+  type: servicemesh
+  lifecycle: external
+  owner: CNCF

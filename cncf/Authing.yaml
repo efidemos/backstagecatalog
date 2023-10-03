@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: authing
+  tags:
+    - provisioning
+    - keymanagement
+  links:
+    - url:  https://github.com/Authing/Authing
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.authing.cn
+      title: Homepage
+spec:
+  type: keymanagement
+  lifecycle: external
+  owner: CNCF

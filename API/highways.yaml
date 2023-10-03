@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: highways
+  description: Highways of England API
+spec:
+  type: openapi
+  lifecycle: production
+  owner: team-a
+  definition:
+    $text: https://github.com/APIs-guru/openapi-directory/blob/main/APIs/highwaysengland.co.uk/v1/openapi.yaml

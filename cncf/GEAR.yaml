@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: gear
+  tags:
+    - wasm
+    - decentralizedplatforms
+  links:
+    - url:  https://github.com/gear-tech/gear
+      title: GitHub Repo
+      icon: github
+    - url:  https://gear-tech.io/
+      title: Homepage
+spec:
+  type: decentralizedplatforms
+  lifecycle: external
+  owner: CNCF

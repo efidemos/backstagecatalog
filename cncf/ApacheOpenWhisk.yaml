@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: apacheopenwhisk
+  tags:
+    - serverless
+    - installableplatform
+  links:
+    - url:  https://github.com/apache/openwhisk
+      title: GitHub Repo
+      icon: github
+    - url:  https://openwhisk.apache.org/
+      title: Homepage
+spec:
+  type: installableplatform
+  lifecycle: external
+  owner: CNCF

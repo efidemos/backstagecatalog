@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: minio
+  tags:
+    - runtime
+    - cloudnativestorage
+  links:
+    - url:  https://github.com/minio/minio
+      title: GitHub Repo
+      icon: github
+    - url:  https://min.io/
+      title: Homepage
+spec:
+  type: cloudnativestorage
+  lifecycle: external
+  owner: CNCF

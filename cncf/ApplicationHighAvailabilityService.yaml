@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: applicationhighavailabilityservice
+  tags:
+    - observabilityandanalysis
+    - monitoring
+  links:
+    - url:  https://www.example.com/
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.alibabacloud.com/product/ahas
+      title: Homepage
+spec:
+  type: monitoring
+  lifecycle: external
+  owner: CNCF

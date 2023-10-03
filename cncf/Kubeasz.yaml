@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: kubeasz
+  tags:
+    - platform
+    - certifiedkubernetesinstaller
+  links:
+    - url:  https://github.com/easzlab/kubeasz
+      title: GitHub Repo
+      icon: github
+    - url:  https://github.com/easzlab/kubeasz
+      title: Homepage
+spec:
+  type: certifiedkubernetesinstaller
+  lifecycle: external
+  owner: CNCF

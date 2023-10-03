@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: multus
+  tags:
+    - runtime
+    - cloudnativenetwork
+  links:
+    - url:  https://github.com/k8snetworkplumbingwg/multus-cni
+      title: GitHub Repo
+      icon: github
+    - url:  https://networkbuilders.intel.com/intel-technologies/container-experience-kits
+      title: Homepage
+spec:
+  type: cloudnativenetwork
+  lifecycle: external
+  owner: CNCF

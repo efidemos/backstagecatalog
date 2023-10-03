@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: emscripten
+  tags:
+    - wasm
+    - tooling
+  links:
+    - url:  https://github.com/emscripten-core/emscripten
+      title: GitHub Repo
+      icon: github
+    - url:  https://emscripten.org
+      title: Homepage
+spec:
+  type: tooling
+  lifecycle: external
+  owner: CNCF

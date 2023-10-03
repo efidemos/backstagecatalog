@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: cassandra
+  tags:
+    - appdefinitionanddevelopment
+    - database
+  links:
+    - url:  https://github.com/apache/cassandra
+      title: GitHub Repo
+      icon: github
+    - url:  https://cassandra.apache.org/_/index.html
+      title: Homepage
+spec:
+  type: database
+  lifecycle: external
+  owner: CNCF

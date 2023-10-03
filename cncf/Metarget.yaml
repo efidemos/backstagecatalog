@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: metarget
+  tags:
+    - provisioning
+    - securitycompliance
+  links:
+    - url:  https://github.com/Metarget/metarget
+      title: GitHub Repo
+      icon: github
+    - url:  https://github.com/Metarget/metarget
+      title: Homepage
+spec:
+  type: securitycompliance
+  lifecycle: external
+  owner: CNCF

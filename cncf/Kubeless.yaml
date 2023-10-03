@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: kubeless
+  tags:
+    - serverless
+    - installableplatform
+  links:
+    - url:  https://github.com/vmware-archive/kubeless
+      title: GitHub Repo
+      icon: github
+    - url:  https://github.com/vmware-archive/kubeless-website
+      title: Homepage
+spec:
+  type: installableplatform
+  lifecycle: external
+  owner: CNCF

@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: whatap
+  tags:
+    - observabilityandanalysis
+    - monitoring
+  links:
+    - url:  https://www.example.com/
+      title: GitHub Repo
+      icon: github
+    - url:  https://whatap.io/en
+      title: Homepage
+spec:
+  type: monitoring
+  lifecycle: external
+  owner: CNCF

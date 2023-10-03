@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: bmchelix
+  tags:
+    - observabilityandanalysis
+    - continuousoptimization
+  links:
+    - url:  https://www.example.com/
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.bmc.com/it-solutions/bmc-helix.html
+      title: Homepage
+spec:
+  type: continuousoptimization
+  lifecycle: external
+  owner: CNCF

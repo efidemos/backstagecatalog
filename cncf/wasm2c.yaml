@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: wasm2c
+  tags:
+    - wasm
+    - tooling
+  links:
+    - url:  https://github.com/WebAssembly/wabt
+      title: GitHub Repo
+      icon: github
+    - url:  https://github.com/WebAssembly/wabt/tree/main/wasm2c
+      title: Homepage
+spec:
+  type: tooling
+  lifecycle: external
+  owner: CNCF

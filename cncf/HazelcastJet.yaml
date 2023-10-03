@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: hazelcastjet
+  tags:
+    - appdefinitionanddevelopment
+    - streamingmessaging
+  links:
+    - url:  https://github.com/hazelcast/hazelcast-jet
+      title: GitHub Repo
+      icon: github
+    - url:  https://jet-start.sh
+      title: Homepage
+spec:
+  type: streamingmessaging
+  lifecycle: external
+  owner: CNCF

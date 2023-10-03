@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: certmanager
+  tags:
+    - provisioning
+    - securitycompliance
+  links:
+    - url:  https://github.com/cert-manager/cert-manager
+      title: GitHub Repo
+      icon: github
+    - url:  https://cert-manager.io/
+      title: Homepage
+spec:
+  type: securitycompliance
+  lifecycle: external
+  owner: CNCF

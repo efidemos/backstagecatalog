@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: crux
+  tags:
+    - appdefinitionanddevelopment
+    - database
+  links:
+    - url:  https://github.com/xtdb/xtdb
+      title: GitHub Repo
+      icon: github
+    - url:  https://xtdb.com/index.html
+      title: Homepage
+spec:
+  type: database
+  lifecycle: external
+  owner: CNCF

@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: swift
+  tags:
+    - runtime
+    - cloudnativestorage
+  links:
+    - url:  https://github.com/openstack/swift
+      title: GitHub Repo
+      icon: github
+    - url:  https://docs.openstack.org/swift/latest/
+      title: Homepage
+spec:
+  type: cloudnativestorage
+  lifecycle: external
+  owner: CNCF

@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: platform9managedkubernetes
+  tags:
+    - platform
+    - certifiedkubernetesdistribution
+  links:
+    - url:  https://www.example.com/
+      title: GitHub Repo
+      icon: github
+    - url:  https://platform9.com/managed-kubernetes/
+      title: Homepage
+spec:
+  type: certifiedkubernetesdistribution
+  lifecycle: external
+  owner: CNCF

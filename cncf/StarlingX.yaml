@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: starlingx
+  tags:
+    - platform
+    - certifiedkuberneteshosted
+  links:
+    - url:  https://github.com/starlingx/config
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.starlingx.io
+      title: Homepage
+spec:
+  type: certifiedkuberneteshosted
+  lifecycle: external
+  owner: CNCF

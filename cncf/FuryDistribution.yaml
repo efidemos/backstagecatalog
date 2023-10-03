@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: furydistribution
+  tags:
+    - platform
+    - certifiedkubernetesdistribution
+  links:
+    - url:  https://github.com/sighupio/fury-distribution
+      title: GitHub Repo
+      icon: github
+    - url:  https://sighup.io
+      title: Homepage
+spec:
+  type: certifiedkubernetesdistribution
+  lifecycle: external
+  owner: CNCF

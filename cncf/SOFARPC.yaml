@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: sofarpc
+  tags:
+    - orchestrationmanagement
+    - remoteprocedurecall
+  links:
+    - url:  https://github.com/sofastack/sofa-rpc
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.sofastack.tech/en/
+      title: Homepage
+spec:
+  type: remoteprocedurecall
+  lifecycle: external
+  owner: CNCF

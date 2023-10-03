@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: minikube
+  tags:
+    - platform
+    - certifiedkubernetesinstaller
+  links:
+    - url:  https://github.com/kubernetes/minikube
+      title: GitHub Repo
+      icon: github
+    - url:  https://minikube.sigs.k8s.io
+      title: Homepage
+spec:
+  type: certifiedkubernetesinstaller
+  lifecycle: external
+  owner: CNCF

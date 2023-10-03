@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: nginx
+  tags:
+    - orchestrationmanagement
+    - serviceproxy
+  links:
+    - url:  https://github.com/nginx/nginx
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.nginx.com/
+      title: Homepage
+spec:
+  type: serviceproxy
+  lifecycle: external
+  owner: CNCF

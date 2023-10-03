@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: linuxkit
+  tags:
+    - provisioning
+    - automationconfiguration
+  links:
+    - url:  https://github.com/linuxkit/linuxkit
+      title: GitHub Repo
+      icon: github
+    - url:  https://github.com/linuxkit/linuxkit
+      title: Homepage
+spec:
+  type: automationconfiguration
+  lifecycle: external
+  owner: CNCF

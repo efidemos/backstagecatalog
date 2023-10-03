@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: bosh
+  tags:
+    - provisioning
+    - automationconfiguration
+  links:
+    - url:  https://github.com/cloudfoundry/bosh
+      title: GitHub Repo
+      icon: github
+    - url:  https://bosh.io/docs/
+      title: Homepage
+spec:
+  type: automationconfiguration
+  lifecycle: external
+  owner: CNCF

@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: bbc
+  description: BBC
+spec:
+  type: openapi
+  lifecycle: production
+  owner: team-a
+  definition:
+    $text: https://github.com/APIs-guru/openapi-directory/blob/main/APIs/bbci.co.uk/1.0/openapi.yaml

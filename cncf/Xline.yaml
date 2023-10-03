@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: xline
+  tags:
+    - orchestrationmanagement
+    - coordinationservicediscovery
+  links:
+    - url:  https://github.com/xline-kv/Xline
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.xline.cloud
+      title: Homepage
+spec:
+  type: coordinationservicediscovery
+  lifecycle: external
+  owner: CNCF

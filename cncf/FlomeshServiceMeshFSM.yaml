@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: flomeshservicemeshfsm
+  tags:
+    - orchestrationmanagement
+    - servicemesh
+  links:
+    - url:  https://github.com/flomesh-io/fsm
+      title: GitHub Repo
+      icon: github
+    - url:  https://flomesh.io/
+      title: Homepage
+spec:
+  type: servicemesh
+  lifecycle: external
+  owner: CNCF

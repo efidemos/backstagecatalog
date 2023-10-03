@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: canada
+  description: Canada Holidays
+spec:
+  type: openapi
+  lifecycle: production
+  owner: team-a
+  definition:
+    $text: https://github.com/APIs-guru/openapi-directory/blob/main/APIs/canada-holidays.ca/1.8.0/openapi.yaml

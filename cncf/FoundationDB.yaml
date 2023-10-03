@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: foundationdb
+  tags:
+    - appdefinitionanddevelopment
+    - database
+  links:
+    - url:  https://github.com/apple/foundationdb
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.foundationdb.org/
+      title: Homepage
+spec:
+  type: database
+  lifecycle: external
+  owner: CNCF

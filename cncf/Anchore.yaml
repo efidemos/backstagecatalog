@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: anchore
+  tags:
+    - provisioning
+    - securitycompliance
+  links:
+    - url:  https://github.com/anchore/anchore-engine
+      title: GitHub Repo
+      icon: github
+    - url:  https://anchore.com/platform
+      title: Homepage
+spec:
+  type: securitycompliance
+  lifecycle: external
+  owner: CNCF

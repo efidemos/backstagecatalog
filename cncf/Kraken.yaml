@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: kraken
+  tags:
+    - provisioning
+    - containerregistry
+  links:
+    - url:  https://github.com/uber/kraken
+      title: GitHub Repo
+      icon: github
+    - url:  https://eng.uber.com/introducing-kraken/
+      title: Homepage
+spec:
+  type: containerregistry
+  lifecycle: external
+  owner: CNCF

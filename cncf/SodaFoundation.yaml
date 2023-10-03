@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: sodafoundation
+  tags:
+    - runtime
+    - cloudnativestorage
+  links:
+    - url:  https://github.com/sodafoundation/api
+      title: GitHub Repo
+      icon: github
+    - url:  https://sodafoundation.io/wp-content/uploads/2021/03/cn.png
+      title: Homepage
+spec:
+  type: cloudnativestorage
+  lifecycle: external
+  owner: CNCF

@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: lumigo
+  tags:
+    - serverless
+    - tools
+  links:
+    - url:  https://www.example.com/
+      title: GitHub Repo
+      icon: github
+    - url:  https://lumigo.io/
+      title: Homepage
+spec:
+  type: tools
+  lifecycle: external
+  owner: CNCF

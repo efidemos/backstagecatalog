@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: enrouteonestepingress
+  tags:
+    - orchestrationmanagement
+    - apigateway
+  links:
+    - url:  https://github.com/saarasio/enroute
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.getenroute.io
+      title: Homepage
+spec:
+  type: apigateway
+  lifecycle: external
+  owner: CNCF

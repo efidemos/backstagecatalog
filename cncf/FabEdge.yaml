@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: fabedge
+  tags:
+    - runtime
+    - cloudnativenetwork
+  links:
+    - url:  https://github.com/FabEdge/fabedge
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.fabedge.io/
+      title: Homepage
+spec:
+  type: cloudnativenetwork
+  lifecycle: external
+  owner: CNCF

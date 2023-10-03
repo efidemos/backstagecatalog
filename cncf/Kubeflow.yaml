@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: kubeflow
+  tags:
+    - orchestrationmanagement
+    - schedulingorchestration
+  links:
+    - url:  https://github.com/kubeflow/kubeflow
+      title: GitHub Repo
+      icon: github
+    - url:  https://kubeflow.org
+      title: Homepage
+spec:
+  type: schedulingorchestration
+  lifecycle: external
+  owner: CNCF

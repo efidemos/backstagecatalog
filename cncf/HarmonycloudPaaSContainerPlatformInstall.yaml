@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: harmonycloudpaascontainerplatforminstall
+  tags:
+    - platform
+    - certifiedkubernetesinstaller
+  links:
+    - url:  https://www.example.com/
+      title: GitHub Repo
+      icon: github
+    - url:  http://harmonycloud.cn/products/rongqiyun/
+      title: Homepage
+spec:
+  type: certifiedkubernetesinstaller
+  lifecycle: external
+  owner: CNCF

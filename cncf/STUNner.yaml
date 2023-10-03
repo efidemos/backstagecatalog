@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: stunner
+  tags:
+    - orchestrationmanagement
+    - serviceproxy
+  links:
+    - url:  https://github.com/l7mp/stunner
+      title: GitHub Repo
+      icon: github
+    - url:  https://l7mp.io
+      title: Homepage
+spec:
+  type: serviceproxy
+  lifecycle: external
+  owner: CNCF

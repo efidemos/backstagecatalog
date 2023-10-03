@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: tars
+  tags:
+    - orchestrationmanagement
+    - remoteprocedurecall
+  links:
+    - url:  https://github.com/tarsCloud/tars
+      title: GitHub Repo
+      icon: github
+    - url:  https://github.com/tarsCloud
+      title: Homepage
+spec:
+  type: remoteprocedurecall
+  lifecycle: external
+  owner: CNCF

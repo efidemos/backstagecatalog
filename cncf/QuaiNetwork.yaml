@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: quainetwork
+  tags:
+    - wasm
+    - decentralizedplatforms
+  links:
+    - url:  https://github.com/dominant-strategies/go-quai
+      title: GitHub Repo
+      icon: github
+    - url:  https://qu.ai/
+      title: Homepage
+spec:
+  type: decentralizedplatforms
+  lifecycle: external
+  owner: CNCF

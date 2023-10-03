@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: consul
+  tags:
+    - orchestrationmanagement
+    - servicemesh
+  links:
+    - url:  https://github.com/hashicorp/consul
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.consul.io/
+      title: Homepage
+spec:
+  type: servicemesh
+  lifecycle: external
+  owner: CNCF

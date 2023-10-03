@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: sel4
+  tags:
+    - wasm
+    - edgebaremetal
+  links:
+    - url:  https://github.com/seL4/seL4
+      title: GitHub Repo
+      icon: github
+    - url:  https://sel4.systems/
+      title: Homepage
+spec:
+  type: edgebaremetal
+  lifecycle: external
+  owner: CNCF

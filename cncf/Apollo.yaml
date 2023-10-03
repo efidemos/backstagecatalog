@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: apollo
+  tags:
+    - provisioning
+    - automationconfiguration
+  links:
+    - url:  https://github.com/apolloconfig/apollo
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.apolloconfig.com/
+      title: Homepage
+spec:
+  type: automationconfiguration
+  lifecycle: external
+  owner: CNCF

@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: nodelambda
+  tags:
+    - serverless
+    - tools
+  links:
+    - url:  https://github.com/motdotla/node-lambda
+      title: GitHub Repo
+      icon: github
+    - url:  https://github.com/motdotla/node-lambda
+      title: Homepage
+spec:
+  type: tools
+  lifecycle: external
+  owner: CNCF

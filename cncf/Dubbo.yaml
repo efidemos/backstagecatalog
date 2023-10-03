@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: dubbo
+  tags:
+    - orchestrationmanagement
+    - remoteprocedurecall
+  links:
+    - url:  https://github.com/apache/dubbo
+      title: GitHub Repo
+      icon: github
+    - url:  https://dubbo.apache.org/en/
+      title: Homepage
+spec:
+  type: remoteprocedurecall
+  lifecycle: external
+  owner: CNCF

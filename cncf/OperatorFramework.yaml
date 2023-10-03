@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: operatorframework
+  tags:
+    - appdefinitionanddevelopment
+    - applicationdefinitionimagebuild
+  links:
+    - url:  https://github.com/operator-framework/operator-sdk
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.redhat.com/en/technologies/cloud-computing/openshift/what-are-openshift-operators
+      title: Homepage
+spec:
+  type: applicationdefinitionimagebuild
+  lifecycle: external
+  owner: CNCF

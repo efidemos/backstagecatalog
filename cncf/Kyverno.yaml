@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: kyverno
+  tags:
+    - provisioning
+    - securitycompliance
+  links:
+    - url:  https://github.com/kyverno/kyverno
+      title: GitHub Repo
+      icon: github
+    - url:  https://kyverno.io/
+      title: Homepage
+spec:
+  type: securitycompliance
+  lifecycle: external
+  owner: CNCF

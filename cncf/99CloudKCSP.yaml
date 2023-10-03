@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: 99cloudkcsp
+  tags:
+    - special
+    - kubernetescertifiedserviceprovider
+  links:
+    - url:  https://www.example.com/
+      title: GitHub Repo
+      icon: github
+    - url:  http://www.99cloud.net/en/
+      title: Homepage
+spec:
+  type: kubernetescertifiedserviceprovider
+  lifecycle: external
+  owner: CNCF

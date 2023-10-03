@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: timecraft
+  tags:
+    - wasm
+    - runtimes
+  links:
+    - url:  https://github.com/stealthrocket/timecraft
+      title: GitHub Repo
+      icon: github
+    - url:  https://docs.timecraft.dev
+      title: Homepage
+spec:
+  type: runtimes
+  lifecycle: external
+  owner: CNCF

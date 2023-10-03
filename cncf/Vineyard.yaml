@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: vineyard
+  tags:
+    - runtime
+    - cloudnativestorage
+  links:
+    - url:  https://github.com/v6d-io/v6d
+      title: GitHub Repo
+      icon: github
+    - url:  https://v6d.io
+      title: Homepage
+spec:
+  type: cloudnativestorage
+  lifecycle: external
+  owner: CNCF

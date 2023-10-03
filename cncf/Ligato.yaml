@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ligato
+  tags:
+    - runtime
+    - cloudnativenetwork
+  links:
+    - url:  https://github.com/ligato/vpp-agent
+      title: GitHub Repo
+      icon: github
+    - url:  https://ligato.io/
+      title: Homepage
+spec:
+  type: cloudnativenetwork
+  lifecycle: external
+  owner: CNCF

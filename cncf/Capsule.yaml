@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: capsule
+  tags:
+    - orchestrationmanagement
+    - schedulingorchestration
+  links:
+    - url:  https://github.com/clastix/capsule
+      title: GitHub Repo
+      icon: github
+    - url:  https://capsule.clastix.io
+      title: Homepage
+spec:
+  type: schedulingorchestration
+  lifecycle: external
+  owner: CNCF

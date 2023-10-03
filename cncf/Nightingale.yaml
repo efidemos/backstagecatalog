@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: nightingale
+  tags:
+    - observabilityandanalysis
+    - monitoring
+  links:
+    - url:  https://github.com/didi/nightingale
+      title: GitHub Repo
+      icon: github
+    - url:  http://n9e.didiyun.com
+      title: Homepage
+spec:
+  type: monitoring
+  lifecycle: external
+  owner: CNCF

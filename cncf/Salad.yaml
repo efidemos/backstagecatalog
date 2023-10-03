@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: salad
+  tags:
+    - platform
+    - paascontainerservice
+  links:
+    - url:  https://www.example.com/
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.salad.com
+      title: Homepage
+spec:
+  type: paascontainerservice
+  lifecycle: external
+  owner: CNCF

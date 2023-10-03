@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: spiderpool
+  tags:
+    - runtime
+    - cloudnativenetwork
+  links:
+    - url:  https://github.com/spidernet-io/spiderpool
+      title: GitHub Repo
+      icon: github
+    - url:  https://spidernet-io.github.io/spiderpool/
+      title: Homepage
+spec:
+  type: cloudnativenetwork
+  lifecycle: external
+  owner: CNCF

@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: wasmtime
+  tags:
+    - wasm
+    - runtimes
+  links:
+    - url:  https://github.com/bytecodealliance/wasmtime
+      title: GitHub Repo
+      icon: github
+    - url:  https://wasmtime.dev/
+      title: Homepage
+spec:
+  type: runtimes
+  lifecycle: external
+  owner: CNCF

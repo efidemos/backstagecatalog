@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: kurl
+  tags:
+    - platform
+    - certifiedkubernetesdistribution
+  links:
+    - url:  https://github.com/replicatedhq/kurl
+      title: GitHub Repo
+      icon: github
+    - url:  https://kurl.sh
+      title: Homepage
+spec:
+  type: certifiedkubernetesdistribution
+  lifecycle: external
+  owner: CNCF

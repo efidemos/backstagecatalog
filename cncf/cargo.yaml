@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: cargo
+  tags:
+    - wasm
+    - tooling
+  links:
+    - url:  https://github.com/rust-lang/cargo
+      title: GitHub Repo
+      icon: github
+    - url:  https://doc.rust-lang.org/cargo/
+      title: Homepage
+spec:
+  type: tooling
+  lifecycle: external
+  owner: CNCF

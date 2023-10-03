@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ericssoncloudcontainerdistribution
+  tags:
+    - platform
+    - certifiedkubernetesdistribution
+  links:
+    - url:  https://www.example.com/
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.ericsson.com/en/portfolio/cloud-software--services/cloud-core/cloud-infrastructure/nfvi/cloud-container-distribution
+      title: Homepage
+spec:
+  type: certifiedkubernetesdistribution
+  lifecycle: external
+  owner: CNCF

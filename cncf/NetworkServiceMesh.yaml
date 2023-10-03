@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: networkservicemesh
+  tags:
+    - runtime
+    - cloudnativenetwork
+  links:
+    - url:  https://github.com/networkservicemesh/api
+      title: GitHub Repo
+      icon: github
+    - url:  https://networkservicemesh.io/
+      title: Homepage
+spec:
+  type: cloudnativenetwork
+  lifecycle: external
+  owner: CNCF

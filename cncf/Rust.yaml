@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: rust
+  tags:
+    - wasm
+    - languages
+  links:
+    - url:  https://github.com/rust-lang/rust
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.rust-lang.org/
+      title: Homepage
+spec:
+  type: languages
+  lifecycle: external
+  owner: CNCF

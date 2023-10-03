@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: opengitops
+  tags:
+    - appdefinitionanddevelopment
+    - continuousintegrationdelivery
+  links:
+    - url:  https://github.com/open-gitops/project
+      title: GitHub Repo
+      icon: github
+    - url:  https://opengitops.dev/
+      title: Homepage
+spec:
+  type: continuousintegrationdelivery
+  lifecycle: external
+  owner: CNCF

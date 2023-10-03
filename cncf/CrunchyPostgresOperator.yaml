@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: crunchypostgresoperator
+  tags:
+    - appdefinitionanddevelopment
+    - database
+  links:
+    - url:  https://github.com/CrunchyData/postgres-operator
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.crunchydata.com
+      title: Homepage
+spec:
+  type: database
+  lifecycle: external
+  owner: CNCF

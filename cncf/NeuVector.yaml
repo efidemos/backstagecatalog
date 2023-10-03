@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: neuvector
+  tags:
+    - provisioning
+    - securitycompliance
+  links:
+    - url:  https://github.com/neuvector/neuvector
+      title: GitHub Repo
+      icon: github
+    - url:  https://neuvector.com/
+      title: Homepage
+spec:
+  type: securitycompliance
+  lifecycle: external
+  owner: CNCF

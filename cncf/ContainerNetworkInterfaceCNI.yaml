@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: containernetworkinterfacecni
+  tags:
+    - runtime
+    - cloudnativenetwork
+  links:
+    - url:  https://github.com/containernetworking/cni
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.cni.dev/
+      title: Homepage
+spec:
+  type: cloudnativenetwork
+  lifecycle: external
+  owner: CNCF

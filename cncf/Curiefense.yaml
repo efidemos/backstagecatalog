@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: curiefense
+  tags:
+    - provisioning
+    - securitycompliance
+  links:
+    - url:  https://github.com/curiefense/curiefense
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.curiefense.io/
+      title: Homepage
+spec:
+  type: securitycompliance
+  lifecycle: external
+  owner: CNCF

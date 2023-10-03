@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: puppetlabskubernetes
+  tags:
+    - platform
+    - certifiedkubernetesinstaller
+  links:
+    - url:  https://github.com/puppetlabs/puppetlabs-kubernetes
+      title: GitHub Repo
+      icon: github
+    - url:  https://forge.puppet.com/modules/puppetlabs/kubernetes
+      title: Homepage
+spec:
+  type: certifiedkubernetesinstaller
+  lifecycle: external
+  owner: CNCF

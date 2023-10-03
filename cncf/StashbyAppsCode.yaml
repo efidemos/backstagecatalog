@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: stashbyappscode
+  tags:
+    - runtime
+    - cloudnativestorage
+  links:
+    - url:  https://github.com/stashed/stash
+      title: GitHub Repo
+      icon: github
+    - url:  https://stash.run
+      title: Homepage
+spec:
+  type: cloudnativestorage
+  lifecycle: external
+  owner: CNCF

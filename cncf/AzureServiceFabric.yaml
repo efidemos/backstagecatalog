@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: azureservicefabric
+  tags:
+    - orchestrationmanagement
+    - schedulingorchestration
+  links:
+    - url:  https://github.com/Microsoft/service-fabric
+      title: GitHub Repo
+      icon: github
+    - url:  https://docs.microsoft.com/en-us/azure/service-fabric/
+      title: Homepage
+spec:
+  type: schedulingorchestration
+  lifecycle: external
+  owner: CNCF

@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: mosn
+  tags:
+    - orchestrationmanagement
+    - serviceproxy
+  links:
+    - url:  https://github.com/mosn/mosn
+      title: GitHub Repo
+      icon: github
+    - url:  https://mosn.io
+      title: Homepage
+spec:
+  type: serviceproxy
+  lifecycle: external
+  owner: CNCF

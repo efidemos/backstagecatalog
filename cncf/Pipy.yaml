@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: pipy
+  tags:
+    - orchestrationmanagement
+    - serviceproxy
+  links:
+    - url:  https://github.com/flomesh-io/pipy
+      title: GitHub Repo
+      icon: github
+    - url:  https://flomesh.io/pipy/
+      title: Homepage
+spec:
+  type: serviceproxy
+  lifecycle: external
+  owner: CNCF

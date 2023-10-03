@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: portus
+  tags:
+    - provisioning
+    - containerregistry
+  links:
+    - url:  https://github.com/SUSE/Portus
+      title: GitHub Repo
+      icon: github
+    - url:  http://port.us.org/
+      title: Homepage
+spec:
+  type: containerregistry
+  lifecycle: external
+  owner: CNCF

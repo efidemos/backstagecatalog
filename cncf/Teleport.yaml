@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: teleport
+  tags:
+    - provisioning
+    - keymanagement
+  links:
+    - url:  https://github.com/gravitational/teleport
+      title: GitHub Repo
+      icon: github
+    - url:  https://goteleport.com
+      title: Homepage
+spec:
+  type: keymanagement
+  lifecycle: external
+  owner: CNCF

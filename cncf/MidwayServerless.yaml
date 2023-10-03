@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: midwayserverless
+  tags:
+    - serverless
+    - framework
+  links:
+    - url:  https://github.com/midwayjs/midway
+      title: GitHub Repo
+      icon: github
+    - url:  https://github.com/midwayjs/midway
+      title: Homepage
+spec:
+  type: framework
+  lifecycle: external
+  owner: CNCF

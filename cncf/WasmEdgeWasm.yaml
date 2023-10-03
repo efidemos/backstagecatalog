@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: wasmedgewasm
+  tags:
+    - wasm
+    - runtimes
+  links:
+    - url:  https://github.com/WasmEdge/WasmEdge
+      title: GitHub Repo
+      icon: github
+    - url:  https://wasmedge.org/
+      title: Homepage
+spec:
+  type: runtimes
+  lifecycle: external
+  owner: CNCF

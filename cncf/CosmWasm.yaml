@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: cosmwasm
+  tags:
+    - wasm
+    - decentralizedplatforms
+  links:
+    - url:  https://github.com/CosmWasm/cosmwasm
+      title: GitHub Repo
+      icon: github
+    - url:  https://cosmwasm.com/
+      title: Homepage
+spec:
+  type: decentralizedplatforms
+  lifecycle: external
+  owner: CNCF

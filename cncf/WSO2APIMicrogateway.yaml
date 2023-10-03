@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: wso2apimicrogateway
+  tags:
+    - orchestrationmanagement
+    - apigateway
+  links:
+    - url:  https://github.com/wso2/product-microgateway
+      title: GitHub Repo
+      icon: github
+    - url:  https://wso2.com/api-manager/api-microgateway
+      title: Homepage
+spec:
+  type: apigateway
+  lifecycle: external
+  owner: CNCF

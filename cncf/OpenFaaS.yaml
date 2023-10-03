@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: openfaas
+  tags:
+    - serverless
+    - installableplatform
+  links:
+    - url:  https://github.com/openfaas/faas
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.openfaas.com
+      title: Homepage
+spec:
+  type: installableplatform
+  lifecycle: external
+  owner: CNCF

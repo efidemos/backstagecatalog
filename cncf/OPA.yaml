@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: opa
+  tags:
+    - wasm
+    - embeddedfunctions
+  links:
+    - url:  https://github.com/open-policy-agent/opa
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.openpolicyagent.org/
+      title: Homepage
+spec:
+  type: embeddedfunctions
+  lifecycle: external
+  owner: CNCF

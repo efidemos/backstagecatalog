@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: azurefunctions
+  tags:
+    - serverless
+    - hostedplatform
+  links:
+    - url:  https://github.com/Azure/azure-functions-host
+      title: GitHub Repo
+      icon: github
+    - url:  https://azure.microsoft.com/en-us/services/functions/
+      title: Homepage
+spec:
+  type: hostedplatform
+  lifecycle: external
+  owner: CNCF

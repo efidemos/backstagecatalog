@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: cubefs
+  tags:
+    - runtime
+    - cloudnativestorage
+  links:
+    - url:  https://github.com/cubeFS/cubefs
+      title: GitHub Repo
+      icon: github
+    - url:  https://cubefs.io/
+      title: Homepage
+spec:
+  type: cloudnativestorage
+  lifecycle: external
+  owner: CNCF

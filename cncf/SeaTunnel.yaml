@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: seatunnel
+  tags:
+    - appdefinitionanddevelopment
+    - streamingmessaging
+  links:
+    - url:  https://github.com/apache/incubator-seatunnel
+      title: GitHub Repo
+      icon: github
+    - url:  https://seatunnel.apache.org/
+      title: Homepage
+spec:
+  type: streamingmessaging
+  lifecycle: external
+  owner: CNCF

@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: apachetvm
+  tags:
+    - wasm
+    - aimachinelearning
+  links:
+    - url:  https://github.com/apache/tvm
+      title: GitHub Repo
+      icon: github
+    - url:  https://tvm.apache.org/
+      title: Homepage
+spec:
+  type: aimachinelearning
+  lifecycle: external
+  owner: CNCF

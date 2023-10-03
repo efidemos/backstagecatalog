@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: brobridgekcsp
+  tags:
+    - special
+    - kubernetescertifiedserviceprovider
+  links:
+    - url:  https://www.example.com/
+      title: GitHub Repo
+      icon: github
+    - url:  http://www.brobridge.com
+      title: Homepage
+spec:
+  type: kubernetescertifiedserviceprovider
+  lifecycle: external
+  owner: CNCF

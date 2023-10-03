@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: lxd
+  tags:
+    - runtime
+    - containerruntime
+  links:
+    - url:  https://github.com/lxc/lxd
+      title: GitHub Repo
+      icon: github
+    - url:  https://linuxcontainers.org/lxd/
+      title: Homepage
+spec:
+  type: containerruntime
+  lifecycle: external
+  owner: CNCF

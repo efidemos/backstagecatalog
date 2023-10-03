@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ciselinformatiquekcsp
+  tags:
+    - special
+    - kubernetescertifiedserviceprovider
+  links:
+    - url:  https://www.example.com/
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.cisel.ch/2021/11/29/kubernetes
+      title: Homepage
+spec:
+  type: kubernetescertifiedserviceprovider
+  lifecycle: external
+  owner: CNCF

@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: headlamp
+  tags:
+    - observabilityandanalysis
+    - monitoring
+  links:
+    - url:  https://github.com/headlamp-k8s/headlamp
+      title: GitHub Repo
+      icon: github
+    - url:  https://headlamp.dev
+      title: Homepage
+spec:
+  type: monitoring
+  lifecycle: external
+  owner: CNCF

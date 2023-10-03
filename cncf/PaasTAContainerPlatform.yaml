@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: paastacontainerplatform
+  tags:
+    - platform
+    - certifiedkubernetesdistribution
+  links:
+    - url:  https://github.com/PaaS-TA/paas-ta-container-platform
+      title: GitHub Repo
+      icon: github
+    - url:  https://paas-ta.kr/eng/
+      title: Homepage
+spec:
+  type: certifiedkubernetesdistribution
+  lifecycle: external
+  owner: CNCF

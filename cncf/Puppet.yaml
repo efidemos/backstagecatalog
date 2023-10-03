@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: puppet
+  tags:
+    - provisioning
+    - automationconfiguration
+  links:
+    - url:  https://github.com/puppetlabs/puppet
+      title: GitHub Repo
+      icon: github
+    - url:  https://puppet.com/
+      title: Homepage
+spec:
+  type: automationconfiguration
+  lifecycle: external
+  owner: CNCF

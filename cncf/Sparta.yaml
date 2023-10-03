@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: sparta
+  tags:
+    - serverless
+    - framework
+  links:
+    - url:  https://github.com/mweagle/Sparta
+      title: GitHub Repo
+      icon: github
+    - url:  https://gosparta.io/
+      title: Homepage
+spec:
+  type: framework
+  lifecycle: external
+  owner: CNCF

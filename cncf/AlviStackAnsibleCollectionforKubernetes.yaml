@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: alvistackansiblecollectionforkubernetes
+  tags:
+    - platform
+    - certifiedkubernetesdistribution
+  links:
+    - url:  https://github.com/alvistack/ansible-collection-kubernetes
+      title: GitHub Repo
+      icon: github
+    - url:  https://github.com/alvistack/ansible-collection-kubernetes
+      title: Homepage
+spec:
+  type: certifiedkubernetesdistribution
+  lifecycle: external
+  owner: CNCF

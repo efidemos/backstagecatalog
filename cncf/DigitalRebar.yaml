@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: digitalrebar
+  tags:
+    - provisioning
+    - automationconfiguration
+  links:
+    - url:  https://github.com/digitalrebar/provision
+      title: GitHub Repo
+      icon: github
+    - url:  https://rackn.com/rebar/
+      title: Homepage
+spec:
+  type: automationconfiguration
+  lifecycle: external
+  owner: CNCF

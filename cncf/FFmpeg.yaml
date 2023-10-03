@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ffmpeg
+  tags:
+    - wasm
+    - aimachinelearning
+  links:
+    - url:  https://github.com/FFmpeg/FFmpeg
+      title: GitHub Repo
+      icon: github
+    - url:  https://ffmpeg.org/
+      title: Homepage
+spec:
+  type: aimachinelearning
+  lifecycle: external
+  owner: CNCF

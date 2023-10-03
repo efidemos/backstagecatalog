@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: cosmonicwasm
+  tags:
+    - wasm
+    - hostedplatforms
+  links:
+    - url:  https://www.example.com/
+      title: GitHub Repo
+      icon: github
+    - url:  https://cosmonic.com/
+      title: Homepage
+spec:
+  type: hostedplatforms
+  lifecycle: external
+  owner: CNCF

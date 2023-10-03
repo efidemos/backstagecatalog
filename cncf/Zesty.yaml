@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: zesty
+  tags:
+    - observabilityandanalysis
+    - continuousoptimization
+  links:
+    - url:  https://www.example.com/
+      title: GitHub Repo
+      icon: github
+    - url:  https://zesty.co/
+      title: Homepage
+spec:
+  type: continuousoptimization
+  lifecycle: external
+  owner: CNCF

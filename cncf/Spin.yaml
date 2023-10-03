@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: spin
+  tags:
+    - wasm
+    - applicationframeworks
+  links:
+    - url:  https://github.com/fermyon/spin
+      title: GitHub Repo
+      icon: github
+    - url:  https://developer.fermyon.com/spin/index
+      title: Homepage
+spec:
+  type: applicationframeworks
+  lifecycle: external
+  owner: CNCF

@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: sofatracer
+  tags:
+    - observabilityandanalysis
+    - tracing
+  links:
+    - url:  https://github.com/sofastack/sofa-tracer
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.sofastack.tech/en/
+      title: Homepage
+spec:
+  type: tracing
+  lifecycle: external
+  owner: CNCF

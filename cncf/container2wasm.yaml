@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: container2wasm
+  tags:
+    - wasm
+    - orchestrationmanagement
+  links:
+    - url:  https://github.com/ktock/container2wasm
+      title: GitHub Repo
+      icon: github
+    - url:  https://ktock.github.io/container2wasm-demo/
+      title: Homepage
+spec:
+  type: orchestrationmanagement
+  lifecycle: external
+  owner: CNCF

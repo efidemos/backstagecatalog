@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: envoywasm
+  tags:
+    - wasm
+    - embeddedfunctions
+  links:
+    - url:  https://github.com/envoyproxy/envoy
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.envoyproxy.io
+      title: Homepage
+spec:
+  type: embeddedfunctions
+  lifecycle: external
+  owner: CNCF

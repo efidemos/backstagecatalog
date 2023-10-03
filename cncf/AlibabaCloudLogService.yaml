@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: alibabacloudlogservice
+  tags:
+    - observabilityandanalysis
+    - logging
+  links:
+    - url:  https://www.example.com/
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.alibabacloud.com/product/log-service
+      title: Homepage
+spec:
+  type: logging
+  lifecycle: external
+  owner: CNCF

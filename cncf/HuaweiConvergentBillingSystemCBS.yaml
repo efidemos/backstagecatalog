@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: huaweiconvergentbillingsystemcbs
+  tags:
+    - special
+    - certifiedcnfs
+  links:
+    - url:  https://www.example.com/
+      title: GitHub Repo
+      icon: github
+    - url:  https://carrier.huawei.com/en/products/service-and-software/software-business
+      title: Homepage
+spec:
+  type: certifiedcnfs
+  lifecycle: external
+  owner: CNCF

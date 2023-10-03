@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: k8up
+  tags:
+    - runtime
+    - cloudnativestorage
+  links:
+    - url:  https://github.com/k8up-io/k8up
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.k8up.io/
+      title: Homepage
+spec:
+  type: cloudnativestorage
+  lifecycle: external
+  owner: CNCF

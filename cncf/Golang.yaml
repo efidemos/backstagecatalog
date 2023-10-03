@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: golang
+  tags:
+    - wasm
+    - languages
+  links:
+    - url:  https://github.com/golang/go
+      title: GitHub Repo
+      icon: github
+    - url:  https://go.dev/
+      title: Homepage
+spec:
+  type: languages
+  lifecycle: external
+  owner: CNCF

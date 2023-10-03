@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: daprwasm
+  tags:
+    - wasm
+    - embeddedfunctions
+  links:
+    - url:  https://github.com/dapr/dapr
+      title: GitHub Repo
+      icon: github
+    - url:  https://dapr.io
+      title: Homepage
+spec:
+  type: embeddedfunctions
+  lifecycle: external
+  owner: CNCF

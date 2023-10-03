@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: openyurtwasm
+  tags:
+    - wasm
+    - orchestrationmanagement
+  links:
+    - url:  https://github.com/openyurtio/openyurt
+      title: GitHub Repo
+      icon: github
+    - url:  https://openyurt.io/en-us/
+      title: Homepage
+spec:
+  type: orchestrationmanagement
+  lifecycle: external
+  owner: CNCF

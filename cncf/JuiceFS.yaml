@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: juicefs
+  tags:
+    - runtime
+    - cloudnativestorage
+  links:
+    - url:  https://github.com/juicedata/juicefs
+      title: GitHub Repo
+      icon: github
+    - url:  https://juicefs.com/
+      title: Homepage
+spec:
+  type: cloudnativestorage
+  lifecycle: external
+  owner: CNCF

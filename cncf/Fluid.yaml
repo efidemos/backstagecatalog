@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: fluid
+  tags:
+    - orchestrationmanagement
+    - schedulingorchestration
+  links:
+    - url:  https://github.com/fluid-cloudnative/fluid
+      title: GitHub Repo
+      icon: github
+    - url:  http://pasa-bigdata.nju.edu.cn/fluid/index.html
+      title: Homepage
+spec:
+  type: schedulingorchestration
+  lifecycle: external
+  owner: CNCF

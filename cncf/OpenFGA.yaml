@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: openfga
+  tags:
+    - provisioning
+    - securitycompliance
+  links:
+    - url:  https://github.com/openfga/openfga
+      title: GitHub Repo
+      icon: github
+    - url:  https://openfga.dev
+      title: Homepage
+spec:
+  type: securitycompliance
+  lifecycle: external
+  owner: CNCF

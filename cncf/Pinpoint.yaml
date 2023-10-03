@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: pinpoint
+  tags:
+    - observabilityandanalysis
+    - tracing
+  links:
+    - url:  https://github.com/pinpoint-apm/pinpoint
+      title: GitHub Repo
+      icon: github
+    - url:  https://naver.github.io/pinpoint/
+      title: Homepage
+spec:
+  type: tracing
+  lifecycle: external
+  owner: CNCF

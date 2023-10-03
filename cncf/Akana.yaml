@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: akana
+  tags:
+    - orchestrationmanagement
+    - apigateway
+  links:
+    - url:  https://www.example.com/
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.akana.com/
+      title: Homepage
+spec:
+  type: apigateway
+  lifecycle: external
+  owner: CNCF

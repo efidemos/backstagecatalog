@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: elastisyscompliantkubernetes
+  tags:
+    - platform
+    - certifiedkubernetesdistribution
+  links:
+    - url:  https://github.com/elastisys/compliantkubernetes-apps
+      title: GitHub Repo
+      icon: github
+    - url:  https://elastisys.io/compliantkubernetes
+      title: Homepage
+spec:
+  type: certifiedkubernetesdistribution
+  lifecycle: external
+  owner: CNCF

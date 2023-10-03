@@ -1,0 +1,11 @@
+
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: CNCF
+  description: Cloud Native Compute Foundation
+spec:
+  type: team
+  profile:
+    displayName: CNCF
+  children: []

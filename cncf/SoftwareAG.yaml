@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: softwareag
+  tags:
+    - appdefinitionanddevelopment
+    - database
+  links:
+    - url:  https://www.example.com/
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.softwareag.com/en_corporate/platform/adabas-natural/cloud-transformation.html
+      title: Homepage
+spec:
+  type: database
+  lifecycle: external
+  owner: CNCF

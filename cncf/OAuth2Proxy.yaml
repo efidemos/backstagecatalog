@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: oauth2proxy
+  tags:
+    - provisioning
+    - keymanagement
+  links:
+    - url:  https://github.com/oauth2-proxy/oauth2-proxy
+      title: GitHub Repo
+      icon: github
+    - url:  https://oauth2-proxy.github.io/oauth2-proxy/
+      title: Homepage
+spec:
+  type: keymanagement
+  lifecycle: external
+  owner: CNCF

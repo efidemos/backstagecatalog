@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: beats
+  tags:
+    - observabilityandanalysis
+    - monitoring
+  links:
+    - url:  https://github.com/elastic/beats
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.elastic.co/beats
+      title: Homepage
+spec:
+  type: monitoring
+  lifecycle: external
+  owner: CNCF

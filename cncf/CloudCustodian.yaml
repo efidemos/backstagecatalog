@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: cloudcustodian
+  tags:
+    - provisioning
+    - automationconfiguration
+  links:
+    - url:  https://github.com/cloud-custodian/cloud-custodian
+      title: GitHub Repo
+      icon: github
+    - url:  https://cloudcustodian.io/
+      title: Homepage
+spec:
+  type: automationconfiguration
+  lifecycle: external
+  owner: CNCF

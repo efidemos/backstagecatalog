@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: wasm3
+  tags:
+    - wasm
+    - runtimes
+  links:
+    - url:  https://github.com/wasm3/wasm3
+      title: GitHub Repo
+      icon: github
+    - url:  https://github.com/wasm3/wasm3
+      title: Homepage
+spec:
+  type: runtimes
+  lifecycle: external
+  owner: CNCF

@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: dfinity
+  tags:
+    - wasm
+    - decentralizedplatforms
+  links:
+    - url:  https://github.com/dfinity/ic
+      title: GitHub Repo
+      icon: github
+    - url:  https://dfinity.org/
+      title: Homepage
+spec:
+  type: decentralizedplatforms
+  lifecycle: external
+  owner: CNCF

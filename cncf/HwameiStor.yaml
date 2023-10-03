@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: hwameistor
+  tags:
+    - runtime
+    - cloudnativestorage
+  links:
+    - url:  https://github.com/hwameistor/hwameistor
+      title: GitHub Repo
+      icon: github
+    - url:  https://hwameistor.io/
+      title: Homepage
+spec:
+  type: cloudnativestorage
+  lifecycle: external
+  owner: CNCF

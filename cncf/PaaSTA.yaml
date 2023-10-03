@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: paasta
+  tags:
+    - platform
+    - paascontainerservice
+  links:
+    - url:  https://github.com/Yelp/paasta
+      title: GitHub Repo
+      icon: github
+    - url:  https://engineeringblog.yelp.com/2015/11/introducing-paasta-an-open-platform-as-a-service.html
+      title: Homepage
+spec:
+  type: paascontainerservice
+  lifecycle: external
+  owner: CNCF

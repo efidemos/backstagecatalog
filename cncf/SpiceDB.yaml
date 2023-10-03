@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: spicedb
+  tags:
+    - appdefinitionanddevelopment
+    - database
+  links:
+    - url:  https://github.com/authzed/spicedb
+      title: GitHub Repo
+      icon: github
+    - url:  https://authzed.com/spicedb
+      title: Homepage
+spec:
+  type: database
+  lifecycle: external
+  owner: CNCF

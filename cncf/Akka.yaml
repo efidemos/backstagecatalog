@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: akka
+  tags:
+    - platform
+    - paascontainerservice
+  links:
+    - url:  https://github.com/akka/akka
+      title: GitHub Repo
+      icon: github
+    - url:  https://akka.io/
+      title: Homepage
+spec:
+  type: paascontainerservice
+  lifecycle: external
+  owner: CNCF

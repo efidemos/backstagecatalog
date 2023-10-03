@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: algorithmia
+  tags:
+    - serverless
+    - hostedplatform
+  links:
+    - url:  https://www.example.com/
+      title: GitHub Repo
+      icon: github
+    - url:  https://algorithmia.com/product
+      title: Homepage
+spec:
+  type: hostedplatform
+  lifecycle: external
+  owner: CNCF

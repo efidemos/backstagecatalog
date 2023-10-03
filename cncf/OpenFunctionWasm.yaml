@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: openfunctionwasm
+  tags:
+    - wasm
+    - embeddedfunctions
+  links:
+    - url:  https://github.com/OpenFunction/OpenFunction
+      title: GitHub Repo
+      icon: github
+    - url:  https://openfunction.dev
+      title: Homepage
+spec:
+  type: embeddedfunctions
+  lifecycle: external
+  owner: CNCF

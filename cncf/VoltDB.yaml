@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: voltdb
+  tags:
+    - appdefinitionanddevelopment
+    - database
+  links:
+    - url:  https://github.com/voltdb/voltdb
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.voltactivedata.com
+      title: Homepage
+spec:
+  type: database
+  lifecycle: external
+  owner: CNCF

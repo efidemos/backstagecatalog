@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: zig
+  tags:
+    - wasm
+    - languages
+  links:
+    - url:  https://github.com/ziglang/zig
+      title: GitHub Repo
+      icon: github
+    - url:  https://ziglang.org/
+      title: Homepage
+spec:
+  type: languages
+  lifecycle: external
+  owner: CNCF

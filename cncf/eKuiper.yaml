@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ekuiper
+  tags:
+    - wasm
+    - embeddedfunctions
+  links:
+    - url:  https://github.com/lf-edge/ekuiper
+      title: GitHub Repo
+      icon: github
+    - url:  https://ekuiper.org
+      title: Homepage
+spec:
+  type: embeddedfunctions
+  lifecycle: external
+  owner: CNCF

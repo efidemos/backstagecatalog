@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: windriverstudiocloudplatform
+  tags:
+    - platform
+    - certifiedkubernetesdistribution
+  links:
+    - url:  https://github.com/wind-river/starlingx-config
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.windriver.com/studio/operator/cloud-platform
+      title: Homepage
+spec:
+  type: certifiedkubernetesdistribution
+  lifecycle: external
+  owner: CNCF

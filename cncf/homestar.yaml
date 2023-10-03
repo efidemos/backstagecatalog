@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: homestar
+  tags:
+    - wasm
+    - applicationframeworks
+  links:
+    - url:  https://github.com/ipvm-wg/homestar
+      title: GitHub Repo
+      icon: github
+    - url:  https://github.com/ipvm-wg/homestar
+      title: Homepage
+spec:
+  type: applicationframeworks
+  lifecycle: external
+  owner: CNCF

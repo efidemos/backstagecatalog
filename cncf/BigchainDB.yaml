@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: bigchaindb
+  tags:
+    - appdefinitionanddevelopment
+    - database
+  links:
+    - url:  https://github.com/bigchaindb/bigchaindb
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.bigchaindb.com/
+      title: Homepage
+spec:
+  type: database
+  lifecycle: external
+  owner: CNCF

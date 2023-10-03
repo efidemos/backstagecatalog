@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: containersolutionsktp
+  tags:
+    - special
+    - kubernetestrainingpartner
+  links:
+    - url:  https://www.example.com/
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.container-solutions.com/
+      title: Homepage
+spec:
+  type: kubernetestrainingpartner
+  lifecycle: external
+  owner: CNCF

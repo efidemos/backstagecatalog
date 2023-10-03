@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: cloudmatos
+  tags:
+    - provisioning
+    - securitycompliance
+  links:
+    - url:  https://github.com/cloudmatos/matos
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.cloudmatos.com
+      title: Homepage
+spec:
+  type: securitycompliance
+  lifecycle: external
+  owner: CNCF

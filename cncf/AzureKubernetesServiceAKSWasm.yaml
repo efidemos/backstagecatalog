@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: azurekubernetesserviceakswasm
+  tags:
+    - wasm
+    - hostedplatforms
+  links:
+    - url:  https://www.example.com/
+      title: GitHub Repo
+      icon: github
+    - url:  https://learn.microsoft.com/en-us/azure/aks/use-wasi-node-pools
+      title: Homepage
+spec:
+  type: hostedplatforms
+  lifecycle: external
+  owner: CNCF

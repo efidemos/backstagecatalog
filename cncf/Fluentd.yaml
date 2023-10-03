@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: fluentd
+  tags:
+    - observabilityandanalysis
+    - logging
+  links:
+    - url:  https://github.com/fluent/fluentd
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.fluentd.org/
+      title: Homepage
+spec:
+  type: logging
+  lifecycle: external
+  owner: CNCF

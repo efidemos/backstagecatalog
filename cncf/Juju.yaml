@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: juju
+  tags:
+    - provisioning
+    - automationconfiguration
+  links:
+    - url:  https://github.com/juju/juju
+      title: GitHub Repo
+      icon: github
+    - url:  https://jaas.ai/
+      title: Homepage
+spec:
+  type: automationconfiguration
+  lifecycle: external
+  owner: CNCF

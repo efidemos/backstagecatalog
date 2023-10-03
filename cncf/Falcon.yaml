@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: falcon
+  tags:
+    - observabilityandanalysis
+    - monitoring
+  links:
+    - url:  https://github.com/open-falcon/falcon-plus
+      title: GitHub Repo
+      icon: github
+    - url:  https://open-falcon.com
+      title: Homepage
+spec:
+  type: monitoring
+  lifecycle: external
+  owner: CNCF

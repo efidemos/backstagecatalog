@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: d2iqktp
+  tags:
+    - special
+    - kubernetestrainingpartner
+  links:
+    - url:  https://www.example.com/
+      title: GitHub Repo
+      icon: github
+    - url:  https://d2iq.com/
+      title: Homepage
+spec:
+  type: kubernetestrainingpartner
+  lifecycle: external
+  owner: CNCF

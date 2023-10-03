@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: dockerhub
+  tags:
+    - wasm
+    - packagingregistriesapplicationdelivery
+  links:
+    - url:  https://www.example.com/
+      title: GitHub Repo
+      icon: github
+    - url:  https://hub.docker.com/
+      title: Homepage
+spec:
+  type: packagingregistriesapplicationdelivery
+  lifecycle: external
+  owner: CNCF

@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: kong
+  tags:
+    - orchestrationmanagement
+    - apigateway
+  links:
+    - url:  https://github.com/Kong/kong
+      title: GitHub Repo
+      icon: github
+    - url:  https://konghq.com/
+      title: Homepage
+spec:
+  type: apigateway
+  lifecycle: external
+  owner: CNCF

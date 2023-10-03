@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: openyurt
+  tags:
+    - provisioning
+    - automationconfiguration
+  links:
+    - url:  https://github.com/openyurtio/openyurt
+      title: GitHub Repo
+      icon: github
+    - url:  https://openyurt.io/
+      title: Homepage
+spec:
+  type: automationconfiguration
+  lifecycle: external
+  owner: CNCF

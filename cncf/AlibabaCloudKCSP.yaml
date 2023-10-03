@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: alibabacloudkcsp
+  tags:
+    - special
+    - kubernetescertifiedserviceprovider
+  links:
+    - url:  https://www.example.com/
+      title: GitHub Repo
+      icon: github
+    - url:  https://us.alibabacloud.com/
+      title: Homepage
+spec:
+  type: kubernetescertifiedserviceprovider
+  lifecycle: external
+  owner: CNCF

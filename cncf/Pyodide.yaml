@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: pyodide
+  tags:
+    - wasm
+    - languages
+  links:
+    - url:  https://github.com/pyodide/pyodide
+      title: GitHub Repo
+      icon: github
+    - url:  https://pyodide.org/en/stable/
+      title: Homepage
+spec:
+  type: languages
+  lifecycle: external
+  owner: CNCF

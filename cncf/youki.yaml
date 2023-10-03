@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: youki
+  tags:
+    - wasm
+    - orchestrationmanagement
+  links:
+    - url:  https://github.com/containers/youki
+      title: GitHub Repo
+      icon: github
+    - url:  https://github.com/containers/youki
+      title: Homepage
+spec:
+  type: orchestrationmanagement
+  lifecycle: external
+  owner: CNCF

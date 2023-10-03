@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: runwasi
+  tags:
+    - wasm
+    - orchestrationmanagement
+  links:
+    - url:  https://github.com/containerd/runwasi
+      title: GitHub Repo
+      icon: github
+    - url:  https://github.com/containerd/runwasi
+      title: Homepage
+spec:
+  type: orchestrationmanagement
+  lifecycle: external
+  owner: CNCF

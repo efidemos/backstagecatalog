@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: kubehunter
+  tags:
+    - provisioning
+    - securitycompliance
+  links:
+    - url:  https://github.com/aquasecurity/kube-hunter
+      title: GitHub Repo
+      icon: github
+    - url:  https://github.com/aquasecurity/kube-hunter
+      title: Homepage
+spec:
+  type: securitycompliance
+  lifecycle: external
+  owner: CNCF

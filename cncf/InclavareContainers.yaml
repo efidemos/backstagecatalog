@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: inclavarecontainers
+  tags:
+    - runtime
+    - containerruntime
+  links:
+    - url:  https://github.com/inclavare-containers/inclavare-containers
+      title: GitHub Repo
+      icon: github
+    - url:  https://inclavare-containers.io/
+      title: Homepage
+spec:
+  type: containerruntime
+  lifecycle: external
+  owner: CNCF

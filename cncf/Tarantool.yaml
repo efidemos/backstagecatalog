@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: tarantool
+  tags:
+    - appdefinitionanddevelopment
+    - database
+  links:
+    - url:  https://github.com/tarantool/tarantool
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.tarantool.io/en/
+      title: Homepage
+spec:
+  type: database
+  lifecycle: external
+  owner: CNCF

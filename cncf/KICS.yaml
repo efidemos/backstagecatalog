@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: kics
+  tags:
+    - provisioning
+    - securitycompliance
+  links:
+    - url:  https://github.com/Checkmarx/kics
+      title: GitHub Repo
+      icon: github
+    - url:  https://kics.io/
+      title: Homepage
+spec:
+  type: securitycompliance
+  lifecycle: external
+  owner: CNCF

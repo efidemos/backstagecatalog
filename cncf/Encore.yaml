@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: encore
+  tags:
+    - serverless
+    - framework
+  links:
+    - url:  https://github.com/encoredev/encore
+      title: GitHub Repo
+      icon: github
+    - url:  https://encore.dev
+      title: Homepage
+spec:
+  type: framework
+  lifecycle: external
+  owner: CNCF

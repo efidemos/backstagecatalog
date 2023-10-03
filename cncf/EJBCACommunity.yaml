@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ejbcacommunity
+  tags:
+    - provisioning
+    - securitycompliance
+  links:
+    - url:  https://github.com/Keyfactor/ejbca-ce
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.ejbca.org/
+      title: Homepage
+spec:
+  type: securitycompliance
+  lifecycle: external
+  owner: CNCF

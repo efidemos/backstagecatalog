@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: statefulfunctions
+  tags:
+    - serverless
+    - framework
+  links:
+    - url:  https://github.com/apache/flink-statefun
+      title: GitHub Repo
+      icon: github
+    - url:  https://statefun.io
+      title: Homepage
+spec:
+  type: framework
+  lifecycle: external
+  owner: CNCF

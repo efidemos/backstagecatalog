@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: openstack
+  tags:
+    - provisioning
+    - automationconfiguration
+  links:
+    - url:  https://github.com/openstack/openstack
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.openstack.org/
+      title: Homepage
+spec:
+  type: automationconfiguration
+  lifecycle: external
+  owner: CNCF

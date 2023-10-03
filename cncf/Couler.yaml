@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: couler
+  tags:
+    - provisioning
+    - automationconfiguration
+  links:
+    - url:  https://github.com/couler-proj/couler
+      title: GitHub Repo
+      icon: github
+    - url:  https://couler-proj.github.io/couler/index.html
+      title: Homepage
+spec:
+  type: automationconfiguration
+  lifecycle: external
+  owner: CNCF

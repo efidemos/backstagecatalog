@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: clair
+  tags:
+    - provisioning
+    - securitycompliance
+  links:
+    - url:  https://github.com/quay/clair
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.redhat.com/en/topics/containers/what-is-clair
+      title: Homepage
+spec:
+  type: securitycompliance
+  lifecycle: external
+  owner: CNCF

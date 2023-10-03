@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: zot
+  tags:
+    - provisioning
+    - containerregistry
+  links:
+    - url:  https://github.com/project-zot/zot
+      title: GitHub Repo
+      icon: github
+    - url:  https://zotregistry.io/
+      title: Homepage
+spec:
+  type: containerregistry
+  lifecycle: external
+  owner: CNCF

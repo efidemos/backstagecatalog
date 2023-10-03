@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: topaz
+  tags:
+    - provisioning
+    - securitycompliance
+  links:
+    - url:  https://github.com/aserto-dev/topaz
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.topaz.sh
+      title: Homepage
+spec:
+  type: securitycompliance
+  lifecycle: external
+  owner: CNCF

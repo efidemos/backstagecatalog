@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: meshery
+  tags:
+    - provisioning
+    - automationconfiguration
+  links:
+    - url:  https://github.com/meshery/meshery
+      title: GitHub Repo
+      icon: github
+    - url:  https://meshery.io
+      title: Homepage
+spec:
+  type: automationconfiguration
+  lifecycle: external
+  owner: CNCF

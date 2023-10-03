@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: knative
+  tags:
+    - serverless
+    - installableplatform
+  links:
+    - url:  https://github.com/knative/serving
+      title: GitHub Repo
+      icon: github
+    - url:  https://knative.dev
+      title: Homepage
+spec:
+  type: installableplatform
+  lifecycle: external
+  owner: CNCF

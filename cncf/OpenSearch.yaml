@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: opensearch
+  tags:
+    - observabilityandanalysis
+    - logging
+  links:
+    - url:  https://github.com/opensearch-project/opensearch
+      title: GitHub Repo
+      icon: github
+    - url:  https://opensearch.org
+      title: Homepage
+spec:
+  type: logging
+  lifecycle: external
+  owner: CNCF

@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: architect
+  tags:
+    - serverless
+    - framework
+  links:
+    - url:  https://github.com/architect/functions
+      title: GitHub Repo
+      icon: github
+    - url:  https://arc.codes/docs/en/get-started/quickstart
+      title: Homepage
+spec:
+  type: framework
+  lifecycle: external
+  owner: CNCF

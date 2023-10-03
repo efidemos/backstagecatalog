@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: botkube
+  tags:
+    - observabilityandanalysis
+    - monitoring
+  links:
+    - url:  https://github.com/kubeshop/botkube
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.botkube.io
+      title: Homepage
+spec:
+  type: monitoring
+  lifecycle: external
+  owner: CNCF

@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: neo4j
+  tags:
+    - appdefinitionanddevelopment
+    - database
+  links:
+    - url:  https://github.com/neo4j/neo4j
+      title: GitHub Repo
+      icon: github
+    - url:  https://neo4j.com
+      title: Homepage
+spec:
+  type: database
+  lifecycle: external
+  owner: CNCF

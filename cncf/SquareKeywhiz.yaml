@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: squarekeywhiz
+  tags:
+    - provisioning
+    - keymanagement
+  links:
+    - url:  https://github.com/square/keywhiz
+      title: GitHub Repo
+      icon: github
+    - url:  https://square.github.io/keywhiz/
+      title: Homepage
+spec:
+  type: keymanagement
+  lifecycle: external
+  owner: CNCF

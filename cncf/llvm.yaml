@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: llvm
+  tags:
+    - wasm
+    - tooling
+  links:
+    - url:  https://github.com/llvm/llvm-project
+      title: GitHub Repo
+      icon: github
+    - url:  https://llvm.org
+      title: Homepage
+spec:
+  type: tooling
+  lifecycle: external
+  owner: CNCF

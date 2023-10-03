@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: kubebrain
+  tags:
+    - orchestrationmanagement
+    - coordinationservicediscovery
+  links:
+    - url:  https://github.com/kubewharf/kubebrain
+      title: GitHub Repo
+      icon: github
+    - url:  https://github.com/kubewharf/kubebrain
+      title: Homepage
+spec:
+  type: coordinationservicediscovery
+  lifecycle: external
+  owner: CNCF

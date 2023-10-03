@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: kubeedge
+  tags:
+    - provisioning
+    - automationconfiguration
+  links:
+    - url:  https://github.com/kubeedge/kubeedge
+      title: GitHub Repo
+      icon: github
+    - url:  https://kubeedge.io/en/
+      title: Homepage
+spec:
+  type: automationconfiguration
+  lifecycle: external
+  owner: CNCF

@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: aspecto
+  tags:
+    - observabilityandanalysis
+    - tracing
+  links:
+    - url:  https://www.example.com/
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.aspecto.io/
+      title: Homepage
+spec:
+  type: tracing
+  lifecycle: external
+  owner: CNCF

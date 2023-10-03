@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: chaoskube
+  tags:
+    - observabilityandanalysis
+    - chaosengineering
+  links:
+    - url:  https://github.com/linki/chaoskube
+      title: GitHub Repo
+      icon: github
+    - url:  https://github.com/linki/chaoskube
+      title: Homepage
+spec:
+  type: chaosengineering
+  lifecycle: external
+  owner: CNCF

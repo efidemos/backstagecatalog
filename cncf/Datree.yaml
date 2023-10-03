@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: datree
+  tags:
+    - provisioning
+    - securitycompliance
+  links:
+    - url:  https://github.com/datreeio/datree
+      title: GitHub Repo
+      icon: github
+    - url:  https://datree.io/
+      title: Homepage
+spec:
+  type: securitycompliance
+  lifecycle: external
+  owner: CNCF

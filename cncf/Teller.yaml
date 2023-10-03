@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: teller
+  tags:
+    - provisioning
+    - keymanagement
+  links:
+    - url:  https://github.com/tellerops/teller
+      title: GitHub Repo
+      icon: github
+    - url:  https://tlr.dev
+      title: Homepage
+spec:
+  type: keymanagement
+  lifecycle: external
+  owner: CNCF

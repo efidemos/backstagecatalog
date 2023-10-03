@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: gluster
+  tags:
+    - runtime
+    - cloudnativestorage
+  links:
+    - url:  https://github.com/gluster/glusterfs
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.gluster.org/
+      title: Homepage
+spec:
+  type: cloudnativestorage
+  lifecycle: external
+  owner: CNCF

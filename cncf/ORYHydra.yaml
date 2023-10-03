@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: oryhydra
+  tags:
+    - provisioning
+    - keymanagement
+  links:
+    - url:  https://github.com/ory/hydra
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.ory.sh/
+      title: Homepage
+spec:
+  type: keymanagement
+  lifecycle: external
+  owner: CNCF

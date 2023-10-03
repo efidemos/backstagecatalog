@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: pomerium
+  tags:
+    - provisioning
+    - keymanagement
+  links:
+    - url:  https://github.com/pomerium/pomerium
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.pomerium.com
+      title: Homepage
+spec:
+  type: keymanagement
+  lifecycle: external
+  owner: CNCF

@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: starrocks
+  tags:
+    - appdefinitionanddevelopment
+    - database
+  links:
+    - url:  https://github.com/StarRocks/starrocks
+      title: GitHub Repo
+      icon: github
+    - url:  https://starrocks.io
+      title: Homepage
+spec:
+  type: database
+  lifecycle: external
+  owner: CNCF

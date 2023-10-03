@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: promscale
+  tags:
+    - observabilityandanalysis
+    - monitoring
+  links:
+    - url:  https://github.com/timescale/promscale
+      title: GitHub Repo
+      icon: github
+    - url:  https://timescale.com/promscale
+      title: Homepage
+spec:
+  type: monitoring
+  lifecycle: external
+  owner: CNCF

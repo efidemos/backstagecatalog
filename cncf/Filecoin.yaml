@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: filecoin
+  tags:
+    - wasm
+    - decentralizedplatforms
+  links:
+    - url:  https://github.com/filecoin-project/ref-fvm
+      title: GitHub Repo
+      icon: github
+    - url:  https://filecoin.io/
+      title: Homepage
+spec:
+  type: decentralizedplatforms
+  lifecycle: external
+  owner: CNCF

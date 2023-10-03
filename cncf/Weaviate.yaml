@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: weaviate
+  tags:
+    - appdefinitionanddevelopment
+    - database
+  links:
+    - url:  https://github.com/semi-technologies/weaviate
+      title: GitHub Repo
+      icon: github
+    - url:  https://weaviate.io/developers/weaviate/current/index.html
+      title: Homepage
+spec:
+  type: database
+  lifecycle: external
+  owner: CNCF

@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: metal3
+  tags:
+    - provisioning
+    - automationconfiguration
+  links:
+    - url:  https://github.com/metal3-io/baremetal-operator
+      title: GitHub Repo
+      icon: github
+    - url:  https://metal3.io/
+      title: Homepage
+spec:
+  type: automationconfiguration
+  lifecycle: external
+  owner: CNCF

@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: opengauss
+  tags:
+    - wasm
+    - embeddedfunctions
+  links:
+    - url:  https://github.com/opengauss-mirror/openGauss-server
+      title: GitHub Repo
+      icon: github
+    - url:  https://opengauss.org/en/
+      title: Homepage
+spec:
+  type: embeddedfunctions
+  lifecycle: external
+  owner: CNCF

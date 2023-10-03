@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: hexa
+  tags:
+    - provisioning
+    - securitycompliance
+  links:
+    - url:  https://github.com/hexa-org/policy-orchestrator
+      title: GitHub Repo
+      icon: github
+    - url:  https://hexaorchestration.org/
+      title: Homepage
+spec:
+  type: securitycompliance
+  lifecycle: external
+  owner: CNCF

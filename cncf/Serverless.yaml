@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: serverless
+  tags:
+    - serverless
+    - framework
+  links:
+    - url:  https://github.com/serverless/serverless
+      title: GitHub Repo
+      icon: github
+    - url:  https://serverless.com/
+      title: Homepage
+spec:
+  type: framework
+  lifecycle: external
+  owner: CNCF

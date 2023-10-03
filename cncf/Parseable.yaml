@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: parseable
+  tags:
+    - observabilityandanalysis
+    - logging
+  links:
+    - url:  https://github.com/parseablehq/parseable
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.parseable.io
+      title: Homepage
+spec:
+  type: logging
+  lifecycle: external
+  owner: CNCF

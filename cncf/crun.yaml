@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: crun
+  tags:
+    - wasm
+    - orchestrationmanagement
+  links:
+    - url:  https://github.com/containers/crun
+      title: GitHub Repo
+      icon: github
+    - url:  https://github.com/containers/crun
+      title: Homepage
+spec:
+  type: orchestrationmanagement
+  lifecycle: external
+  owner: CNCF

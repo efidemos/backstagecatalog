@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: weavenet
+  tags:
+    - runtime
+    - cloudnativenetwork
+  links:
+    - url:  https://github.com/weaveworks/weave
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.weave.works/oss/net/
+      title: Homepage
+spec:
+  type: cloudnativenetwork
+  lifecycle: external
+  owner: CNCF

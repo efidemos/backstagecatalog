@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: chaostoolkit
+  tags:
+    - observabilityandanalysis
+    - chaosengineering
+  links:
+    - url:  https://github.com/chaostoolkit/chaostoolkit
+      title: GitHub Repo
+      icon: github
+    - url:  https://chaostoolkit.org/
+      title: Homepage
+spec:
+  type: chaosengineering
+  lifecycle: external
+  owner: CNCF

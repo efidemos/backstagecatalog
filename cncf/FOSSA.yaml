@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: fossa
+  tags:
+    - provisioning
+    - securitycompliance
+  links:
+    - url:  https://github.com/fossas/fossa-cli
+      title: GitHub Repo
+      icon: github
+    - url:  https://fossa.com/
+      title: Homepage
+spec:
+  type: securitycompliance
+  lifecycle: external
+  owner: CNCF

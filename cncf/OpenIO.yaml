@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: openio
+  tags:
+    - runtime
+    - cloudnativestorage
+  links:
+    - url:  https://github.com/open-io/oio-sds
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.openio.io/
+      title: Homepage
+spec:
+  type: cloudnativestorage
+  lifecycle: external
+  owner: CNCF

@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: elasticapm
+  tags:
+    - observabilityandanalysis
+    - tracing
+  links:
+    - url:  https://github.com/elastic/apm-server
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.elastic.co/observability/application-performance-monitoring
+      title: Homepage
+spec:
+  type: tracing
+  lifecycle: external
+  owner: CNCF

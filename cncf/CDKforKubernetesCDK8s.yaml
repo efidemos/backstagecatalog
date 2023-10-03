@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: cdkforkubernetescdk8s
+  tags:
+    - provisioning
+    - automationconfiguration
+  links:
+    - url:  https://github.com/cdk8s-team/cdk8s
+      title: GitHub Repo
+      icon: github
+    - url:  https://cdk8s.io/
+      title: Homepage
+spec:
+  type: automationconfiguration
+  lifecycle: external
+  owner: CNCF

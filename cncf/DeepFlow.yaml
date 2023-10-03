@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: deepflow
+  tags:
+    - observabilityandanalysis
+    - monitoring
+  links:
+    - url:  https://github.com/deepflowys/deepflow
+      title: GitHub Repo
+      icon: github
+    - url:  https://deepflow.yunshan.net/community.html
+      title: Homepage
+spec:
+  type: monitoring
+  lifecycle: external
+  owner: CNCF

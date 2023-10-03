@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: oraclefunctions
+  tags:
+    - serverless
+    - hostedplatform
+  links:
+    - url:  https://www.example.com/
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.oracle.com/cloud-native/functions
+      title: Homepage
+spec:
+  type: hostedplatform
+  lifecycle: external
+  owner: CNCF

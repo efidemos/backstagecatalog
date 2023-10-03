@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: v8
+  tags:
+    - wasm
+    - runtimes
+  links:
+    - url:  https://github.com/v8/v8
+      title: GitHub Repo
+      icon: github
+    - url:  https://v8.dev/
+      title: Homepage
+spec:
+  type: runtimes
+  lifecycle: external
+  owner: CNCF

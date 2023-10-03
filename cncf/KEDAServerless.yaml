@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: kedaserverless
+  tags:
+    - serverless
+    - installableplatform
+  links:
+    - url:  https://github.com/kedacore/keda
+      title: GitHub Repo
+      icon: github
+    - url:  https://keda.sh/
+      title: Homepage
+spec:
+  type: installableplatform
+  lifecycle: external
+  owner: CNCF

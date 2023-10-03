@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: sigma
+  tags:
+    - serverless
+    - tools
+  links:
+    - url:  https://www.example.com/
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.slappforge.com/sigma
+      title: Homepage
+spec:
+  type: tools
+  lifecycle: external
+  owner: CNCF

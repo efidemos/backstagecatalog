@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: catalystkubernetesservice
+  tags:
+    - platform
+    - certifiedkuberneteshosted
+  links:
+    - url:  https://github.com/catalyst-cloud/magnum
+      title: GitHub Repo
+      icon: github
+    - url:  https://catalystcloud.nz/services/paas/kubernetes/
+      title: Homepage
+spec:
+  type: certifiedkuberneteshosted
+  lifecycle: external
+  owner: CNCF

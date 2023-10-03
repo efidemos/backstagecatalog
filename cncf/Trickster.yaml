@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: trickster
+  tags:
+    - observabilityandanalysis
+    - monitoring
+  links:
+    - url:  https://github.com/trickstercache/trickster
+      title: GitHub Repo
+      icon: github
+    - url:  https://trickstercache.org
+      title: Homepage
+spec:
+  type: monitoring
+  lifecycle: external
+  owner: CNCF

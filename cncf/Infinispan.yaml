@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: infinispan
+  tags:
+    - appdefinitionanddevelopment
+    - database
+  links:
+    - url:  https://github.com/infinispan/infinispan
+      title: GitHub Repo
+      icon: github
+    - url:  https://infinispan.org/
+      title: Homepage
+spec:
+  type: database
+  lifecycle: external
+  owner: CNCF

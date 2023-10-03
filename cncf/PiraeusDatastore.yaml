@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: piraeusdatastore
+  tags:
+    - runtime
+    - cloudnativestorage
+  links:
+    - url:  https://github.com/piraeusdatastore/piraeus-operator
+      title: GitHub Repo
+      icon: github
+    - url:  https://piraeus.io/
+      title: Homepage
+spec:
+  type: cloudnativestorage
+  lifecycle: external
+  owner: CNCF

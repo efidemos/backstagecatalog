@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: dapr
+  tags:
+    - serverless
+    - framework
+  links:
+    - url:  https://github.com/dapr/dapr
+      title: GitHub Repo
+      icon: github
+    - url:  https://dapr.io
+      title: Homepage
+spec:
+  type: framework
+  lifecycle: external
+  owner: CNCF

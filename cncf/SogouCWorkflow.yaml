@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: sogoucworkflow
+  tags:
+    - platform
+    - paascontainerservice
+  links:
+    - url:  https://github.com/sogou/workflow
+      title: GitHub Repo
+      icon: github
+    - url:  https://github.com/sogou/workflow
+      title: Homepage
+spec:
+  type: paascontainerservice
+  lifecycle: external
+  owner: CNCF

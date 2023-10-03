@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: netdata
+  tags:
+    - observabilityandanalysis
+    - monitoring
+  links:
+    - url:  https://github.com/netdata/netdata
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.netdata.cloud
+      title: Homepage
+spec:
+  type: monitoring
+  lifecycle: external
+  owner: CNCF

@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: polaris
+  tags:
+    - provisioning
+    - securitycompliance
+  links:
+    - url:  https://github.com/FairwindsOps/polaris
+      title: GitHub Repo
+      icon: github
+    - url:  https://fairwinds.com/polaris
+      title: Homepage
+spec:
+  type: securitycompliance
+  lifecycle: external
+  owner: CNCF

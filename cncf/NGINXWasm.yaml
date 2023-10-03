@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: nginxwasm
+  tags:
+    - wasm
+    - embeddedfunctions
+  links:
+    - url:  https://github.com/nginx/nginx
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.nginx.com
+      title: Homepage
+spec:
+  type: embeddedfunctions
+  lifecycle: external
+  owner: CNCF

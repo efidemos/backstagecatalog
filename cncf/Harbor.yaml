@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: harbor
+  tags:
+    - provisioning
+    - containerregistry
+  links:
+    - url:  https://github.com/goharbor/harbor
+      title: GitHub Repo
+      icon: github
+    - url:  https://goharbor.io/
+      title: Homepage
+spec:
+  type: containerregistry
+  lifecycle: external
+  owner: CNCF

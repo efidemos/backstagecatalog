@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: terrascan
+  tags:
+    - provisioning
+    - securitycompliance
+  links:
+    - url:  https://github.com/tenable/terrascan
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.tenable.com/products/tenable-cs
+      title: Homepage
+spec:
+  type: securitycompliance
+  lifecycle: external
+  owner: CNCF

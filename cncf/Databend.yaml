@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: databend
+  tags:
+    - appdefinitionanddevelopment
+    - database
+  links:
+    - url:  https://github.com/datafuselabs/databend
+      title: GitHub Repo
+      icon: github
+    - url:  https://databend.rs
+      title: Homepage
+spec:
+  type: database
+  lifecycle: external
+  owner: CNCF

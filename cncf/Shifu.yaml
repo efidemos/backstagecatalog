@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: shifu
+  tags:
+    - provisioning
+    - automationconfiguration
+  links:
+    - url:  https://github.com/edgenesis/shifu
+      title: GitHub Repo
+      icon: github
+    - url:  https://shifu.dev/
+      title: Homepage
+spec:
+  type: automationconfiguration
+  lifecycle: external
+  owner: CNCF

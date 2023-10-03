@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ibmdb2
+  tags:
+    - appdefinitionanddevelopment
+    - database
+  links:
+    - url:  https://www.example.com/
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.ibm.com/analytics/db2
+      title: Homepage
+spec:
+  type: database
+  lifecycle: external
+  owner: CNCF

@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: layotto
+  tags:
+    - serverless
+    - framework
+  links:
+    - url:  https://github.com/mosn/layotto
+      title: GitHub Repo
+      icon: github
+    - url:  https://mosn.io/layotto
+      title: Homepage
+spec:
+  type: framework
+  lifecycle: external
+  owner: CNCF

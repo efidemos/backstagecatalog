@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: eunomiabpf
+  tags:
+    - wasm
+    - applicationframeworks
+  links:
+    - url:  https://github.com/eunomia-bpf/eunomia-bpf
+      title: GitHub Repo
+      icon: github
+    - url:  https://eunomia.dev/
+      title: Homepage
+spec:
+  type: applicationframeworks
+  lifecycle: external
+  owner: CNCF

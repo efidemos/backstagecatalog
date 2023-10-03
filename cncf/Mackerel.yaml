@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: mackerel
+  tags:
+    - observabilityandanalysis
+    - monitoring
+  links:
+    - url:  https://www.example.com/
+      title: GitHub Repo
+      icon: github
+    - url:  https://en.mackerel.io
+      title: Homepage
+spec:
+  type: monitoring
+  lifecycle: external
+  owner: CNCF

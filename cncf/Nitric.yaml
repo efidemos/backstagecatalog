@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: nitric
+  tags:
+    - serverless
+    - framework
+  links:
+    - url:  https://github.com/nitrictech/nitric
+      title: GitHub Repo
+      icon: github
+    - url:  https://nitric.io/
+      title: Homepage
+spec:
+  type: framework
+  lifecycle: external
+  owner: CNCF

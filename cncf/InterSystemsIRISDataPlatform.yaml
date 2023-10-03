@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: intersystemsirisdataplatform
+  tags:
+    - appdefinitionanddevelopment
+    - database
+  links:
+    - url:  https://www.example.com/
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.intersystems.com/products/intersystems-iris/
+      title: Homepage
+spec:
+  type: database
+  lifecycle: external
+  owner: CNCF

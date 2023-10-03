@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: mariadb
+  tags:
+    - appdefinitionanddevelopment
+    - database
+  links:
+    - url:  https://github.com/MariaDB/server
+      title: GitHub Repo
+      icon: github
+    - url:  https://mariadb.com/
+      title: Homepage
+spec:
+  type: database
+  lifecycle: external
+  owner: CNCF

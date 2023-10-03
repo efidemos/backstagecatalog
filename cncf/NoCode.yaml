@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: nocode
+  tags:
+    - platform
+    - paascontainerservice
+  links:
+    - url:  https://github.com/kelseyhightower/nocode
+      title: GitHub Repo
+      icon: github
+    - url:  https://github.com/kelseyhightower/nocode
+      title: Homepage
+spec:
+  type: paascontainerservice
+  lifecycle: external
+  owner: CNCF

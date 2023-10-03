@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: criowasm
+  tags:
+    - wasm
+    - orchestrationmanagement
+  links:
+    - url:  https://github.com/cri-o/cri-o
+      title: GitHub Repo
+      icon: github
+    - url:  https://cri-o.io/
+      title: Homepage
+spec:
+  type: orchestrationmanagement
+  lifecycle: external
+  owner: CNCF

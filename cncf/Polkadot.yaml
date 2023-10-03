@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: polkadot
+  tags:
+    - wasm
+    - decentralizedplatforms
+  links:
+    - url:  https://github.com/paritytech/polkadot
+      title: GitHub Repo
+      icon: github
+    - url:  https://polkadot.network/
+      title: Homepage
+spec:
+  type: decentralizedplatforms
+  lifecycle: external
+  owner: CNCF

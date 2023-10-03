@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: apachehadoop
+  tags:
+    - appdefinitionanddevelopment
+    - database
+  links:
+    - url:  https://github.com/apache/hadoop
+      title: GitHub Repo
+      icon: github
+    - url:  https://hadoop.apache.org/
+      title: Homepage
+spec:
+  type: database
+  lifecycle: external
+  owner: CNCF

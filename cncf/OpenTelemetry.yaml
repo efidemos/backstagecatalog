@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: opentelemetry
+  tags:
+    - observabilityandanalysis
+    - tracing
+  links:
+    - url:  https://github.com/open-telemetry/opentelemetry-java
+      title: GitHub Repo
+      icon: github
+    - url:  https://opentelemetry.io/
+      title: Homepage
+spec:
+  type: tracing
+  lifecycle: external
+  owner: CNCF

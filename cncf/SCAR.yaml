@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: scar
+  tags:
+    - serverless
+    - tools
+  links:
+    - url:  https://github.com/grycap/scar
+      title: GitHub Repo
+      icon: github
+    - url:  https://scar.readthedocs.io/en/latest/
+      title: Homepage
+spec:
+  type: tools
+  lifecycle: external
+  owner: CNCF

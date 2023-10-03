@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: tdengine
+  tags:
+    - appdefinitionanddevelopment
+    - database
+  links:
+    - url:  https://github.com/taosdata/TDengine
+      title: GitHub Repo
+      icon: github
+    - url:  https://tdengine.com
+      title: Homepage
+spec:
+  type: database
+  lifecycle: external
+  owner: CNCF

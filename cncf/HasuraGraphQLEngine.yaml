@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: hasuragraphqlengine
+  tags:
+    - serverless
+    - tools
+  links:
+    - url:  https://github.com/hasura/graphql-engine
+      title: GitHub Repo
+      icon: github
+    - url:  https://hasura.io/event-triggers
+      title: Homepage
+spec:
+  type: tools
+  lifecycle: external
+  owner: CNCF

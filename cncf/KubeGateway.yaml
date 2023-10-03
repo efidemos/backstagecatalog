@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: kubegateway
+  tags:
+    - orchestrationmanagement
+    - apigateway
+  links:
+    - url:  https://github.com/kubewharf/kubegateway
+      title: GitHub Repo
+      icon: github
+    - url:  https://github.com/kubewharf/kubegateway
+      title: Homepage
+spec:
+  type: apigateway
+  lifecycle: external
+  owner: CNCF

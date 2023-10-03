@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: libsql
+  tags:
+    - wasm
+    - embeddedfunctions
+  links:
+    - url:  https://github.com/libsql/libsql
+      title: GitHub Repo
+      icon: github
+    - url:  https://libsql.org/
+      title: Homepage
+spec:
+  type: embeddedfunctions
+  lifecycle: external
+  owner: CNCF

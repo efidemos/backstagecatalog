@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: sst
+  tags:
+    - serverless
+    - framework
+  links:
+    - url:  https://github.com/serverless-stack/sst
+      title: GitHub Repo
+      icon: github
+    - url:  https://sst.dev/
+      title: Homepage
+spec:
+  type: framework
+  lifecycle: external
+  owner: CNCF

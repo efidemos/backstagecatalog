@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: easeagent
+  tags:
+    - observabilityandanalysis
+    - tracing
+  links:
+    - url:  https://github.com/megaease/easeagent
+      title: GitHub Repo
+      icon: github
+    - url:  https://github.com/megaease/easeagent
+      title: Homepage
+spec:
+  type: tracing
+  lifecycle: external
+  owner: CNCF

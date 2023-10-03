@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: knix
+  tags:
+    - serverless
+    - installableplatform
+  links:
+    - url:  https://github.com/knix-microfunctions/knix
+      title: GitHub Repo
+      icon: github
+    - url:  https://knix.io/
+      title: Homepage
+spec:
+  type: installableplatform
+  lifecycle: external
+  owner: CNCF

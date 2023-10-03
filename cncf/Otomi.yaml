@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: otomi
+  tags:
+    - platform
+    - paascontainerservice
+  links:
+    - url:  https://github.com/redkubes/otomi-core
+      title: GitHub Repo
+      icon: github
+    - url:  https://otomi.io
+      title: Homepage
+spec:
+  type: paascontainerservice
+  lifecycle: external
+  owner: CNCF

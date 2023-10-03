@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: linstor
+  tags:
+    - runtime
+    - cloudnativestorage
+  links:
+    - url:  https://github.com/LINBIT/linstor-server
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.linbit.com/linstor/
+      title: Homepage
+spec:
+  type: cloudnativestorage
+  lifecycle: external
+  owner: CNCF

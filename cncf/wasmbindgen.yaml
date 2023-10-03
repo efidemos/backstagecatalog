@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: wasmbindgen
+  tags:
+    - wasm
+    - tooling
+  links:
+    - url:  https://github.com/rustwasm/wasm-bindgen
+      title: GitHub Repo
+      icon: github
+    - url:  https://rustwasm.github.io/wasm-bindgen/
+      title: Homepage
+spec:
+  type: tooling
+  lifecycle: external
+  owner: CNCF

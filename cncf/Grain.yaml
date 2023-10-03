@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: grain
+  tags:
+    - wasm
+    - languages
+  links:
+    - url:  https://github.com/grain-lang/grain
+      title: GitHub Repo
+      icon: github
+    - url:  https://grain-lang.org/
+      title: Homepage
+spec:
+  type: languages
+  lifecycle: external
+  owner: CNCF

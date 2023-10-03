@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: airship
+  tags:
+    - provisioning
+    - automationconfiguration
+  links:
+    - url:  https://github.com/airshipit/treasuremap
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.airshipit.org/
+      title: Homepage
+spec:
+  type: automationconfiguration
+  lifecycle: external
+  owner: CNCF

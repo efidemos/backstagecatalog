@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: wasmcloudwasm
+  tags:
+    - wasm
+    - applicationframeworks
+  links:
+    - url:  https://github.com/wasmCloud/wasmCloud
+      title: GitHub Repo
+      icon: github
+    - url:  https://wasmcloud.com/
+      title: Homepage
+spec:
+  type: applicationframeworks
+  lifecycle: external
+  owner: CNCF

@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: wabt
+  tags:
+    - wasm
+    - tooling
+  links:
+    - url:  https://github.com/WebAssembly/wabt
+      title: GitHub Repo
+      icon: github
+    - url:  https://github.com/WebAssembly/wabt
+      title: Homepage
+spec:
+  type: tooling
+  lifecycle: external
+  owner: CNCF

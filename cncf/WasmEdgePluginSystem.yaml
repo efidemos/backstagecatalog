@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: wasmedgepluginsystem
+  tags:
+    - wasm
+    - applicationframeworks
+  links:
+    - url:  https://github.com/WasmEdge/WasmEdge
+      title: GitHub Repo
+      icon: github
+    - url:  https://wasmedge.org/docs/start/wasmedge/extensions/plugins
+      title: Homepage
+spec:
+  type: applicationframeworks
+  lifecycle: external
+  owner: CNCF

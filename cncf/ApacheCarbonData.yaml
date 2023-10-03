@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: apachecarbondata
+  tags:
+    - appdefinitionanddevelopment
+    - database
+  links:
+    - url:  https://github.com/apache/carbondata
+      title: GitHub Repo
+      icon: github
+    - url:  https://carbondata.apache.org/
+      title: Homepage
+spec:
+  type: database
+  lifecycle: external
+  owner: CNCF

@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: warg
+  tags:
+    - wasm
+    - packagingregistriesapplicationdelivery
+  links:
+    - url:  https://github.com/bytecodealliance/registry
+      title: GitHub Repo
+      icon: github
+    - url:  https://warg.io/
+      title: Homepage
+spec:
+  type: packagingregistriesapplicationdelivery
+  lifecycle: external
+  owner: CNCF

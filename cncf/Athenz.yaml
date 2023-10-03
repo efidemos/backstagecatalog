@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: athenz
+  tags:
+    - provisioning
+    - keymanagement
+  links:
+    - url:  https://github.com/AthenZ/athenz
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.athenz.io
+      title: Homepage
+spec:
+  type: keymanagement
+  lifecycle: external
+  owner: CNCF

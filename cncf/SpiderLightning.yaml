@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: spiderlightning
+  tags:
+    - wasm
+    - applicationframeworks
+  links:
+    - url:  https://github.com/deislabs/spiderlightning
+      title: GitHub Repo
+      icon: github
+    - url:  https://deislabs.github.io/spiderlightning/
+      title: Homepage
+spec:
+  type: applicationframeworks
+  lifecycle: external
+  owner: CNCF

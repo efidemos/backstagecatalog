@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: kubeovn
+  tags:
+    - runtime
+    - cloudnativenetwork
+  links:
+    - url:  https://github.com/kubeovn/kube-ovn
+      title: GitHub Repo
+      icon: github
+    - url:  https://kubeovn.github.io/docs/en/
+      title: Homepage
+spec:
+  type: cloudnativenetwork
+  lifecycle: external
+  owner: CNCF

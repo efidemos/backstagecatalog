@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: dockerwasm
+  tags:
+    - wasm
+    - orchestrationmanagement
+  links:
+    - url:  https://github.com/docker/compose
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.docker.com
+      title: Homepage
+spec:
+  type: orchestrationmanagement
+  lifecycle: external
+  owner: CNCF

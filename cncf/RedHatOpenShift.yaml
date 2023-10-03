@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: redhatopenshift
+  tags:
+    - platform
+    - certifiedkubernetesdistribution
+  links:
+    - url:  https://github.com/openshift/kubernetes
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.redhat.com/en/technologies/cloud-computing/openshift
+      title: Homepage
+spec:
+  type: certifiedkubernetesdistribution
+  lifecycle: external
+  owner: CNCF

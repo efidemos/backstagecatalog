@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: loggie
+  tags:
+    - observabilityandanalysis
+    - logging
+  links:
+    - url:  https://github.com/loggie-io/loggie
+      title: GitHub Repo
+      icon: github
+    - url:  https://loggie-io.github.io/
+      title: Homepage
+spec:
+  type: logging
+  lifecycle: external
+  owner: CNCF

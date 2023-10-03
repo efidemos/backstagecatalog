@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: tidb
+  tags:
+    - appdefinitionanddevelopment
+    - database
+  links:
+    - url:  https://github.com/pingcap/tidb
+      title: GitHub Repo
+      icon: github
+    - url:  https://en.pingcap.com
+      title: Homepage
+spec:
+  type: database
+  lifecycle: external
+  owner: CNCF

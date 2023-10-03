@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: vault
+  tags:
+    - provisioning
+    - keymanagement
+  links:
+    - url:  https://github.com/hashicorp/vault
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.vaultproject.io/
+      title: Homepage
+spec:
+  type: keymanagement
+  lifecycle: external
+  owner: CNCF

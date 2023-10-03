@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: schemahero
+  tags:
+    - appdefinitionanddevelopment
+    - database
+  links:
+    - url:  https://github.com/schemahero/schemahero
+      title: GitHub Repo
+      icon: github
+    - url:  https://schemahero.io
+      title: Homepage
+spec:
+  type: database
+  lifecycle: external
+  owner: CNCF

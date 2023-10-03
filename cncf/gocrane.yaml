@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: gocrane
+  tags:
+    - observabilityandanalysis
+    - continuousoptimization
+  links:
+    - url:  https://github.com/gocrane/crane
+      title: GitHub Repo
+      icon: github
+    - url:  https://gocrane.io/
+      title: Homepage
+spec:
+  type: continuousoptimization
+  lifecycle: external
+  owner: CNCF

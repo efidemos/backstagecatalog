@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: grafeas
+  tags:
+    - provisioning
+    - securitycompliance
+  links:
+    - url:  https://github.com/grafeas/grafeas
+      title: GitHub Repo
+      icon: github
+    - url:  https://grafeas.io/
+      title: Homepage
+spec:
+  type: securitycompliance
+  lifecycle: external
+  owner: CNCF

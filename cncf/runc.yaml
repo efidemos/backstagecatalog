@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: runc
+  tags:
+    - runtime
+    - containerruntime
+  links:
+    - url:  https://github.com/opencontainers/runc
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.opencontainers.org/
+      title: Homepage
+spec:
+  type: containerruntime
+  lifecycle: external
+  owner: CNCF

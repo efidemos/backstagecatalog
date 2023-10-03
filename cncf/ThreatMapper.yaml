@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: threatmapper
+  tags:
+    - provisioning
+    - securitycompliance
+  links:
+    - url:  https://github.com/deepfence/ThreatMapper
+      title: GitHub Repo
+      icon: github
+    - url:  https://deepfence.io/threatmapper/
+      title: Homepage
+spec:
+  type: securitycompliance
+  lifecycle: external
+  owner: CNCF

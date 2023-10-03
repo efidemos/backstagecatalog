@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: matano
+  tags:
+    - provisioning
+    - securitycompliance
+  links:
+    - url:  https://github.com/matanolabs/matano
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.matano.dev
+      title: Homepage
+spec:
+  type: securitycompliance
+  lifecycle: external
+  owner: CNCF

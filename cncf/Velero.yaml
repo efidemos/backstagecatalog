@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: velero
+  tags:
+    - runtime
+    - cloudnativestorage
+  links:
+    - url:  https://github.com/vmware-tanzu/velero
+      title: GitHub Repo
+      icon: github
+    - url:  https://velero.io
+      title: Homepage
+spec:
+  type: cloudnativestorage
+  lifecycle: external
+  owner: CNCF

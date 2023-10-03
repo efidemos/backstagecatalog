@@ -1,0 +1,16 @@
+
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: demo
+  tags:
+    - aws
+  links:
+    - url:  https://github.com/example
+      title: GitHub Repo
+      icon: github
+spec:
+  type: environment
+  lifecycle: experimental
+  owner: TechServices
+---

@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: wamr
+  tags:
+    - wasm
+    - runtimes
+  links:
+    - url:  https://github.com/bytecodealliance/wasm-micro-runtime
+      title: GitHub Repo
+      icon: github
+    - url:  https://github.com/bytecodealliance/wasm-micro-runtime
+      title: Homepage
+spec:
+  type: runtimes
+  lifecycle: external
+  owner: CNCF

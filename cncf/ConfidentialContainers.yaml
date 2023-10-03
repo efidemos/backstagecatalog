@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: confidentialcontainers
+  tags:
+    - provisioning
+    - securitycompliance
+  links:
+    - url:  https://github.com/confidential-containers/operator
+      title: GitHub Repo
+      icon: github
+    - url:  https://github.com/confidential-containers
+      title: Homepage
+spec:
+  type: securitycompliance
+  lifecycle: external
+  owner: CNCF

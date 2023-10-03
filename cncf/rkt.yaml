@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: rkt
+  tags:
+    - runtime
+    - containerruntime
+  links:
+    - url:  https://github.com/rkt/rkt
+      title: GitHub Repo
+      icon: github
+    - url:  https://github.com/rkt/rkt
+      title: Homepage
+spec:
+  type: containerruntime
+  lifecycle: external
+  owner: CNCF

@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: intoto
+  tags:
+    - provisioning
+    - securitycompliance
+  links:
+    - url:  https://github.com/in-toto/in-toto
+      title: GitHub Repo
+      icon: github
+    - url:  https://in-toto.io
+      title: Homepage
+spec:
+  type: securitycompliance
+  lifecycle: external
+  owner: CNCF

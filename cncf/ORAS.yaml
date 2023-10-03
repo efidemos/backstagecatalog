@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: oras
+  tags:
+    - runtime
+    - cloudnativestorage
+  links:
+    - url:  https://github.com/oras-project/oras
+      title: GitHub Repo
+      icon: github
+    - url:  https://oras.land/
+      title: Homepage
+spec:
+  type: cloudnativestorage
+  lifecycle: external
+  owner: CNCF

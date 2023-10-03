@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: walang
+  tags:
+    - wasm
+    - languages
+  links:
+    - url:  https://github.com/wa-lang/wa
+      title: GitHub Repo
+      icon: github
+    - url:  https://wa-lang.github.io/
+      title: Homepage
+spec:
+  type: languages
+  lifecycle: external
+  owner: CNCF

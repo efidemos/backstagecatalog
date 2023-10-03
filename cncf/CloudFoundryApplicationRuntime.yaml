@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: cloudfoundryapplicationruntime
+  tags:
+    - platform
+    - paascontainerservice
+  links:
+    - url:  https://github.com/cloudfoundry/cli
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.cloudfoundry.org/working-groups
+      title: Homepage
+spec:
+  type: paascontainerservice
+  lifecycle: external
+  owner: CNCF

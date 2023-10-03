@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: paladincloud
+  tags:
+    - provisioning
+    - securitycompliance
+  links:
+    - url:  https://github.com/PaladinCloud/CE
+      title: GitHub Repo
+      icon: github
+    - url:  https://paladincloud.io/
+      title: Homepage
+spec:
+  type: securitycompliance
+  lifecycle: external
+  owner: CNCF

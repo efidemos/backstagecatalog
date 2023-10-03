@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: appscale
+  tags:
+    - serverless
+    - installableplatform
+  links:
+    - url:  https://github.com/AppScale/gts
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.appscale.com/
+      title: Homepage
+spec:
+  type: installableplatform
+  lifecycle: external
+  owner: CNCF

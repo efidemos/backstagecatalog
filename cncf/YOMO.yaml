@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: yomo
+  tags:
+    - wasm
+    - embeddedfunctions
+  links:
+    - url:  https://github.com/yomorun/yomo
+      title: GitHub Repo
+      icon: github
+    - url:  https://yomo.run/
+      title: Homepage
+spec:
+  type: embeddedfunctions
+  lifecycle: external
+  owner: CNCF

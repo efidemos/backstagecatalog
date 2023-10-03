@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: tsuru
+  tags:
+    - platform
+    - paascontainerservice
+  links:
+    - url:  https://github.com/tsuru/tsuru
+      title: GitHub Repo
+      icon: github
+    - url:  https://tsuru.io/
+      title: Homepage
+spec:
+  type: paascontainerservice
+  lifecycle: external
+  owner: CNCF

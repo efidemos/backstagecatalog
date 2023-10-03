@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: harborwasm
+  tags:
+    - wasm
+    - packagingregistriesapplicationdelivery
+  links:
+    - url:  https://github.com/goharbor/harbor
+      title: GitHub Repo
+      icon: github
+    - url:  https://goharbor.io/
+      title: Homepage
+spec:
+  type: packagingregistriesapplicationdelivery
+  lifecycle: external
+  owner: CNCF

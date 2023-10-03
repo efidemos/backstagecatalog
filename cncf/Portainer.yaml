@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: portainer
+  tags:
+    - platform
+    - paascontainerservice
+  links:
+    - url:  https://github.com/portainer/portainer
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.portainer.io/
+      title: Homepage
+spec:
+  type: paascontainerservice
+  lifecycle: external
+  owner: CNCF

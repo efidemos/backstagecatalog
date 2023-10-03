@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: krustlet
+  tags:
+    - serverless
+    - installableplatform
+  links:
+    - url:  https://github.com/krustlet/krustlet
+      title: GitHub Repo
+      icon: github
+    - url:  https://krustlet.dev
+      title: Homepage
+spec:
+  type: installableplatform
+  lifecycle: external
+  owner: CNCF

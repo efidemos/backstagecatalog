@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: gvisor
+  tags:
+    - runtime
+    - containerruntime
+  links:
+    - url:  https://github.com/google/gvisor
+      title: GitHub Repo
+      icon: github
+    - url:  https://gvisor.dev/
+      title: Homepage
+spec:
+  type: containerruntime
+  lifecycle: external
+  owner: CNCF

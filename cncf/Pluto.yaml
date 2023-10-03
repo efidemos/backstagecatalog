@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: pluto
+  tags:
+    - provisioning
+    - securitycompliance
+  links:
+    - url:  https://github.com/FairwindsOps/pluto
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.fairwinds.com/open-source-software
+      title: Homepage
+spec:
+  type: securitycompliance
+  lifecycle: external
+  owner: CNCF

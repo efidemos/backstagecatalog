@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: c
+  tags:
+    - wasm
+    - languages
+  links:
+    - url:  https://www.example.com/
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.open-std.org/jtc1/sc22/wg14/
+      title: Homepage
+spec:
+  type: languages
+  lifecycle: external
+  owner: CNCF

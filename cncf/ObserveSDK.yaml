@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: observesdk
+  tags:
+    - wasm
+    - debuggingobservability
+  links:
+    - url:  https://github.com/dylibso/observe-sdk
+      title: GitHub Repo
+      icon: github
+    - url:  https://dev.dylib.so/docs/observe/overview
+      title: Homepage
+spec:
+  type: debuggingobservability
+  lifecycle: external
+  owner: CNCF

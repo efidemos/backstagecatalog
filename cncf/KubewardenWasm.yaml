@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: kubewardenwasm
+  tags:
+    - wasm
+    - embeddedfunctions
+  links:
+    - url:  https://github.com/kubewarden/kubewarden-controller
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.kubewarden.io
+      title: Homepage
+spec:
+  type: embeddedfunctions
+  lifecycle: external
+  owner: CNCF

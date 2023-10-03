@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: openscap
+  tags:
+    - provisioning
+    - securitycompliance
+  links:
+    - url:  https://github.com/OpenSCAP/openscap
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.open-scap.org/
+      title: Homepage
+spec:
+  type: securitycompliance
+  lifecycle: external
+  owner: CNCF

@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: elastic
+  tags:
+    - observabilityandanalysis
+    - logging
+  links:
+    - url:  https://github.com/elastic/elasticsearch
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.elastic.co/
+      title: Homepage
+spec:
+  type: logging
+  lifecycle: external
+  owner: CNCF

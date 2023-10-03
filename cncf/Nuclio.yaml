@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: nuclio
+  tags:
+    - serverless
+    - installableplatform
+  links:
+    - url:  https://github.com/nuclio/nuclio
+      title: GitHub Repo
+      icon: github
+    - url:  https://nuclio.io/
+      title: Homepage
+spec:
+  type: installableplatform
+  lifecycle: external
+  owner: CNCF

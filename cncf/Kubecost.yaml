@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: kubecost
+  tags:
+    - observabilityandanalysis
+    - continuousoptimization
+  links:
+    - url:  https://github.com/kubecost/cost-model
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.kubecost.com/
+      title: Homepage
+spec:
+  type: continuousoptimization
+  lifecycle: external
+  owner: CNCF

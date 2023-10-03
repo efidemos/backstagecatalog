@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: webiny
+  tags:
+    - serverless
+    - framework
+  links:
+    - url:  https://github.com/webiny/webiny-js
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.webiny.com
+      title: Homepage
+spec:
+  type: framework
+  lifecycle: external
+  owner: CNCF

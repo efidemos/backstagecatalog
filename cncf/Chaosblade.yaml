@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: chaosblade
+  tags:
+    - observabilityandanalysis
+    - chaosengineering
+  links:
+    - url:  https://github.com/chaosblade-io/chaosblade
+      title: GitHub Repo
+      icon: github
+    - url:  https://chaosblade.io/
+      title: Homepage
+spec:
+  type: chaosengineering
+  lifecycle: external
+  owner: CNCF

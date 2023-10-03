@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: tracetest
+  tags:
+    - observabilityandanalysis
+    - tracing
+  links:
+    - url:  https://github.com/kubeshop/tracetest
+      title: GitHub Repo
+      icon: github
+    - url:  https://tracetest.io
+      title: Homepage
+spec:
+  type: tracing
+  lifecycle: external
+  owner: CNCF

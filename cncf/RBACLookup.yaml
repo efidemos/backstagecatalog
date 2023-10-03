@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: rbaclookup
+  tags:
+    - provisioning
+    - securitycompliance
+  links:
+    - url:  https://github.com/FairwindsOps/rbac-lookup
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.fairwinds.com/open-source-software
+      title: Homepage
+spec:
+  type: securitycompliance
+  lifecycle: external
+  owner: CNCF

@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: chefinfra
+  tags:
+    - provisioning
+    - automationconfiguration
+  links:
+    - url:  https://github.com/chef/chef
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.chef.io/
+      title: Homepage
+spec:
+  type: automationconfiguration
+  lifecycle: external
+  owner: CNCF

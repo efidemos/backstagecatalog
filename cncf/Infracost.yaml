@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: infracost
+  tags:
+    - observabilityandanalysis
+    - continuousoptimization
+  links:
+    - url:  https://github.com/infracost/infracost
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.infracost.io/
+      title: Homepage
+spec:
+  type: continuousoptimization
+  lifecycle: external
+  owner: CNCF

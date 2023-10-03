@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: skywalking
+  tags:
+    - observabilityandanalysis
+    - tracing
+  links:
+    - url:  https://github.com/apache/skywalking
+      title: GitHub Repo
+      icon: github
+    - url:  https://skywalking.apache.org/
+      title: Homepage
+spec:
+  type: tracing
+  lifecycle: external
+  owner: CNCF

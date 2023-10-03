@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: openpolicycontainers
+  tags:
+    - provisioning
+    - securitycompliance
+  links:
+    - url:  https://github.com/opcr-io/policy
+      title: GitHub Repo
+      icon: github
+    - url:  https://openpolicycontainers.com
+      title: Homepage
+spec:
+  type: securitycompliance
+  lifecycle: external
+  owner: CNCF

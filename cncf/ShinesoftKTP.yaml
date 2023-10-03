@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: shinesoftktp
+  tags:
+    - special
+    - kubernetestrainingpartner
+  links:
+    - url:  https://www.example.com/
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.shinesoft.co.jp/business/#training
+      title: Homepage
+spec:
+  type: kubernetestrainingpartner
+  lifecycle: external
+  owner: CNCF

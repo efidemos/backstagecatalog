@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: scylla
+  tags:
+    - appdefinitionanddevelopment
+    - database
+  links:
+    - url:  https://github.com/scylladb/scylla
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.scylladb.com/
+      title: Homepage
+spec:
+  type: database
+  lifecycle: external
+  owner: CNCF

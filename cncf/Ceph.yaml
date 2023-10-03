@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ceph
+  tags:
+    - runtime
+    - cloudnativestorage
+  links:
+    - url:  https://github.com/ceph/ceph
+      title: GitHub Repo
+      icon: github
+    - url:  https://ceph.io/en
+      title: Homepage
+spec:
+  type: cloudnativestorage
+  lifecycle: external
+  owner: CNCF

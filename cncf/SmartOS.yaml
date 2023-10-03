@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: smartos
+  tags:
+    - runtime
+    - containerruntime
+  links:
+    - url:  https://github.com/TritonDataCenter/smartos-live
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.TritonDataCenter.com/smartos
+      title: Homepage
+spec:
+  type: containerruntime
+  lifecycle: external
+  owner: CNCF

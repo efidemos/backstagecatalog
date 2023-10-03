@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: notary
+  tags:
+    - provisioning
+    - securitycompliance
+  links:
+    - url:  https://github.com/notaryproject/notation
+      title: GitHub Repo
+      icon: github
+    - url:  https://notaryproject.dev/
+      title: Homepage
+spec:
+  type: securitycompliance
+  lifecycle: external
+  owner: CNCF

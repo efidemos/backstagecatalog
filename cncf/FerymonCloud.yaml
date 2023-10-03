@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ferymoncloud
+  tags:
+    - wasm
+    - hostedplatforms
+  links:
+    - url:  https://www.example.com/
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.fermyon.com/cloud
+      title: Homepage
+spec:
+  type: hostedplatforms
+  lifecycle: external
+  owner: CNCF

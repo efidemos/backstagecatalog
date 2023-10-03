@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: opencv
+  tags:
+    - wasm
+    - aimachinelearning
+  links:
+    - url:  https://github.com/opencv/opencv
+      title: GitHub Repo
+      icon: github
+    - url:  https://opencv.org/
+      title: Homepage
+spec:
+  type: aimachinelearning
+  lifecycle: external
+  owner: CNCF

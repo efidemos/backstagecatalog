@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: gloo
+  tags:
+    - orchestrationmanagement
+    - apigateway
+  links:
+    - url:  https://github.com/solo-io/gloo
+      title: GitHub Repo
+      icon: github
+    - url:  https://www.solo.io
+      title: Homepage
+spec:
+  type: apigateway
+  lifecycle: external
+  owner: CNCF

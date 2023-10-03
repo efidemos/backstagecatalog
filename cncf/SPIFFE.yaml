@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: spiffe
+  tags:
+    - provisioning
+    - keymanagement
+  links:
+    - url:  https://github.com/spiffe/spiffe
+      title: GitHub Repo
+      icon: github
+    - url:  https://spiffe.io/
+      title: Homepage
+spec:
+  type: keymanagement
+  lifecycle: external
+  owner: CNCF

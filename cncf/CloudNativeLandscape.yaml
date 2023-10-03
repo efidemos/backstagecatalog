@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: cloudnativelandscape
+  tags:
+    - serverless
+    - tools
+  links:
+    - url:  https://github.com/cncf/landscapeapp
+      title: GitHub Repo
+      icon: github
+    - url:  https://landscape.cncf.io/
+      title: Homepage
+spec:
+  type: tools
+  lifecycle: external
+  owner: CNCF

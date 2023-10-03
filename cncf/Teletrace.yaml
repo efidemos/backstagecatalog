@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: teletrace
+  tags:
+    - observabilityandanalysis
+    - tracing
+  links:
+    - url:  https://github.com/teletrace/teletrace
+      title: GitHub Repo
+      icon: github
+    - url:  https://docs.teletrace.io/
+      title: Homepage
+spec:
+  type: tracing
+  lifecycle: external
+  owner: CNCF
