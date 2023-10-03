@@ -1,0 +1,27 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: api-list
+  description: list of APIs
+spec:
+  targets:
+    - ./API/hello-world.yaml
+    - ./API/spotify-api.yaml
+    - ./API/wayback.yaml
+    - ./API/bbc.yaml
+    - ./API/pizza.yaml
+    - ./API/exchange.yaml
+    - ./API/keycloak_local.yaml
+    - ./API/lufthansa.yaml
+    - ./API/trello.yaml
+    - ./API/mailbox.yaml
+    - ./API/iban.yaml
+    - ./API/getty.yaml
+    - ./API/highways.yaml
+    - ./API/github.yaml
+    - ./API/hetzner.yaml
+    - ./API/google.yaml
+    - ./API/domaindb.yaml
+    - ./API/canada.yaml
+    - ./API/bitbucket.yaml
+    

@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: templates
+  description: templates
+spec:
+  targets:
+    - ./Templates/featenv.yaml 
+    - ./Templates/mlenv.yaml 
+    - ./Templates/prodenv.yaml 
+    - ./Templates/testenv.yaml 
+    

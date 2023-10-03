@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: teams-and-groups
+  description: org teams and groups
+spec:
+  targets:
+    - ./Groups/cncf.yaml 
+    - ./Groups/teama.yaml 
+    - ./Groups/techsvc.yaml 
+
+    

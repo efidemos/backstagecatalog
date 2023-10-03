@@ -5,36 +5,6 @@ metadata:
   description: Extracted list of all CNCF projects
 spec:
   targets:
-    - ./env/env1.yaml 
-    - ./env/env2.yaml 
-    - ./env/env3.yaml 
-    - ./env/env4.yaml 
-    - ./Groups/cncf.yaml 
-    - ./Groups/teama.yaml 
-    - ./Groups/techsvc.yaml 
-    - ./Templates/featenv.yaml 
-    - ./Templates/mlenv.yaml 
-    - ./Templates/prodenv.yaml 
-    - ./Templates/testenv.yaml 
-    - ./API/hello-world.yaml
-    - ./API/spotify-api.yaml
-    - ./API/wayback.yaml
-    - ./API/bbc.yaml
-    - ./API/pizza.yaml
-    - ./API/exchange.yaml
-    - ./API/keycloak_local.yaml
-    - ./API/lufthansa.yaml
-    - ./API/trello.yaml
-    - ./API/mailbox.yaml
-    - ./API/iban.yaml
-    - ./API/getty.yaml
-    - ./API/highways.yaml
-    - ./API/github.yaml
-    - ./API/hetzner.yaml
-    - ./API/google.yaml
-    - ./API/domaindb.yaml
-    - ./API/canada.yaml
-    - ./API/bitbucket.yaml
     - ./cncf/1CrewKCSP.yaml
     - ./cncf/3Scale.yaml
     - ./cncf/3ShakeKCSP.yaml

@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: env-components
+  description: environments
+spec:
+  targets:
+    - ./env/env1.yaml 
+    - ./env/env2.yaml 
+    - ./env/env3.yaml 
+    - ./env/env4.yaml 
+    
