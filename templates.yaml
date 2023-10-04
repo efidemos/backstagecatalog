@@ -8,5 +8,15 @@ spec:
     - ./Templates/featenv.yaml 
     - ./Templates/mlenv.yaml 
     - ./Templates/prodenv.yaml 
-    - ./Templates/testenv.yaml 
-    - https://github.com/efidemos/env-template/blob/template.yaml
+    - ./Templates/testenv.yaml
+---  
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: moretemplates
+  description: templates
+spec:
+  type: url
+  target: https://github.com/efidemos/env-template/blob/template.yaml
+      rules:
+        - allow: [Component, API, Location, Template, Group]
