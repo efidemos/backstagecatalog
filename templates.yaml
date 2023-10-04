@@ -9,4 +9,4 @@ spec:
     - ./Templates/mlenv.yaml 
     - ./Templates/prodenv.yaml 
     - ./Templates/testenv.yaml 
-    
+    - https://github.com/efidemos/env-template/blob/template.yaml
