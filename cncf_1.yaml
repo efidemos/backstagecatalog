@@ -97,4 +97,10 @@ spec:
     - ./cncf/AppDynamics.yaml
     - ./cncf/AppNeta.yaml
     - ./cncf/AppOptics.yaml
-    - ./cncf/AppScale.yaml    - ./cncf/zot.yaml
+    - ./cncf/AppScale.yaml
+    - ./cncf/AppSignal.yaml
+    - ./cncf/AppddictionStudioKCSP.yaml
+    - ./cncf/AppddictionStudioKTP.yaml
+    - ./cncf/ApplicationHighAvailabilityService.yaml
+    - ./cncf/ApplicationsManager.yaml
+    - ./cncf/AppstellarKCSP.yaml

@@ -5,12 +5,6 @@ metadata:
   description: Extracted list of all CNCF projects
 spec:
   targets:
-    - ./cncf/AppSignal.yaml
-    - ./cncf/AppddictionStudioKCSP.yaml
-    - ./cncf/AppddictionStudioKTP.yaml
-    - ./cncf/ApplicationHighAvailabilityService.yaml
-    - ./cncf/ApplicationsManager.yaml
-    - ./cncf/AppstellarKCSP.yaml
     - ./cncf/Appveyor.yaml
     - ./cncf/AppviaKCSP.yaml
     - ./cncf/Aqua.yaml
@@ -101,4 +95,13 @@ spec:
     - ./cncf/CamptocampKTP.yaml
     - ./cncf/CanonicalCharmedKubernetes.yaml
     - ./cncf/CanonicalKCSP.yaml
-    - ./cncf/Capsule.yaml    - ./cncf/zot.yaml
+    - ./cncf/Capsule.yaml
+    - ./cncf/Capsule8.yaml
+    - ./cncf/Carina.yaml
+    - ./cncf/Cartographer.yaml
+    - ./cncf/Carvel.yaml
+    - ./cncf/Casper.yaml
+    - ./cncf/Cassandra.yaml
+    - ./cncf/CatalystCloudKCSP.yaml
+    - ./cncf/CatalystKubernetesService.yaml
+    - ./cncf/Catchpoint.yaml

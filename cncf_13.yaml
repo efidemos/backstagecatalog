@@ -1,0 +1,27 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: cncf-components
+  description: Extracted list of all CNCF projects
+spec:
+  targets:
+    - ./cncf/servicememeKTP.yaml
+    - ./cncf/sigstore.yaml
+    - ./cncf/sso.yaml
+    - ./cncf/steadybit.yaml
+    - ./cncf/sysdig.yaml
+    - ./cncf/vcluster.yaml
+    - ./cncf/vscodewasm.yaml
+    - ./cncf/wapm.yaml
+    - ./cncf/warg.yaml
+    - ./cncf/wasilogging.yaml
+    - ./cncf/wasm2c.yaml
+    - ./cncf/wasm3.yaml
+    - ./cncf/wasmCloud.yaml
+    - ./cncf/wasmCloudWasm.yaml
+    - ./cncf/wasmbindgen.yaml
+    - ./cncf/wasmpack.yaml
+    - ./cncf/werf.yaml
+    - ./cncf/xcellentKTP.yaml
+    - ./cncf/youki.yaml
+    - ./cncf/zot.yaml
