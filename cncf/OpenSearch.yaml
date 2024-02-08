@@ -15,3 +15,6 @@ spec:
   type: logging
   lifecycle: external
   owner: CNCF
+  consumesApi:
+    - bbc
+    - getty
