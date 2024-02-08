@@ -9,3 +9,6 @@ spec:
   owner: team-a
   definition:
     $text: https://github.com/APIs-guru/openapi-directory/blob/main/APIs/bitbucket.org/2.0/openapi.yaml
+  apiProvidedBy:
+    - bb-import-test
+    - bb-autodiscovery-test
