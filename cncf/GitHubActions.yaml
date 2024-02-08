@@ -15,5 +15,5 @@ spec:
   type: continuousintegrationdelivery
   lifecycle: external
   owner: CNCF
-  providesApi:
+  providesApis:
     - github
