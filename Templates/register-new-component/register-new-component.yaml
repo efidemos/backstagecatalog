@@ -105,10 +105,10 @@ spec:
           techDocsPathType:
             title: Path Type
             type: string
-            description: 'The path type to the TechDocs directory. This can be a directory in the repository using `docs``, or linked externally using `url`.'
-            default: docs
+            description: 'The path type to the TechDocs directory. This can be a directory in the repository using `dir``, or linked externally using `url`.'
+            default: dir
             enum:
-              - docs
+              - dir
               - url
 
           techDocsPath:
