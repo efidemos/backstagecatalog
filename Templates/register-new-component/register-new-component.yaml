@@ -147,7 +147,7 @@ spec:
           argoAppName: ${{ parameters.argoAppName }}
           pagerdutyServiceId: ${{ parameters.pagerdutyServiceId }}
           lifecycle: ${{ parameters.lifecycle }}
-          techDocsPath: '${{parameters.techDocsPathType}}:.${{parameters.techDocsPath}}'
+          techDocsPath: '${{parameters.techDocsPathType}}:${{parameters.techDocsPath}}'
 
     - id: fetchTechDocsTemplate
       name: Write TechDocs to root path
