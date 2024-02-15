@@ -126,43 +126,43 @@ spec:
                 title: Type
                 type: string
 
-    - title: Component Relationships # Title of the third step
-      properties:
-        subcomponentOf:
-          title: Subcomponent of
-          type: array
-          description: If this is part of another component, list what component it is part of
-          ui:field: EntityPicker
-          ui:options:
-            catalogFilter:
-              kind: Component
+    # - title: Component Relationships # Title of the third step
+    #   properties:
+    #     subcomponentOf:
+    #       title: Subcomponent of
+    #       type: array
+    #       description: If this is part of another component, list what component it is part of
+    #       ui:field: EntityPicker
+    #       ui:options:
+    #         catalogFilter:
+    #           kind: Component
         
-        dependsOn:
-          title: Depends on
-          type: array
-          description: Dependencies the component has
-          ui:field: EntityPicker
-          ui:options:
-            catalogFilter:
-              kind: Component
+    #     dependsOn:
+    #       title: Depends on
+    #       type: array
+    #       description: Dependencies the component has
+    #       ui:field: EntityPicker
+    #       ui:options:
+    #         catalogFilter:
+    #           kind: Component
         
-        providesApis:
-          title: Provides APIs
-          type: array
-          description: APIs provided by this component
-          ui:field: EntityPicker
-          ui:options:
-            catalogFilter:
-              kind: API
+    #     providesApis:
+    #       title: Provides APIs
+    #       type: array
+    #       description: APIs provided by this component
+    #       ui:field: EntityPicker
+    #       ui:options:
+    #         catalogFilter:
+    #           kind: API
         
-        consumesApis:
-          title: Consumes APIs
-          type: array
-          description: APIs consumed by this component
-          ui:field: EntityPicker
-          ui:options:
-            catalogFilter:
-              kind: API
+    #     consumesApis:
+    #       title: Consumes APIs
+    #       type: array
+    #       description: APIs consumed by this component
+    #       ui:field: EntityPicker
+    #       ui:options:
+    #         catalogFilter:
+    #           kind: API
 
     - title: Integrations (optional) # Title of the fourth step.
       properties: #TODO: Specify any additional integrations associated with your repos.
