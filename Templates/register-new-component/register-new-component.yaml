@@ -90,6 +90,20 @@ spec:
                   description: 'APIs consumed by this component'
                   type: string
                   default: ''
+            - properties:
+                type:
+                  enum:
+                    - api
+                apiProvidedBy:
+                  title: API provided by
+                  description: Component which provides this API
+                  type: string
+                  default: ''
+                apiConsumedBy:
+                  title: API consumed by
+                  description: Component which consumes this API
+                  type: string
+                  default: ''
 
     - title: Component Location # Title of the second step.
       required:
