@@ -106,7 +106,7 @@ spec:
         entityLinks:
           title: Links
           type: array
-          minItems: 1
+          minItems: 0
           ui:options:
             addable: true
             removable: true
@@ -130,7 +130,7 @@ spec:
       properties:
         subcomponentOf:
           title: Subcomponent of
-          type: array
+          type: string
           description: If this is part of another component, list what component it is part of
           ui:field: EntityPicker
           ui:options:
