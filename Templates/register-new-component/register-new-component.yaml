@@ -16,6 +16,7 @@ spec:
         - description
         - type
         - lifecycle
+        - owner
       properties:
         name:
           title: Component Name
@@ -31,7 +32,7 @@ spec:
           title: Component Type
           type: string
           default: service
-          enum: ['service', 'website', 'library', 'mobile', 'action', 'workflow', 'data-pipeline', 'model', 'api']
+          enum: ['service', 'website', 'library', 'mobile', 'action', 'workflow', 'data-pipeline', 'model']
 
         lifecycle:
           title: Component Lifecycle
@@ -42,71 +43,29 @@ spec:
         owner:
           title: Component Owner
           type: string
-          description: Owner of the component
+          description: Team or User who owns the component
           ui:field: OwnerPicker
           ui:options:
             catalogFilter:
-              kind: Group # Decide if you want to allow setting owner by user, group, or both. e.g. [Group, User]
-
-      dependencies:
-        type:
-          oneOf:
-            - properties:
-                type:
-                  enum:
-                    - service
-                    - website
-                    - library
-                    - mobile
-                    - action
-                    - workflow
-                    - data-pipeline
-                system:
-                  title: System
-                  description: 'System to which the component belongs'
-                  type: string
-                  ui:field: EntityPicker
-                  ui:options:
-                    catalogFilter:
-                      kind: System
-
-                subcomponentOf:
-                  title: Subcomponent of
-                  description: 'If this is part of another component'
-                  type: string
-                  default: ''
-                
-                dependsOn:
-                  title: Depends on
-                  description: 'Dependencies the component has'
-                  type: string
-                  default: ''
-                
-                providesApis:
-                  title: Provides APIs
-                  description: 'APIs provided by this component'
-                  type: string
-                  default: ''
-                
-                consumesApis:
-                  title: Consumes APIs
-                  description: 'APIs consumed by this component'
-                  type: string
-                  default: ''
-            - properties:
-                type:
-                  enum:
-                    - api
-                apiProvidedBy:
-                  title: API provided by
-                  description: Component which provides this API
-                  type: string
-                  default: ''
-                apiConsumedBy:
-                  title: API consumed by
-                  description: Component which consumes this API
-                  type: string
-                  default: ''
+              kind: [Group, User]
+        
+        productOwner:
+          title: Product Owner
+          type: string
+          description: Product owner of the component
+          ui:field: OwnerPicker
+          ui:options:
+            catalogFilter:
+              kind: User
+        
+        system:
+          title: System
+          description: System to which the component belongs
+          type: string
+          ui:field: EntityPicker
+          ui:options:
+            catalogFilter:
+              kind: System
 
     - title: Component Location # Title of the second step.
       required:
@@ -138,6 +97,58 @@ spec:
         entityTags:
           type: array
           ui:field: EntityTagsPicker
+
+        entityLabels:
+          type: string
+          description: References to other entities, e.g. developer.astrazeneca.com/TAG
+        
+        entityLinks:
+          linkUrl:
+            type: string
+          linkTitle:
+            type: string
+          linkIcon:
+            type: string
+          linkType:
+            type: string
+
+    - title: Component Relationships # Title of the third step
+      properties:
+        subcomponentOf:
+          title: Subcomponent of
+          description: If this is part of another component, list what component it is part of
+          type: array
+          ui:field: EntityPicker
+          ui:options:
+            catalogFilter:
+              kind: Component
+        
+        dependsOn:
+          title: Depends on
+          description: Dependencies the component has
+          type: array
+          ui:field: EntityPicker
+          ui:options:
+            catalogFilter:
+              kind: Component
+        
+        providesApis:
+          title: Provides APIs
+          description: APIs provided by this component
+          type: array
+          ui:field: EntityPicker
+          ui:options:
+            catalogFilter:
+              kind: API
+        
+        consumesApis:
+          title: Consumes APIs
+          description: APIs consumed by this component
+          type: array
+          ui:field: EntityPicker
+          ui:options:
+            catalogFilter:
+              kind: API
 
     - title: Integrations (optional) # Title of the third step.
       properties: #TODO: Specify any additional integrations associated with your repos.
