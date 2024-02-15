@@ -126,16 +126,16 @@ spec:
                 title: Type
                 type: string
 
-    # - title: Component Relationships # Title of the third step
-    #   properties:
-    #     subcomponentOf:
-    #       title: Subcomponent of
-    #       type: array
-    #       description: If this is part of another component, list what component it is part of
-    #       ui:field: EntityPicker
-    #       ui:options:
-    #         catalogFilter:
-    #           kind: Component
+    - title: Component Relationships # Title of the third step
+      properties:
+        subcomponentOf:
+          title: Subcomponent of
+          type: array
+          description: If this is part of another component, list what component it is part of
+          ui:field: EntityPicker
+          ui:options:
+            catalogFilter:
+              kind: Component
         
     #     dependsOn:
     #       title: Depends on
