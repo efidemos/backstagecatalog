@@ -9,7 +9,18 @@ metadata:
     {%if values.techDocsPath %}backstage.io/techdocs-ref: ${{values.techDocsPath}} {% endif %}
     {%if values.argoAppName %}argocd/app-name: ${{values.argoAppName}} {% endif %}
     {%if values.pagerdutyServiceId %}pagerduty.com/service-id: ${{values.pagerdutyServiceId}} {% endif %}
+  {%if values.entityTags %}tags:
+    ${{ values.entityTags }}
+  {% endif }
+  {%if values.entityLabels %}labels:
+    ${{ values.entityLabels }}
+  {% endif }
 spec:
   type: ${{ values.type }}
   owner: ${{ values.owner }}
+  {%if values.productOwner %}productOwner: ${{values.productOwner}}{% endif %}
   lifecycle: ${{ values.lifecycle }}
+  {%if values.subcomponentOf %}subcomponentOf: ${{values.subcomponentOf}}{% endif }
+  {%if values.dependsOn %}dependsOn: ${{values.dependsOn}}{% endif }
+  {%if values.providesApis %}providesApis: ${{values.providesApis}}{% endif }
+  {%if values.consumesApis %}consumesApis: ${{values.consumesApis}}{% endif }

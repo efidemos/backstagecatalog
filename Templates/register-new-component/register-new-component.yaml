@@ -106,7 +106,7 @@ spec:
         entityLinks:
           title: Links
           type: array
-          minItems: 0
+          minItems: 1
           ui:options:
             addable: true
             removable: true
@@ -130,8 +130,8 @@ spec:
       properties:
         subcomponentOf:
           title: Subcomponent of
-          description: If this is part of another component, list what component it is part of
           type: array
+          description: If this is part of another component, list what component it is part of
           ui:field: EntityPicker
           ui:options:
             catalogFilter:
@@ -139,8 +139,8 @@ spec:
         
         dependsOn:
           title: Depends on
-          description: Dependencies the component has
           type: array
+          description: Dependencies the component has
           ui:field: EntityPicker
           ui:options:
             catalogFilter:
@@ -148,8 +148,8 @@ spec:
         
         providesApis:
           title: Provides APIs
-          description: APIs provided by this component
           type: array
+          description: APIs provided by this component
           ui:field: EntityPicker
           ui:options:
             catalogFilter:
@@ -157,8 +157,8 @@ spec:
         
         consumesApis:
           title: Consumes APIs
-          description: APIs consumed by this component
           type: array
+          description: APIs consumed by this component
           ui:field: EntityPicker
           ui:options:
             catalogFilter:
@@ -228,15 +228,23 @@ spec:
           description: ${{ parameters.description }}
           owner: ${{ parameters.owner }}
           type: ${{ parameters.type }}
+          productOwner: ${{ parameters.productOwner}}
+          system: ${{ parameters.system }}
           repoSlug: ${{ parameters.repoSlug }}
           argoAppName: ${{ parameters.argoAppName }}
           pagerdutyServiceId: ${{ parameters.pagerdutyServiceId }}
           lifecycle: ${{ parameters.lifecycle }}
           techDocsPath: '${{parameters.techDocsPathType}}:${{parameters.techDocsPath}}'
+          entityTags: ${{ parameters.entityTags }}
+          entityLabels: ${{ parameters.entityLabels }}
+          subcomponentOf: ${{ parameters.subcomponentOf }}
+          dependsOn: ${{ parameters.dependsOn }}
+          providesApis: ${{ parameters.providesApis }}
+          consumesApis: ${{ parameters.consumesApis }}
 
     - id: fetchTechDocsTemplate
       name: Write TechDocs to root path
-      if: ${{ parameters.ensableTechDocs and parameters.techDocsPath == '.' and parameters.techDocsPathType == 'docs' }}
+      if: ${{ parameters.ensableTechDocs and parameters.techDocsPath == '.' and parameters.techDocsPathType == 'dir' }}
       action: fetch:template
       input:
         url: ./techDocs
@@ -247,7 +255,7 @@ spec:
 
     - id: fetchTechDocsTemplate
       name: Write TechDocs to custom path
-      if: ${{ parameters.ensableTechDocs and parameters.techDocsPath != '.' and parameters.techDocsPathType == 'docs' }}
+      if: ${{ parameters.ensableTechDocs and parameters.techDocsPath != '.' and parameters.techDocsPathType == 'dir' }}
       action: fetch:template
       input:
         url: ./techDocs
