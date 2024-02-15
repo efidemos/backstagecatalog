@@ -65,7 +65,10 @@ spec:
                   title: System
                   description: 'System to which the component belongs'
                   type: string
-                  default: ''
+                  ui:field: EntityPicker
+                  ui:options:
+                    catalogFilter:
+                      kind: System
 
                 subcomponentOf:
                   title: Subcomponent of
