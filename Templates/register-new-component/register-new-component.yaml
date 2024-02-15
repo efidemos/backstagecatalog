@@ -27,6 +27,12 @@ spec:
           decription: A Detailed decription allows for the component to be easily found and understood in Roadie Backstage.
           type: string
 
+        type:
+          title: Component Type
+          type: string
+          default: service
+          enum: ['service', 'website', 'library', 'mobile', 'action', 'workflow', 'data-pipeline', 'model', 'api']
+
         lifecycle:
           title: Component Lifecycle
           type: string
@@ -42,16 +48,17 @@ spec:
             catalogFilter:
               kind: Group # Decide if you want to allow setting owner by user, group, or both. e.g. [Group, User]
   
-        type:
-          title: Component Type
-          type: string
-          default: service
-          enum: ['service', 'website', 'library', 'mobile', 'action', 'workflow', 'data-pipeline', 'model', 'api']
-
         if:
           properties:
             type:
-              enum: ['service', 'website', 'library', 'mobile', 'action', 'workflow', 'data-pipeline']
+              enum:
+                - service
+                - website
+                - library
+                - mobile
+                - action
+                - workflow
+                - data-pipeline
         then:
           properties:
             system:
