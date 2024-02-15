@@ -13,3 +13,4 @@ spec:
     - opensearch
     - something-that-doesnt-exist
   system: customers-system
+  customField: custom-answer
