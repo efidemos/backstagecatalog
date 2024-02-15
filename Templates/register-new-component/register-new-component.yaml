@@ -65,14 +65,14 @@ spec:
             subcomponentOf:
               title: Subcomponent of
               description: 'If this is part of another component'
-              type: array
-              ui:field: EntityPicker
+              type: string
+              default: ''
             
             dependsOn:
               title: Depends on
               description: 'Dependencies the component has'
-              type: array
-              ui:field: EntityPicker
+              type: string
+              default: ''
             
             providesApis:
               title: Provides APIs
