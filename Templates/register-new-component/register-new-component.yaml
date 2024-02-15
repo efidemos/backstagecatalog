@@ -99,18 +99,32 @@ spec:
           ui:field: EntityTagsPicker
 
         entityLabels:
+          title: Labels
           type: string
           description: References to other entities, e.g. developer.astrazeneca.com/TAG
         
         entityLinks:
-          linkUrl:
-            type: string
-          linkTitle:
-            type: string
-          linkIcon:
-            type: string
-          linkType:
-            type: string
+          title: Links
+          type: array
+          minItems: 0
+          ui:options:
+            addable: true
+            removable: true
+          items:
+            type: object
+            properties:
+              linkUrl:
+                title: URL
+                type: string
+              linkTitle:
+                title: Title
+                type: string
+              linkIcon:
+                title: Icon
+                type: string
+              linkType:
+                title: Type
+                type: string
 
     - title: Component Relationships # Title of the third step
       properties:
@@ -150,7 +164,7 @@ spec:
             catalogFilter:
               kind: API
 
-    - title: Integrations (optional) # Title of the third step.
+    - title: Integrations (optional) # Title of the fourth step.
       properties: #TODO: Specify any additional integrations associated with your repos.
         argoAppName:
           title: Argo CD App Name
