@@ -47,49 +47,49 @@ spec:
           ui:options:
             catalogFilter:
               kind: Group # Decide if you want to allow setting owner by user, group, or both. e.g. [Group, User]
-  
-      if:
-        properties:
-          type:
-            enum:
-              - service
-              - website
-              - library
-              - mobile
-              - action
-              - workflow
-              - data-pipeline
-      then:
-        properties:
-          system:
-            title: System
-            description: 'System to which the component belongs'
-            type: string
-            default: ''
 
-          subcomponentOf:
-            title: Subcomponent of
-            description: 'If this is part of another component'
-            type: string
-            default: ''
-          
-          dependsOn:
-            title: Depends on
-            description: 'Dependencies the component has'
-            type: string
-            default: ''
-          
-          providesApis:
-            title: Provides APIs
-            description: 'APIs provided by this component'
-            type: string
-            default: ''
-          
-          consumesApis:
-            title: Consumes APIs
-            description: 'APIs consumed by this component'
-            type: string
-            default: ''
+      dependencies:
+        type:
+          oneOf:
+            - properties:
+                type:
+                  enum:
+                    - service
+                    - website
+                    - library
+                    - mobile
+                    - action
+                    - workflow
+                    - data-pipeline
+                system:
+                  title: System
+                  description: 'System to which the component belongs'
+                  type: string
+                  default: ''
+
+                subcomponentOf:
+                  title: Subcomponent of
+                  description: 'If this is part of another component'
+                  type: string
+                  default: ''
+                
+                dependsOn:
+                  title: Depends on
+                  description: 'Dependencies the component has'
+                  type: string
+                  default: ''
+                
+                providesApis:
+                  title: Provides APIs
+                  description: 'APIs provided by this component'
+                  type: string
+                  default: ''
+                
+                consumesApis:
+                  title: Consumes APIs
+                  description: 'APIs consumed by this component'
+                  type: string
+                  default: ''
 
     - title: Component Location # Title of the second step.
       required:
