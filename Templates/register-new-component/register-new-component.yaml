@@ -51,14 +51,7 @@ spec:
         if:
           properties:
             type:
-              enum:
-                - service
-                - website
-                - library
-                - mobile
-                - action
-                - workflow
-                - data-pipeline
+              const: "service"
         then:
           properties:
             system:
