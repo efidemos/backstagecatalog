@@ -52,8 +52,6 @@ spec:
           properties:
             type:
               enum: ['service', 'website', 'library', 'mobile', 'action', 'workflow', 'data-pipeline']
-          required:
-          - type
         then:
           properties:
             system:
