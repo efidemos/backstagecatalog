@@ -12,3 +12,4 @@ spec:
   apiConsumedBy:
     - opensearch
     - something-that-doesnt-exist
+  system: customers-system
