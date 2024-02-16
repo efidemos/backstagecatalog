@@ -38,29 +38,6 @@ spec:
           decription: A detailed decription allows for the component or API to be easily found and understood in Roadie Backstage.
           type: string
 
-        if:
-          properties:
-            kind:
-              const: "Component"
-        then:
-          properties:
-            type:
-              title: Component Type
-              type: string
-              default: service
-              enum: ['service', 'website', 'library', 'mobile', 'action', 'workflow', 'data-pipeline', 'model']
-          required:
-            - type
-        else:
-          properties:
-            type:
-              title: API Type
-              type: string
-              default: openapi
-              enum: ['openapi', 'asyncapi', 'graphql', 'grpc', 'RAML']
-          required:
-            - type
-
         lifecycle:
           title: Component Lifecycle
           type: string
@@ -76,15 +53,6 @@ spec:
             catalogFilter:
               kind: [Group, User]
         
-        productOwner:
-          title: Product Owner
-          type: string
-          description: Product owner of the component
-          ui:field: OwnerPicker
-          ui:options:
-            catalogFilter:
-              kind: User
-        
         system:
           title: System
           description: System to which the component belongs
@@ -93,6 +61,29 @@ spec:
           ui:options:
             catalogFilter:
               kind: System
+
+      if:
+        properties:
+          kind:
+            const: "Component"
+      then:
+        properties:
+          type:
+            title: Component Type
+            type: string
+            default: service
+            enum: ['service', 'website', 'library', 'mobile', 'action', 'workflow', 'data-pipeline', 'model']
+        required:
+          - type
+      else:
+        properties:
+          type:
+            title: API Type
+            type: string
+            default: openapi
+            enum: ['openapi', 'asyncapi', 'graphql', 'grpc', 'RAML']
+        required:
+          - type
 
     - title: Component Location # Title of the second step.
       required:
