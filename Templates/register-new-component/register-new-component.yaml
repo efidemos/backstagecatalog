@@ -86,68 +86,8 @@ spec:
             enum: ['openapi', 'asyncapi', 'graphql', 'grpc', 'RAML']
         required:
           - type
-
-    - title: Entity Location # Title of the second step.
-      required:
-        - repoSlug
-      properties:
-        repoHost:
-          type: string
-          default: github.com
-          ui:widget: hidden
-
-        repoSlug:
-          type: string
-          ui:field: SelectFieldFromApi
-          ui:options:
-            title: Repository
-            description: Choose the repository to be registered in your catalog.
-            path: "proxy/github/api/orgs/efidemos/repos" # Add the name of your GitHub org. e.g. `/orgs/{reporOrg}/repos`
-            params:
-              per_page: '100'
-              page: '{{ parameters.repoPage }}'
-            valueSelector: "full_name"
-            labelSelector: "name"
-
-        repoPage:
-          title: Page Number
-          type: number
-          default: 1
-
-        entityTags:
-          type: array
-          ui:field: EntityTagsPicker
-
-        entityLabels:
-          title: Labels
-          type: string
-          description: References to other entities, e.g. developer.astrazeneca.com/TAG
-        
-        entityLinks:
-          title: Links
-          type: array
-          minItems: 0
-          ui:options:
-            addable: true
-            removable: true
-          items:
-            type: object
-            properties:
-              linkUrl:
-                title: URL
-                type: string
-              linkTitle:
-                title: Title
-                type: string
-              linkIcon:
-                title: Icon
-                type: string
-              linkType:
-                title: Type
-                type: string
-
-    - title: Entity Relationships # Title of the third step
-      dependencies:
+      
+        dependencies:
         type:
           oneOf:
             - properties:
@@ -208,6 +148,65 @@ spec:
                   ui:options:
                     catalogFilter:
                       kind: Component
+
+    - title: Entity Location # Title of the second step.
+      required:
+        - repoSlug
+      properties:
+        repoHost:
+          type: string
+          default: github.com
+          ui:widget: hidden
+
+        repoSlug:
+          type: string
+          ui:field: SelectFieldFromApi
+          ui:options:
+            title: Repository
+            description: Choose the repository to be registered in your catalog.
+            path: "proxy/github/api/orgs/efidemos/repos" # Add the name of your GitHub org. e.g. `/orgs/{reporOrg}/repos`
+            params:
+              per_page: '100'
+              page: '{{ parameters.repoPage }}'
+            valueSelector: "full_name"
+            labelSelector: "name"
+
+        repoPage:
+          title: Page Number
+          type: number
+          default: 1
+
+        entityTags:
+          type: array
+          ui:field: EntityTagsPicker
+
+        entityLabels:
+          title: Labels
+          type: string
+          description: References to other entities, e.g. developer.astrazeneca.com/TAG
+        
+        entityLinks:
+          title: Links
+          type: array
+          minItems: 0
+          ui:options:
+            addable: true
+            removable: true
+          items:
+            type: object
+            properties:
+              linkUrl:
+                title: URL
+                type: string
+              linkTitle:
+                title: Title
+                type: string
+              linkIcon:
+                title: Icon
+                type: string
+              linkType:
+                title: Type
+                type: string
 
     - title: Integrations (optional) # Title of the fourth step.
       properties: #TODO: Specify any additional integrations associated with your repos.
