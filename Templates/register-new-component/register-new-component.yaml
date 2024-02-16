@@ -121,7 +121,7 @@ spec:
                 
                 providesApis:
                   title: Provides APIs
-                  type: string
+                  type: array
                   description: APIs provided by this component
                   ui:options:
                     addable: true
@@ -136,7 +136,7 @@ spec:
                 
                 consumesApis:
                   title: Consumes APIs
-                  type: string
+                  type: array
                   description: APIs consumed by this component
                   ui:options:
                     addable: true
@@ -160,7 +160,7 @@ spec:
 
                 apiProvidedBy:
                   title: API provided by
-                  type: string
+                  type: array
                   description: Component which provides this API
                   ui:options:
                     addable: true
@@ -175,7 +175,7 @@ spec:
 
                 apiConsumedBy:
                   title: API consumed by
-                  type: string
+                  type: array
                   description: Component which consumes this API
                   ui:options:
                     addable: true
