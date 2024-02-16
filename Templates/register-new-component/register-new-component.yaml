@@ -106,7 +106,7 @@ spec:
 
                 dependsOn:
                   title: Depends on
-                  type: array
+                  type: string
                   description: Dependencies the component has
                   ui:field: EntityPicker
                   ui:options:
@@ -115,7 +115,7 @@ spec:
                 
                 providesApis:
                   title: Provides APIs
-                  type: array
+                  type: string
                   description: APIs provided by this component
                   ui:field: EntityPicker
                   ui:options:
@@ -124,7 +124,7 @@ spec:
                 
                 consumesApis:
                   title: Consumes APIs
-                  type: array
+                  type: string
                   description: APIs consumed by this component
                   ui:field: EntityPicker
                   ui:options:
