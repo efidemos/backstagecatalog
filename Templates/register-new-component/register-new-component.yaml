@@ -76,41 +76,41 @@ spec:
             default: service
             enum: ['service', 'website', 'library', 'mobile', 'action', 'workflow', 'data-pipeline', 'model']
 
-          subcomponentOf:
-            title: Subcomponent of
-            type: string
-            description: If this is part of another component, list what component it is part of
-            ui:field: EntityPicker
-            ui:options:
-              catalogFilter:
-                kind: Component
+          # subcomponentOf:
+          #   title: Subcomponent of
+          #   type: string
+          #   description: If this is part of another component, list what component it is part of
+          #   ui:field: EntityPicker
+          #   ui:options:
+          #     catalogFilter:
+          #       kind: Component
 
-          dependsOn:
-            title: Depends on
-            type: array
-            description: Dependencies the component has
-            ui:field: EntityPicker
-            ui:options:
-              catalogFilter:
-                kind: Component
+          # dependsOn:
+          #   title: Depends on
+          #   type: array
+          #   description: Dependencies the component has
+          #   ui:field: EntityPicker
+          #   ui:options:
+          #     catalogFilter:
+          #       kind: Component
           
-          providesApis:
-            title: Provides APIs
-            type: array
-            description: APIs provided by this component
-            ui:field: EntityPicker
-            ui:options:
-              catalogFilter:
-                kind: API
+          # providesApis:
+          #   title: Provides APIs
+          #   type: array
+          #   description: APIs provided by this component
+          #   ui:field: EntityPicker
+          #   ui:options:
+          #     catalogFilter:
+          #       kind: API
           
-          consumesApis:
-            title: Consumes APIs
-            type: array
-            description: APIs consumed by this component
-            ui:field: EntityPicker
-            ui:options:
-              catalogFilter:
-                kind: API
+          # consumesApis:
+          #   title: Consumes APIs
+          #   type: array
+          #   description: APIs consumed by this component
+          #   ui:field: EntityPicker
+          #   ui:options:
+          #     catalogFilter:
+          #       kind: API
 
       else:
         properties:
@@ -120,23 +120,23 @@ spec:
             default: openapi
             enum: ['openapi', 'asyncapi', 'graphql', 'grpc', 'RAML']
 
-          apiProvidedBy:
-            title: API provided by
-            type: string
-            description: Component which provides this API
-            ui:field: EntityPicker
-            ui:options:
-              catalogFilter:
-                kind: Component
+          # apiProvidedBy:
+          #   title: API provided by
+          #   type: string
+          #   description: Component which provides this API
+          #   ui:field: EntityPicker
+          #   ui:options:
+          #     catalogFilter:
+          #       kind: Component
 
-          apiConsumedBy:
-            title: API consumed by
-            type: string
-            description: Component which consumes this API
-            ui:field: EntityPicker
-            ui:options:
-              catalogFilter:
-                kind: Component
+          # apiConsumedBy:
+          #   title: API consumed by
+          #   type: string
+          #   description: Component which consumes this API
+          #   ui:field: EntityPicker
+          #   ui:options:
+          #     catalogFilter:
+          #       kind: Component
 
     - title: Entity Location # Title of the second step.
       required:
