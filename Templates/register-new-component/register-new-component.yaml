@@ -107,20 +107,23 @@ spec:
                 dependsOn:
                   title: Depends on
                   type: array
-                  items:
-                    type: string
                   description: Dependencies the component has
-                  ui:field: MultiEntityPicker
                   ui:options:
-                    allowArbitraryValues: false
-                    catalogFilter:
-                      - kind: Component
+                    addable: true
+                    orderable: true
+                    removable: true
+                  items:
+                    type: string                      
+                    ui:field: EntityPicker # Change this to MultiEntityPicker when it's available in v1.23
+                    ui:options:
+                      catalogFilter:
+                        kind: Component
                 
                 providesApis:
                   title: Provides APIs
                   type: string
                   description: APIs provided by this component
-                  ui:field: EntityPicker
+                  ui:field: EntityPicker # Change this to MultiEntityPicker when it's available in v1.23
                   ui:options:
                     catalogFilter:
                       kind: API
@@ -129,7 +132,7 @@ spec:
                   title: Consumes APIs
                   type: string
                   description: APIs consumed by this component
-                  ui:field: EntityPicker
+                  ui:field: EntityPicker # Change this to MultiEntityPicker when it's available in v1.23
                   ui:options:
                     catalogFilter:
                       kind: API
@@ -147,7 +150,7 @@ spec:
                   title: API provided by
                   type: string
                   description: Component which provides this API
-                  ui:field: EntityPicker
+                  ui:field: EntityPicker # Change this to MultiEntityPicker when it's available in v1.23 (maybe?)
                   ui:options:
                     catalogFilter:
                       kind: Component
@@ -156,7 +159,7 @@ spec:
                   title: API consumed by
                   type: string
                   description: Component which consumes this API
-                  ui:field: EntityPicker
+                  ui:field: EntityPicker # Change this to MultiEntityPicker when it's available in v1.23
                   ui:options:
                     catalogFilter:
                       kind: Component
