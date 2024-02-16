@@ -10,29 +10,56 @@ spec:
 
   # These are the steps which are rendered in the frontend with the form input.
   parameters:
-    - title: Component Details # Title of the first step.
+    - title: Entity Details # Title of the first step.
       required:
         - name
+        - kind
         - description
         - type
         - lifecycle
         - owner
       properties:
-        name:
-          title: Component Name
+        kind:
+          title: Kind
           type: string
-          description: The name of the component in Roadie Backstage, typically the same name used in the repository. This will be used to create a human readable title.
+          description: Component or API
+          ui:field: EntityPicker
+          ui:options:
+            catalogFilter:
+              kind: [Component, API]
+
+        name:
+          title: Name
+          type: string
+          description: The name of the component or API in Roadie Backstage, typically the same name used in the repository. This will be used to create a human readable title.
 
         description:
-          title: Component Description
-          decription: A Detailed decription allows for the component to be easily found and understood in Roadie Backstage.
+          title: Description
+          decription: A detailed decription allows for the component or API to be easily found and understood in Roadie Backstage.
           type: string
 
-        type:
-          title: Component Type
-          type: string
-          default: service
-          enum: ['service', 'website', 'library', 'mobile', 'action', 'workflow', 'data-pipeline', 'model']
+        if:
+          properties:
+            kind:
+              const: "Component"
+        then:
+          properties:
+            type:
+              title: Component Type
+              type: string
+              default: service
+              enum: ['service', 'website', 'library', 'mobile', 'action', 'workflow', 'data-pipeline', 'model']
+          required:
+            - type
+        else:
+          properties:
+            type:
+              title: API Type
+              type: string
+              default: openapi
+              enum: ['openapi', 'asyncapi', 'graphql', 'grpc', 'RAML']
+          required:
+            - type
 
         lifecycle:
           title: Component Lifecycle
