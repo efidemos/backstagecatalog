@@ -23,10 +23,7 @@ spec:
           title: Kind
           type: string
           description: Component or API
-          ui:field: EntityPicker
-          ui:options:
-            catalogFilter:
-              kind: [Component, API]
+          enum: ['Component', 'API']
 
         name:
           title: Name
