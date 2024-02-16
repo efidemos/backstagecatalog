@@ -147,65 +147,67 @@ spec:
                 type: string
 
     - title: Entity Relationships # Title of the third step
-      if:
-        properties:
-          kind:
-            const: "Component"
-      then:
-        properties:
-          subcomponentOf:
-            title: Subcomponent of
-            type: string
-            description: If this is part of another component, list what component it is part of
-            ui:field: EntityPicker
-            ui:options:
-              catalogFilter:
-                kind: Component
-          dependsOn:
-            title: Depends on
-            type: array
-            description: Dependencies the component has
-            ui:field: EntityPicker
-            ui:options:
-              catalogFilter:
-                kind: Component
-          
-          providesApis:
-            title: Provides APIs
-            type: array
-            description: APIs provided by this component
-            ui:field: EntityPicker
-            ui:options:
-              catalogFilter:
-                kind: API
-          
-          consumesApis:
-            title: Consumes APIs
-            type: array
-            description: APIs consumed by this component
-            ui:field: EntityPicker
-            ui:options:
-              catalogFilter:
-                kind: API
-      else:
-        properties:
-          apiProvidedBy:
-            title: API provided by
-            type: string
-            description: Component which provides this API
-            ui:field: EntityPicker
-            ui:options:
-              catalogFilter:
-                kind: Component
+      dependencies:
+        type:
+          oneOf:
+            - properties:
+                type:
+                  const: "Component"
+              subcomponentOf:
+                title: Subcomponent of
+                type: string
+                description: If this is part of another component, list what component it is part of
+                ui:field: EntityPicker
+                ui:options:
+                  catalogFilter:
+                    kind: Component
+              dependsOn:
+                title: Depends on
+                type: array
+                description: Dependencies the component has
+                ui:field: EntityPicker
+                ui:options:
+                  catalogFilter:
+                    kind: Component
+              
+              providesApis:
+                title: Provides APIs
+                type: array
+                description: APIs provided by this component
+                ui:field: EntityPicker
+                ui:options:
+                  catalogFilter:
+                    kind: API
+              
+              consumesApis:
+                title: Consumes APIs
+                type: array
+                description: APIs consumed by this component
+                ui:field: EntityPicker
+                ui:options:
+                  catalogFilter:
+                    kind: API
+                    
+            - properties:
+                type:
+                  const: "API"
+                apiProvidedBy:
+                  title: API provided by
+                  type: string
+                  description: Component which provides this API
+                  ui:field: EntityPicker
+                  ui:options:
+                    catalogFilter:
+                      kind: Component
 
-          apiConsumedBy:
-            title: API consumed by
-            type: string
-            description: Component which consumes this API
-            ui:field: EntityPicker
-            ui:options:
-              catalogFilter:
-                kind: Component
+                apiConsumedBy:
+                  title: API consumed by
+                  type: string
+                  description: Component which consumes this API
+                  ui:field: EntityPicker
+                  ui:options:
+                    catalogFilter:
+                      kind: Component
 
     - title: Integrations (optional) # Title of the fourth step.
       properties: #TODO: Specify any additional integrations associated with your repos.
@@ -285,6 +287,8 @@ spec:
           dependsOn: ${{ parameters.dependsOn }}
           providesApis: ${{ parameters.providesApis }}
           consumesApis: ${{ parameters.consumesApis }}
+          apiProvidedBy: ${{ parameters.apiProvidedBy }}
+          apiConsumedBy: ${{ parameters.apiConsumedBy }}
 
     - id: fetchTechDocsTemplate
       name: Write TechDocs to root path
