@@ -29,6 +29,11 @@ spec:
           title: Name
           type: string
           description: The name of the component or API in Roadie Backstage, typically the same name used in the repository. This will be used to create a human readable title.
+        
+        title:
+          title: Title
+          type: string
+          description: (Optional) Named showed to users 
 
         description:
           title: Description
@@ -36,15 +41,15 @@ spec:
           type: string
 
         lifecycle:
-          title: Component Lifecycle
+          title: Lifecycle
           type: string
           default: production
           enum: ['production', 'development', 'experimental', 'deprecated']
 
         owner:
-          title: Component Owner
+          title: Owner
           type: string
-          description: Team or User who owns the component
+          description: Team or User who owns the component or API
           ui:field: OwnerPicker
           ui:options:
             catalogFilter:
@@ -52,7 +57,7 @@ spec:
         
         system:
           title: System
-          description: System to which the component belongs
+          description: System to which the component or API belongs
           type: string
           ui:field: EntityPicker
           ui:options:
@@ -82,7 +87,7 @@ spec:
         required:
           - type
 
-    - title: Component Location # Title of the second step.
+    - title: Entity Location # Title of the second step.
       required:
         - repoSlug
       properties:
@@ -141,43 +146,66 @@ spec:
                 title: Type
                 type: string
 
-    - title: Component Relationships # Title of the third step
-      properties:
-        subcomponentOf:
-          title: Subcomponent of
-          type: string
-          description: If this is part of another component, list what component it is part of
-          ui:field: EntityPicker
-          ui:options:
-            catalogFilter:
-              kind: Component
-        
-    #     dependsOn:
-    #       title: Depends on
-    #       type: array
-    #       description: Dependencies the component has
-    #       ui:field: EntityPicker
-    #       ui:options:
-    #         catalogFilter:
-    #           kind: Component
-        
-    #     providesApis:
-    #       title: Provides APIs
-    #       type: array
-    #       description: APIs provided by this component
-    #       ui:field: EntityPicker
-    #       ui:options:
-    #         catalogFilter:
-    #           kind: API
-        
-    #     consumesApis:
-    #       title: Consumes APIs
-    #       type: array
-    #       description: APIs consumed by this component
-    #       ui:field: EntityPicker
-    #       ui:options:
-    #         catalogFilter:
-    #           kind: API
+    - title: Entity Relationships # Title of the third step
+      if:
+        properties:
+          kind:
+            const: "Component"
+      then:
+        properties:
+          subcomponentOf:
+            title: Subcomponent of
+            type: string
+            description: If this is part of another component, list what component it is part of
+            ui:field: EntityPicker
+            ui:options:
+              catalogFilter:
+                kind: Component
+          dependsOn:
+            title: Depends on
+            type: array
+            description: Dependencies the component has
+            ui:field: EntityPicker
+            ui:options:
+              catalogFilter:
+                kind: Component
+          
+          providesApis:
+            title: Provides APIs
+            type: array
+            description: APIs provided by this component
+            ui:field: EntityPicker
+            ui:options:
+              catalogFilter:
+                kind: API
+          
+          consumesApis:
+            title: Consumes APIs
+            type: array
+            description: APIs consumed by this component
+            ui:field: EntityPicker
+            ui:options:
+              catalogFilter:
+                kind: API
+      else:
+        properties:
+          apiProvidedBy:
+            title: API provided by
+            type: string
+            description: Component which provides this API
+            ui:field: EntityPicker
+            ui:options:
+              catalogFilter:
+                kind: Component
+
+          apiConsumedBy:
+            title: API consumed by
+            type: string
+            description: Component which consumes this API
+            ui:field: EntityPicker
+            ui:options:
+              catalogFilter:
+                kind: Component
 
     - title: Integrations (optional) # Title of the fourth step.
       properties: #TODO: Specify any additional integrations associated with your repos.
@@ -189,17 +217,17 @@ spec:
           title: PagerDuty Service ID
           type: string
 
-        ensableTechDocs:
+        enableTechDocs:
           title: Enable TechDocs
           default: true
           type: boolean
 
       if:
         properties:
-          ensableTechDocs:
+          enableTechDocs:
             const: true
         required:
-        - ensableTechDocs
+        - enableTechDocs
       then:
         properties:
           techDocsPathType:
@@ -239,6 +267,7 @@ spec:
         url: ./skeleton
         templateFileExtension: .njk
         values:
+          kind: ${{ parameters.kind }}
           name: ${{ parameters.name }}
           description: ${{ parameters.description }}
           owner: ${{ parameters.owner }}
@@ -259,7 +288,7 @@ spec:
 
     - id: fetchTechDocsTemplate
       name: Write TechDocs to root path
-      if: ${{ parameters.ensableTechDocs and parameters.techDocsPath == '.' and parameters.techDocsPathType == 'dir' }}
+      if: ${{ parameters.enableTechDocs and parameters.techDocsPath == '.' and parameters.techDocsPathType == 'dir' }}
       action: fetch:template
       input:
         url: ./techDocs
@@ -270,7 +299,7 @@ spec:
 
     - id: fetchTechDocsTemplate
       name: Write TechDocs to custom path
-      if: ${{ parameters.ensableTechDocs and parameters.techDocsPath != '.' and parameters.techDocsPathType == 'dir' }}
+      if: ${{ parameters.enableTechDocs and parameters.techDocsPath != '.' and parameters.techDocsPathType == 'dir' }}
       action: fetch:template
       input:
         url: ./techDocs
