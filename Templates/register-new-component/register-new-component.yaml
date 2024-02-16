@@ -64,24 +64,24 @@ spec:
             catalogFilter:
               kind: System
 
-      if:
-        properties:
-          kind:
-            const: "Component"
-      then:
-        properties:
-          type:
-            title: Component Type
-            type: string
-            default: service
-            enum: ['service', 'website', 'library', 'mobile', 'action', 'workflow', 'data-pipeline', 'model']
-      else:
-        properties:
-          type:
-            title: API Type
-            type: string
-            default: openapi
-            enum: ['openapi', 'asyncapi', 'graphql', 'grpc', 'RAML']
+      # if:
+      #   properties:
+      #     kind:
+      #       const: "Component"
+      # then:
+      #   properties:
+      #     type:
+      #       title: Component Type
+      #       type: string
+      #       default: service
+      #       enum: ['service', 'website', 'library', 'mobile', 'action', 'workflow', 'data-pipeline', 'model']
+      # else:
+      #   properties:
+      #     type:
+      #       title: API Type
+      #       type: string
+      #       default: openapi
+      #       enum: ['openapi', 'asyncapi', 'graphql', 'grpc', 'RAML']
 
       dependencies:
         kind:
@@ -89,6 +89,12 @@ spec:
             - properties:
                 kind:
                   const: "Component"
+                type:
+                  title: Component Type
+                  type: string
+                  default: service
+                  enum: ['service', 'website', 'library', 'mobile', 'action', 'workflow', 'data-pipeline', 'model']
+
                 subcomponentOf:
                   title: Subcomponent of
                   type: string
@@ -128,6 +134,12 @@ spec:
             - properties:
                 kind:
                   const: "API"
+                type:
+                  title: API Type
+                  type: string
+                  default: openapi
+                  enum: ['openapi', 'asyncapi', 'graphql', 'grpc', 'RAML']
+
                 apiProvidedBy:
                   title: API provided by
                   type: string
