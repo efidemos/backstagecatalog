@@ -112,6 +112,7 @@ spec:
                   description: Dependencies the component has
                   ui:field: MultiEntityPicker
                   ui:options:
+                    allowArbitraryValues: false
                     catalogFilter:
                       - kind: Component
                 
