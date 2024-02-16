@@ -108,7 +108,7 @@ spec:
                   title: Depends on
                   type: string
                   description: Dependencies the component has
-                  ui:field: EntityPicker
+                  ui:field: MultiEntityPicker
                   ui:options:
                     catalogFilter:
                       kind: Component
