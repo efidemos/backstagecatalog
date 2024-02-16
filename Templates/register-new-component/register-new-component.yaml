@@ -69,8 +69,6 @@ spec:
           kind:
             const: "Component"
       then:
-        required:
-          - type
         properties:
           type:
             title: Component Type
@@ -115,8 +113,6 @@ spec:
                 kind: API
 
       else:
-        required:
-          - type
         properties:
           type:
             title: API Type
