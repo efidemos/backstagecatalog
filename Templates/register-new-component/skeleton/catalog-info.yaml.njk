@@ -6,20 +6,21 @@ metadata:
   description: ${{ values.description }}
   annotations:
     github.com/project-slug: ${{ values.repoSlug }}
-    {%if values.techDocsPath %}backstage.io/techdocs-ref: ${{values.techDocsPath}} {% endif %}
-    {%if values.argoAppName %}argocd/app-name: ${{values.argoAppName}} {% endif %}
-    {%if values.pagerdutyServiceId %}pagerduty.com/service-id: ${{values.pagerdutyServiceId}} {% endif %}
+    {%if values.techDocsPath %}backstage.io/techdocs-ref: ${{values.techDocsPath}}{% endif %}
+    {%if values.argoAppName %}argocd/app-name: ${{values.argoAppName}}{% endif %}
+    {%if values.pagerdutyServiceId %}pagerduty.com/service-id: ${{values.pagerdutyServiceId}}{% endif %}
   {%if values.entityTags %}tags:
-    ${{ values.entityTags }}
-  {% endif %}
+    ${{ values.entityTags }}{% endif %}
   {%if values.entityLabels %}labels:
-    ${{ values.entityLabels }}
-  {% endif %}
+    ${{ values.entityLabels }}{% endif %}
+  {%if values.entityLinks }links:
+    ${{ values.entityLinks }}{% endif %}
 spec:
   type: ${{ values.type }}
   owner: ${{ values.owner }}
   {%if values.productOwner %}productOwner: ${{values.productOwner}}{% endif %}
   lifecycle: ${{ values.lifecycle }}
+  system: ${{ values.system }}
   {%if values.subcomponentOf %}subcomponentOf: ${{values.subcomponentOf}}{% endif %}
   {%if values.dependsOn %}dependsOn: ${{values.dependsOn}}{% endif %}
   {%if values.providesApis %}providesApis: ${{values.providesApis}}{% endif %}
