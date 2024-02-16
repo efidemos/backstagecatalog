@@ -107,14 +107,11 @@ spec:
                 dependsOn:
                   title: Depends on
                   type: array
-                  items:
-                    type: string
                   description: Dependencies the component has
                   ui:field: MultiEntityPicker
                   ui:options:
-                    allowArbitraryValues: true
                     catalogFilter:
-                      kind: Component
+                      - kind: Component
                 
                 providesApis:
                   title: Provides APIs
