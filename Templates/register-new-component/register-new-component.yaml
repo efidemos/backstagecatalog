@@ -114,7 +114,7 @@ spec:
                     removable: true
                   items:
                     type: string                      
-                    ui:field: EntityPicker # Change this to MultiEntityPicker when it's available in v1.23
+                    ui:field: EntityPicker # Use MultiEntityPicker when it's available in v1.23
                     ui:options:
                       catalogFilter:
                         kind: Component
@@ -123,19 +123,31 @@ spec:
                   title: Provides APIs
                   type: string
                   description: APIs provided by this component
-                  ui:field: EntityPicker # Change this to MultiEntityPicker when it's available in v1.23
                   ui:options:
-                    catalogFilter:
-                      kind: API
+                    addable: true
+                    orderable: true
+                    removable: true
+                  items:
+                    type: string
+                    ui:field: EntityPicker # Use MultiEntityPicker when it's available in v1.23
+                    ui:options:
+                      catalogFilter:
+                        kind: API
                 
                 consumesApis:
                   title: Consumes APIs
                   type: string
                   description: APIs consumed by this component
-                  ui:field: EntityPicker # Change this to MultiEntityPicker when it's available in v1.23
                   ui:options:
-                    catalogFilter:
-                      kind: API
+                    addable: true
+                    orderable: true
+                    removable: true
+                  items:
+                    type: string
+                    ui:field: EntityPicker # Use MultiEntityPicker when it's available in v1.23
+                    ui:options:
+                      catalogFilter:
+                        kind: API
 
             - properties:
                 kind:
@@ -150,19 +162,31 @@ spec:
                   title: API provided by
                   type: string
                   description: Component which provides this API
-                  ui:field: EntityPicker # Change this to MultiEntityPicker when it's available in v1.23 (maybe?)
                   ui:options:
-                    catalogFilter:
-                      kind: Component
+                    addable: true
+                    orderable: true
+                    removable: true
+                  items:
+                    type: string
+                    ui:field: EntityPicker # Use MultiEntityPicker when it's available in v1.23 (maybe?)
+                    ui:options:
+                      catalogFilter:
+                        kind: Component
 
                 apiConsumedBy:
                   title: API consumed by
                   type: string
                   description: Component which consumes this API
-                  ui:field: EntityPicker # Change this to MultiEntityPicker when it's available in v1.23
                   ui:options:
-                    catalogFilter:
-                      kind: Component
+                    addable: true
+                    orderable: true
+                    removable: true
+                  items:
+                    type: string
+                    ui:field: EntityPicker # Use MultiEntityPicker when it's available in v1.23
+                    ui:options:
+                      catalogFilter:
+                        kind: Component
 
 
     - title: Entity Location # Title of the second step.
