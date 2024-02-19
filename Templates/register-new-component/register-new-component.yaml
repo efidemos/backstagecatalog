@@ -298,14 +298,14 @@ spec:
     - id: fetchCatalogTemplate
       action: fetch:template
       each:
-        tags: '${{ parameters.tags }}'
-        labels: '${{ parameters.entityLabels}}'
-        links: '${{ parameters.entityLinks }}'
-        dependsOn: '${{ parameters.dependsOn }}'
-        providesApis: '${{ parameters.providesApis }}'
-        consumesApis: '{{ parameters.consumesApis }}'
-        apiProvidedBy: '{{ parameters.apiProvidedBy }}'
-        apiConsumedBy: '{{ parameters.apiConsumedBy }}'
+        tagsArray: ${{ parameters.tags }}
+        labelsArray: ${{ parameters.entityLabels}}
+        linksArray: ${{ parameters.entityLinks }}
+        dependsOnArray: ${{ parameters.dependsOn }}
+        providesApisArray: ${{ parameters.providesApis }}
+        consumesApisArray: ${{ parameters.consumesApis }}
+        apiProvidedByArray: ${{ parameters.apiProvidedBy }}
+        apiConsumedByArray: ${{ parameters.apiConsumedBy }}
       input:
         url: ./skeleton
         templateFileExtension: .njk
@@ -318,20 +318,20 @@ spec:
           techDocsPath: '${{parameters.techDocsPathType}}:${{parameters.techDocsPath}}'
           argoAppName: ${{ parameters.argoAppName }}
           pagerdutyServiceId: ${{ parameters.pagerdutyServiceId }}
-          entityTags: ${{ each.value.tags }}
-          entityLabels: ${{ each.value.labels }}
-          entityLinks: ${{ each.value.links }}
+          entityTags: ${{ each.value.tagsArray }}
+          entityLabels: ${{ each.value.labelsArray }}
+          entityLinks: ${{ each.value.linksArray }}
           type: ${{ parameters.type }}
           owner: ${{ parameters.owner }}
           productOwner: ${{ parameters.productOwner }}
           lifecycle: ${{ parameters.lifecycle }}
           system: ${{ parameters.system }}
           subcomponentOf: ${{ parameters.subcomponentOf }}
-          dependsOn: ${{ each.values.dependsOn }}
-          providesApis: ${{ each.values.providesApis }}
-          consumesApis: ${{ each.values.consumesApis }}
-          apiProvidedBy: ${{ each.values.apiProvidedBy }}
-          apiConsumedBy: ${{ each.values.apiConsumedBy }}
+          dependsOn: ${{ each.values.dependsOnArray }}
+          providesApis: ${{ each.values.providesApisArray }}
+          consumesApis: ${{ each.values.consumesApisArray }}
+          apiProvidedBy: ${{ each.values.apiProvidedByArray }}
+          apiConsumedBy: ${{ each.values.apiConsumedByArray }}
 
     - id: fetchTechDocsTemplate
       name: Write TechDocs to root path
