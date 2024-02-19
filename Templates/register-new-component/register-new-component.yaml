@@ -298,14 +298,14 @@ spec:
     - id: fetchCatalogTemplate
       action: fetch:template
       each:
-        tagsArray: ${{ parameters.tags }}
-        labelsArray: ['value1', 'value2']
-        linksArray: ${{ parameters.entityLinks }}
-        dependsOnArray: ${{ parameters.dependsOn }}
-        providesApisArray: ${{ parameters.providesApis }}
-        consumesApisArray: ${{ parameters.consumesApis }}
-        apiProvidedByArray: ${{ parameters.apiProvidedBy }}
-        apiConsumedByArray: ${{ parameters.apiConsumedBy }}
+        - tagsArray: ${{ parameters.tags }}
+        - labelsArray: ['value1', 'value2']
+        - linksArray: ${{ parameters.entityLinks }}
+        - dependsOnArray: ${{ parameters.dependsOn }}
+        - providesApisArray: ${{ parameters.providesApis }}
+        - consumesApisArray: ${{ parameters.consumesApis }}
+        - apiProvidedByArray: ${{ parameters.apiProvidedBy }}
+        - apiConsumedByArray: ${{ parameters.apiConsumedBy }}
       input:
         url: ./skeleton
         templateFileExtension: .njk
