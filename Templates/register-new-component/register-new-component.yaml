@@ -297,6 +297,15 @@ spec:
                       )"
     - id: fetchCatalogTemplate
       action: fetch:template
+      each:
+        tags: '${{ parameters.tags }}'
+        labels: '${{ parameters.entityLabels}}'
+        links: '${{ parameters.entityLinks }}'
+        dependsOn: '${{ parameters.dependsOn }}'
+        providesApis: '${{ parameters.providesApis }}'
+        consumesApis: '{{ parameters.consumesApis }}'
+        apiProvidedBy: '{{ parameters.apiProvidedBy }}'
+        apiConsumedBy: '{{ parameters.apiConsumedBy }}'
       input:
         url: ./skeleton
         templateFileExtension: .njk
@@ -309,20 +318,20 @@ spec:
           techDocsPath: '${{parameters.techDocsPathType}}:${{parameters.techDocsPath}}'
           argoAppName: ${{ parameters.argoAppName }}
           pagerdutyServiceId: ${{ parameters.pagerdutyServiceId }}
-          entityTags: ${{ parameters.entityTags }}
-          entityLabels: ${{ parameters.entityLabels }}
-          entityLinks: ${{ parameters.entityLinks }}
+          entityTags: ${{ each.value.tags }}
+          entityLabels: ${{ each.value.labels }}
+          entityLinks: ${{ each.value.links }}
           type: ${{ parameters.type }}
           owner: ${{ parameters.owner }}
           productOwner: ${{ parameters.productOwner }}
           lifecycle: ${{ parameters.lifecycle }}
           system: ${{ parameters.system }}
           subcomponentOf: ${{ parameters.subcomponentOf }}
-          dependsOn: ${{ parameters.dependsOn }}
-          providesApis: ${{ parameters.providesApis }}
-          consumesApis: ${{ parameters.consumesApis }}
-          apiProvidedBy: ${{ parameters.apiProvidedBy }}
-          apiConsumedBy: ${{ parameters.apiConsumedBy }}
+          dependsOn: ${{ each.values.dependsOn }}
+          providesApis: ${{ each.values.providesApis }}
+          consumesApis: ${{ each.values.consumesApis }}
+          apiProvidedBy: ${{ each.values.apiProvidedBy }}
+          apiConsumedBy: ${{ each.values.apiConsumedBy }}
 
     - id: fetchTechDocsTemplate
       name: Write TechDocs to root path
