@@ -22,13 +22,14 @@ spec:
         kind:
           title: Kind
           type: string
-          description: Component or API
-          enum: ['Component', 'API']
+          description: Describes the kind of entity
+          default: Component
+          enum: ['System', 'Component', 'Resource', 'API', 'TBC', 'Template']
 
         name:
           title: Name
           type: string
-          description: The name of the component or API in Roadie Backstage, typically the same name used in the repository. This will be used to create a human readable title.
+          description: The name of the entity in Roadie Backstage, typically the same name used in the repository. This will be used to create a human readable title.
         
         title:
           title: Title
@@ -37,7 +38,7 @@ spec:
 
         description:
           title: Description
-          decription: A detailed decription allows for the component or API to be easily found and understood in Roadie Backstage.
+          decription: A detailed decription allows for the entity to be easily found and understood in Roadie Backstage.
           type: string
 
         lifecycle:
@@ -64,33 +65,34 @@ spec:
             catalogFilter:
               kind: System
 
-      # if:
-      #   properties:
-      #     kind:
-      #       const: "Component"
-      # then:
-      #   properties:
-      #     type:
-      #       title: Component Type
-      #       type: string
-      #       default: service
-      #       enum: ['service', 'website', 'library', 'mobile', 'action', 'workflow', 'data-pipeline', 'model']
-      # else:
-      #   properties:
-      #     type:
-      #       title: API Type
-      #       type: string
-      #       default: openapi
-      #       enum: ['openapi', 'asyncapi', 'graphql', 'grpc', 'RAML']
+        entityTags:
+          type: array
+          ui:field: EntityTagsPicker
+
+        entityLabels:
+          title: Labels
+          type: string
+          description: References to other entities, e.g. developer.astrazeneca.com/TAG
 
       dependencies:
         kind:
           oneOf:
             - properties:
                 kind:
-                  const: "Component"
+                  enum:
+                    - System
+                cmdb-id:
+                  title: CMDB-ID
+                  type: number
+                  description: Enter the Service Now ID for the Business Service
+                  
+            - properties:
+                kind:
+                  enum:
+                    - Component
+                    - Resources
                 type:
-                  title: Component Type
+                  title: Component Type # TODO: separate the types for component, resource, tooling, template
                   type: string
                   default: service
                   enum: ['service', 'website', 'library', 'mobile', 'action', 'workflow', 'data-pipeline', 'model']
@@ -215,15 +217,6 @@ spec:
           title: Page Number
           type: number
           default: 1
-
-        entityTags:
-          type: array
-          ui:field: EntityTagsPicker
-
-        entityLabels:
-          title: Labels
-          type: string
-          description: References to other entities, e.g. developer.astrazeneca.com/TAG
         
         entityLinks:
           title: Links
@@ -310,18 +303,20 @@ spec:
         values:
           kind: ${{ parameters.kind }}
           name: ${{ parameters.name }}
+          title: ${{ parameters.title }}
           description: ${{ parameters.description }}
-          owner: ${{ parameters.owner }}
-          type: ${{ parameters.type }}
-          productOwner: ${{ parameters.productOwner}}
-          system: ${{ parameters.system }}
           repoSlug: ${{ parameters.repoSlug }}
+          techDocsPath: '${{parameters.techDocsPathType}}:${{parameters.techDocsPath}}'
           argoAppName: ${{ parameters.argoAppName }}
           pagerdutyServiceId: ${{ parameters.pagerdutyServiceId }}
-          lifecycle: ${{ parameters.lifecycle }}
-          techDocsPath: '${{parameters.techDocsPathType}}:${{parameters.techDocsPath}}'
           entityTags: ${{ parameters.entityTags }}
           entityLabels: ${{ parameters.entityLabels }}
+          entityLinks: ${{ parameters.entityLinks }}
+          type: ${{ parameters.type }}
+          owner: ${{ parameters.owner }}
+          productOwner: ${{ parameters.productOwner }}
+          lifecycle: ${{ parameters.lifecycle }}
+          system: ${{ parameters.system }}
           subcomponentOf: ${{ parameters.subcomponentOf }}
           dependsOn: ${{ parameters.dependsOn }}
           providesApis: ${{ parameters.providesApis }}
