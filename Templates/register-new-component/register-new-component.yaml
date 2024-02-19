@@ -327,11 +327,11 @@ spec:
           lifecycle: ${{ parameters.lifecycle }}
           system: ${{ parameters.system }}
           subcomponentOf: ${{ parameters.subcomponentOf }}
-          dependsOn: ${{ each.values.dependsOnArray }}
-          providesApis: ${{ each.values.providesApisArray }}
-          consumesApis: ${{ each.values.consumesApisArray }}
-          apiProvidedBy: ${{ each.values.apiProvidedByArray }}
-          apiConsumedBy: ${{ each.values.apiConsumedByArray }}
+          dependsOn: ${{ each.value.dependsOnArray }}
+          providesApis: ${{ each.value.providesApisArray }}
+          consumesApis: ${{ each.value.consumesApisArray }}
+          apiProvidedBy: ${{ each.value.apiProvidedByArray }}
+          apiConsumedBy: ${{ each.value.apiConsumedByArray }}
 
     - id: fetchTechDocsTemplate
       name: Write TechDocs to root path
