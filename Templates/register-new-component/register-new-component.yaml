@@ -299,7 +299,7 @@ spec:
       action: fetch:template
       each:
         tagsArray: ${{ parameters.tags }}
-        labelsArray: ${{ parameters.entityLabels}}
+        labelsArray: ['value1', 'value2']
         linksArray: ${{ parameters.entityLinks }}
         dependsOnArray: ${{ parameters.dependsOn }}
         providesApisArray: ${{ parameters.providesApis }}
