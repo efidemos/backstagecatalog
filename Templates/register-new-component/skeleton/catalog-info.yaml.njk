@@ -12,7 +12,7 @@ metadata:
   {%if values.entityTags -%}tags:{% for tag in values.entityTags %}
     - ${{ tag }}{% endfor %}{%- endif %}
   {%if values.entityLabels %}labels: ${{ values.entityLabels }}{% endif %}
-  {%if values.entityLinks %}links: ${{ values.entityLinks }}{% endif %}
+  {%if values.entityLinks %}links:{% for link in values.entityLinks %} ${{ values.entityLinks }}{% endif %}
 spec:
   type: ${{ values.type }}
   owner: ${{ values.owner }}
@@ -25,3 +25,4 @@ spec:
   {%if values.consumesApis %}consumesApis: ${{values.consumesApis}}{% endif %}
   {%if values.apiProvidedBy %}apiProvidedBy: ${{values.apiProvidedBy}}{% endif %}
   {%if values.apiConsumedBy %}apiConsumedBy: ${{values.apiConsumedBy}}{% endif %}
+  {%if values.definition %}definition: ${{values.definition}}{% endif %}

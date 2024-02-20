@@ -24,7 +24,7 @@ spec:
           type: string
           description: Describes the kind of entity
           default: Component
-          enum: ['System', 'Component', 'Resource', 'API', 'TBC', 'Template']
+          enum: ['System', 'Component', 'Resource', 'API', 'TBC']
 
         name:
           title: Name
@@ -82,10 +82,18 @@ spec:
                   enum:
                     - Component
                 type:
-                  title: Component Type # TODO: separate the types for component, resource, tooling, template
+                  title: Component Type
                   type: string
                   default: service
                   enum: ['service', 'website', 'library', 'mobile', 'action', 'workflow', 'data-pipeline', 'model']
+                
+                productOwner:
+                  title: Product Owner
+                  type: string
+                  ui:field: OwnerPicker
+                  ui:options:
+                    catalogFilter:
+                      kind: User
                         
                 system:
                   title: System
@@ -221,37 +229,48 @@ spec:
                   type: string
                   default: openapi
                   enum: ['openapi', 'asyncapi', 'graphql', 'grpc', 'RAML']
-
-                apiProvidedBy:
-                  title: API provided by
-                  type: array
-                  description: Component which provides this API
+                
+                definition:
+                  title: API Definition
+                  type: string
+                  description: API definition based on API type
+                  ui:widget: textarea
                   ui:options:
-                    addable: true
-                    orderable: true
-                    removable: true
-                  items:
-                    type: string
-                    ui:field: EntityPicker # Use MultiEntityPicker when it's available in v1.23 (maybe?)
-                    ui:options:
-                      catalogFilter:
-                        kind: Component
+                    rows: 10
+                  ui:placeholder: |
+                    openapi: "3.0.0"
+                    info:
+                      version: 1.0.0
+                      title: Artist API
+                      license:
+                        name: MIT
+                    servers:
+                      - url: http://artist.spotify.net/v1
+                    paths:
+                      /artists:
+                        get:
+                          summary: List all artists
+                    ...
 
-                apiConsumedBy:
-                  title: API consumed by
-                  type: array
-                  description: Component which consumes this API
-                  ui:options:
-                    addable: true
-                    orderable: true
-                    removable: true
-                  items:
-                    type: string
-                    ui:field: EntityPicker # Use MultiEntityPicker when it's available in v1.23
-                    ui:options:
-                      catalogFilter:
-                        kind: Component
-
+            - properties:
+                kind:
+                  const: "TBC"
+                type:
+                  title: TBC Type
+                  type: string
+                  enum:
+                    - collaboration
+                    - core-engineering
+                    - test-management
+                    - test-automation
+                    - development-validation
+                    - data-services
+                    - monitoring
+                    - provisioning
+                    - security
+                    - api-management
+                    - ai&ml
+                    - product-management-design
 
     - title: Entity Location # Title of the second step.
       required:
@@ -357,8 +376,10 @@ spec:
                           'repoName': $Name
                         }
                       )"
-    - id: fetchCatalogTemplate
+
+    - id: fetchCatalogTemplateSystem
       action: fetch:template
+      if: ${{ parameters.kind == 'System'}}
       input:
         url: ./skeleton
         templateFileExtension: .njk
@@ -369,22 +390,100 @@ spec:
           description: ${{ parameters.description }}
           repoSlug: ${{ parameters.repoSlug }}
           techDocsPath: '${{parameters.techDocsPathType}}:${{parameters.techDocsPath}}'
-          argoAppName: ${{ parameters.argoAppName }}
-          pagerdutyServiceId: ${{ parameters.pagerdutyServiceId }}
+          entityTags: ${{ parameters.entityTags }}
+          entityLabels: ${{ parameters.entityLabels }}
+          entityLinks: ${{ parameters.entityLinks }}
+          owner: ${{ parameters.owner }}
+          cmdb-id: ${{ parameters.cmdb-id }}
+
+    - id: fetchCatalogTemplateComponent
+      action: fetch:template
+      if: ${{ parameters.kind == 'Component '}}
+      input:
+        url: ./skeleton
+        templateFileExtension: .njk
+        values:
+          kind: ${{ parameters.kind }}
+          name: ${{ parameters.name }}
+          title: ${{ parameters.title }}
+          description: ${{ parameters.description }}
+          repoSlug: ${{ parameters.repoSlug }}
+          techDocsPath: '${{parameters.techDocsPathType}}:${{parameters.techDocsPath}}'
           entityTags: ${{ parameters.entityTags }}
           entityLabels: ${{ parameters.entityLabels }}
           entityLinks: ${{ parameters.entityLinks }}
           type: ${{ parameters.type }}
-          owner: ${{ parameters.owner }}
-          productOwner: ${{ parameters.productOwner }}
           lifecycle: ${{ parameters.lifecycle }}
+          owner: ${{ parameters.owner }}
+          system: ${{ parameters.system }}
+    
+    - id: fetchCatalogTemplateResource
+      action: fetch:template
+      if: ${{ parameters.kind == 'Resource' }}
+      input:
+        url: ./skeleton
+        templateFileExtension: .njk
+        values:
+          kind: ${{ parameters.kind }}
+          name: ${{ parameters.name }}
+          title: ${{ parameters.title }}
+          description: ${{ parameters.description }}
+          repoSlug: ${{ parameters.repoSlug }}
+          techDocsPath: '${{parameters.techDocsPathType}}:${{parameters.techDocsPath}}'
+          entityTags: ${{ parameters.entityTags }}
+          entityLabels: ${{ parameters.entityLabels }}
+          entityLinks: ${{ parameters.entityLinks }}
+          type: ${{ parameters.type }}
+          lifecycle: ${{ parameters.lifecycle }}
+          owner: ${{ parameters.owner }}
           system: ${{ parameters.system }}
           subcomponentOf: ${{ parameters.subcomponentOf }}
           dependsOn: ${{ parameters.dependsOn }}
           providesApis: ${{ parameters.providesApis }}
           consumesApis: ${{ parameters.consumesApis }}
+
+    - id: fetchCatalogTemplateApi
+      action: fetch:template
+      if: ${{ parameters.kind == 'API' }}
+      input:
+        url: ./skeleton
+        templateFileExtension: .njk
+        values:
+          kind: ${{ parameters.kind }}
+          name: ${{ parameters.name }}
+          title: ${{ parameters.title }}
+          description: ${{ parameters.description }}
+          repoSlug: ${{ parameters.repoSlug }}
+          techDocsPath: '${{parameters.techDocsPathType}}:${{parameters.techDocsPath}}'
+          entityTags: ${{ parameters.entityTags }}
+          entityLabels: ${{ parameters.entityLabels }}
+          entityLinks: ${{ parameters.entityLinks }}
+          type: ${{ parameters.type }}
+          lifecycle: ${{ parameters.lifecycle }}
+          owner: ${{ parameters.owner }}
+          definition: ${{ parameters.definition }}
           apiProvidedBy: ${{ parameters.apiProvidedBy }}
           apiConsumedBy: ${{ parameters.apiConsumedBy }}
+    
+    - id: fetchCatalogTemplateTBC
+      action: fetch:template
+      if: ${{ parameters.kind == "TBC" }}
+      input:
+        url: ./skeleton
+        templateFileExtension: .njk
+        values:
+          kind: ${{ parameters.kind }}
+          name: ${{ parameters.name }}
+          title: ${{ parameters.title }}
+          description: ${{ parameters.description }}
+          repoSlug: ${{ parameters.repoSlug }}
+          techDocsPath: '${{parameters.techDocsPathType}}:${{parameters.techDocsPath}}'
+          entityTags: ${{ parameters.entityTags }}
+          entityLabels: ${{ parameters.entityLabels }}
+          entityLinks: ${{ parameters.entityLinks }}
+          type: ${{ parameters.type }}
+          lifecycle: ${{ parameters.lifecycle }}
+          owner: ${{ parameters.owner }}
 
     - id: fetchTechDocsTemplate
       name: Write TechDocs to root path
