@@ -50,20 +50,11 @@ spec:
         owner:
           title: Owner
           type: string
-          description: Team or User who owns the component or API
+          description: Team or User who owns the entity
           ui:field: OwnerPicker
           ui:options:
             catalogFilter:
               kind: [Group, User]
-        
-        system:
-          title: System
-          description: System to which the component or API belongs
-          type: string
-          ui:field: EntityPicker
-          ui:options:
-            catalogFilter:
-              kind: System
 
         entityTags:
           type: array
@@ -85,18 +76,40 @@ spec:
                   title: CMDB-ID
                   type: number
                   description: Enter the Service Now ID for the Business Service
-                  
+
             - properties:
                 kind:
                   enum:
                     - Component
-                    - Resources
                 type:
                   title: Component Type # TODO: separate the types for component, resource, tooling, template
                   type: string
                   default: service
                   enum: ['service', 'website', 'library', 'mobile', 'action', 'workflow', 'data-pipeline', 'model']
+                        
+                system:
+                  title: System
+                  description: System to which the entity belongs
+                  type: string
+                  ui:field: EntityPicker
+                  ui:options:
+                    catalogFilter:
+                      kind: System
 
+            - properties:
+                kind:
+                  enum:
+                    - Resources
+                type:
+                  title: Resource Type
+                  type: string
+                  enum: ['database', 's3-bucket', 'cluster']
+
+            - properties:
+                kind:
+                  enum:
+                    - Component
+                    - Resources
                 subcomponentOf:
                   title: Subcomponent of
                   type: string
