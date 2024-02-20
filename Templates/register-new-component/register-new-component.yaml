@@ -420,6 +420,10 @@ spec:
           lifecycle: ${{ parameters.lifecycle }}
           owner: ${{ parameters.owner }}
           system: ${{ parameters.system }}
+          subcomponentOf: ${{ parameters.subcomponentOf }}
+          dependsOn: ${{ parameters.dependsOn }}
+          providesApis: ${{ parameters.providesApis }}
+          consumesApis: ${{ parameters.consumesApis }}
     
     - id: fetchCatalogTemplateResource
       name: Write catalog entry for Resource
@@ -468,8 +472,6 @@ spec:
           lifecycle: ${{ parameters.lifecycle }}
           owner: ${{ parameters.owner }}
           definition: ${{ parameters.definition }}
-          apiProvidedBy: ${{ parameters.apiProvidedBy }}
-          apiConsumedBy: ${{ parameters.apiConsumedBy }}
     
     - id: fetchCatalogTemplateTBC
       name: Write catalog entry for TBC
