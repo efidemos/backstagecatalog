@@ -419,6 +419,7 @@ spec:
           type: ${{ parameters.type }}
           lifecycle: ${{ parameters.lifecycle }}
           owner: ${{ parameters.owner }}
+          productOwner: ${{ parameters.productOwner }}
           system: ${{ parameters.system }}
           subcomponentOf: ${{ parameters.subcomponentOf }}
           dependsOn: ${{ parameters.dependsOn }}
