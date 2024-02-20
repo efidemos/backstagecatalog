@@ -10,11 +10,9 @@ metadata:
     {%if values.argoAppName %}argocd/app-name: ${{values.argoAppName}}{% endif %}
     {%if values.pagerdutyServiceId %}pagerduty.com/service-id: ${{values.pagerdutyServiceId}}{% endif %}
   {%if values.entityTags %}tags:
-    ${{ values.entityTags }}{% endif %}
-  {%if values.entityLabels %}labels:
-    ${{ values.entityLabels }}{% endif %}
-  {%if values.entityLinks %}links:
-    ${{ values.entityLinks }}{% endif %}
+    {%for tag in ${{ values.entityTags }}}- ${{ tag }}{% endif %}
+  {%if values.entityLabels %}labels: ${{ values.entityLabels }}{% endif %}
+  {%if values.entityLinks %}links: ${{ values.entityLinks }}{% endif %}
 spec:
   type: ${{ values.type }}
   owner: ${{ values.owner }}
