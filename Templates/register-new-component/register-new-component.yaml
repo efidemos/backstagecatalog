@@ -224,8 +224,6 @@ spec:
             - properties:
                 kind:
                   const: "API"
-                required:
-                  - definition
                 type:
                   title: API Type
                   type: string
@@ -253,6 +251,8 @@ spec:
                         get:
                           summary: List all artists
                     ...
+              required:
+                - definition
 
             - properties:
                 kind:
