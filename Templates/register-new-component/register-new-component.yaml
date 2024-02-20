@@ -290,6 +290,7 @@ spec:
           items:
             type: object
             properties:
+              array:
               linkUrl:
                 title: URL
                 type: string
@@ -371,7 +372,7 @@ spec:
           techDocsPath: '${{parameters.techDocsPathType}}:${{parameters.techDocsPath}}'
           argoAppName: ${{ parameters.argoAppName }}
           pagerdutyServiceId: ${{ parameters.pagerdutyServiceId }}
-          entityTags: '[${{ parameters.entityTags }}]'
+          entityTags: ${{ parameters.entityTags }}
           entityLabels: ${{ parameters.entityLabels }}
           entityLinks: ${{ parameters.entityLinks }}
           type: ${{ parameters.type }}
@@ -380,11 +381,11 @@ spec:
           lifecycle: ${{ parameters.lifecycle }}
           system: ${{ parameters.system }}
           subcomponentOf: ${{ parameters.subcomponentOf }}
-          dependsOn: '[${{ parameters.dependsOn }}]'
-          providesApis: '[${{ parameters.providesApis }}]'
-          consumesApis: '[${{ parameters.consumesApis }}]'
-          apiProvidedBy: '[${{ parameters.apiProvidedBy }}]'
-          apiConsumedBy: '[${{ parameters.apiConsumedBy }}]'
+          dependsOn: ${{ parameters.dependsOn }}
+          providesApis: ${{ parameters.providesApis }}
+          consumesApis: ${{ parameters.consumesApis }}
+          apiProvidedBy: ${{ parameters.apiProvidedBy }}
+          apiConsumedBy: ${{ parameters.apiConsumedBy }}
 
     - id: fetchTechDocsTemplate
       name: Write TechDocs to root path
