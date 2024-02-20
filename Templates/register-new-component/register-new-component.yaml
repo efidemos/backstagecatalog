@@ -224,6 +224,8 @@ spec:
             - properties:
                 kind:
                   const: "API"
+                required:
+                  - definition
                 type:
                   title: API Type
                   type: string
@@ -378,8 +380,9 @@ spec:
                       )"
 
     - id: fetchCatalogTemplateSystem
+      name: Write catalog entry for System
+      if: ${{ parameters.kind == 'System' }}
       action: fetch:template
-      if: ${{ parameters.kind == 'System'}}
       input:
         url: ./skeleton
         templateFileExtension: .njk
@@ -397,8 +400,9 @@ spec:
           cmdb-id: ${{ parameters.cmdb-id }}
 
     - id: fetchCatalogTemplateComponent
+      name: Write catalog entry for Component
+      if: ${{ parameters.kind == 'Component' }}
       action: fetch:template
-      if: ${{ parameters.kind == 'Component '}}
       input:
         url: ./skeleton
         templateFileExtension: .njk
@@ -418,8 +422,9 @@ spec:
           system: ${{ parameters.system }}
     
     - id: fetchCatalogTemplateResource
-      action: fetch:template
+      name: Write catalog entry for Resource
       if: ${{ parameters.kind == 'Resource' }}
+      action: fetch:template
       input:
         url: ./skeleton
         templateFileExtension: .njk
@@ -443,8 +448,9 @@ spec:
           consumesApis: ${{ parameters.consumesApis }}
 
     - id: fetchCatalogTemplateApi
-      action: fetch:template
+      name: Write catalog entry for API
       if: ${{ parameters.kind == 'API' }}
+      action: fetch:template
       input:
         url: ./skeleton
         templateFileExtension: .njk
@@ -466,8 +472,9 @@ spec:
           apiConsumedBy: ${{ parameters.apiConsumedBy }}
     
     - id: fetchCatalogTemplateTBC
+      name: Write catalog entry for TBC
+      if: ${{ parameters.kind == 'TBC' }}
       action: fetch:template
-      if: ${{ parameters.kind == "TBC" }}
       input:
         url: ./skeleton
         templateFileExtension: .njk
