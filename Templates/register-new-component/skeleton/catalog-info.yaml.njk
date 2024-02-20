@@ -12,7 +12,8 @@ metadata:
   {%if values.entityTags -%}tags:{% for tag in values.entityTags %}
     - ${{ tag }}{% endfor %}{%- endif %}
   {%if values.entityLabels %}labels: ${{ values.entityLabels }}{% endif %}
-  {%if values.entityLinks %}links: {% for link in values.entityLinks %}${{ values.entityLinks }}{% endfor %}{% endif %}
+  {%if values.entityLinks %}links:{% for link in values.entityLinks %}
+    - ${{ values.entityLinks }}{% endfor %}{% endif %}
 spec:
   type: ${{ values.type }}
   owner: ${{ values.owner }}
@@ -20,8 +21,11 @@ spec:
   lifecycle: ${{ values.lifecycle }}
   {%if values.system %}system: ${{ values.system }}{% endif %}
   {%if values.subcomponentOf %}subcomponentOf: ${{values.subcomponentOf}}{% endif %}
-  {%if values.dependsOn %}dependsOn: {% for dependency in values.dependsOn %}${{values.dependsOn}}{% endfor %}{% endif %}
-  {%if values.providesApis %}providesApis: {% for providedApi in values.providesApis %}${{values.providesApis}}{% endfor %}{% endif %}
-  {%if values.consumesApis %}consumesApis: {% for consumedApi in values.consumesApis %}${{values.consumesApis}}{% endfor %}{% endif %}
+  {%if values.dependsOn %}dependsOn:{% for dependency in values.dependsOn %}
+    - ${{ dependency }}{% endfor %}{% endif %}
+  {%if values.providesApis %}providesApis:{% for providedApi in values.providesApis %}
+    - ${{ providedApi }}{% endfor %}{% endif %}
+  {%if values.consumesApis %}consumesApis:{% for consumedApi in values.consumesApis %}
+    - ${{ consumedApi }}{% endfor %}{% endif %}
   {%if values.definition %}definition: |
     ${{values.definition}}{% endif %}
