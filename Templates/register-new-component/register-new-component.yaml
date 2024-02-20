@@ -290,7 +290,6 @@ spec:
           items:
             type: object
             properties:
-              array:
               linkUrl:
                 title: URL
                 type: string
