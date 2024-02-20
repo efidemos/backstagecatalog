@@ -9,8 +9,8 @@ metadata:
     {%if values.techDocsPath %}backstage.io/techdocs-ref: ${{values.techDocsPath}}{% endif %}
     {%if values.argoAppName %}argocd/app-name: ${{values.argoAppName}}{% endif %}
     {%if values.pagerdutyServiceId %}pagerduty.com/service-id: ${{values.pagerdutyServiceId}}{% endif %}
-  {%if values.entityTags %}tags:
-    {%for tag in ${{ values.entityTags }}}- ${{ tag }}{% endfor %}{% endif %}
+  {%if values.entityTags %}tags:{% for tag in ${{ values.entityTags }} %}
+    - {{ tag }}{% endfor %}{% endif %}
   {%if values.entityLabels %}labels: ${{ values.entityLabels }}{% endif %}
   {%if values.entityLinks %}links: ${{ values.entityLinks }}{% endif %}
 spec:
