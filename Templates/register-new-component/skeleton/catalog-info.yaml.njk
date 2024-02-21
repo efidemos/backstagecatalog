@@ -11,7 +11,7 @@ metadata:
     {% if values.argoAppName %}argocd/app-name: ${{values.argoAppName }}
     {% endif -%}
     {% if values.pagerdutyServiceId %}pagerduty.com/service-id: ${{ values.pagerdutyServiceId }}
-    {% endif -%}
+  {% endif -%}
   {% if values.entityTags %}tags:{% for tag in values.entityTags %}
     - ${{ tag }}{% endfor %}
   {% endif -%}
@@ -19,7 +19,8 @@ metadata:
   {% endif -%}
   {% if values.entityLinks %}links:{% for link in values.entityLinks %}
     - {% for k, v in link %}${{ k }}: ${{ v }}
-      {% endfor %}{% endfor %}
+      {% endfor %}
+      {% endfor -%}
   {% endif -%}
 spec:
   type: ${{ values.type }}
