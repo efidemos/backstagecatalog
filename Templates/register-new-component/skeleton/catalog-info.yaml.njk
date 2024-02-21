@@ -12,7 +12,7 @@ metadata:
   {%if values.entityTags -%}tags:{% for tag in values.entityTags %}
     - ${{ tag }}{% endfor %}{%- endif %}
   {%if values.entityLabels %}labels: ${{ values.entityLabels }}{% endif %}
-  {%if values.entityLinks %}links:{% for k, v in values.entityLinks %}
+  {%if values.entityLinks %}links:{% for link in values.entityLinks %}{% for k, v in link %}
     - ${{ k }}:${{ v }}{% endfor %}{% endif %}
 spec:
   type: ${{ values.type }}
