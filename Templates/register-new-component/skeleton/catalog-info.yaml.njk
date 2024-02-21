@@ -13,7 +13,7 @@ metadata:
     - ${{ tag }}{% endfor %}{%- endif %}
   {%if values.entityLabels %}labels: ${{ values.entityLabels }}{% endif %}
   {%if values.entityLinks %}links:{% for link in values.entityLinks %}{% for k, v in link %}
-    - ${{ k }}:${{ v }}{% endfor %}{% endif %}
+    - ${{ k }}:${{ v }}{% endfor %}{% endfor %}{% endif %}
 spec:
   type: ${{ values.type }}
   owner: ${{ values.owner }}
