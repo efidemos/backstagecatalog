@@ -7,20 +7,20 @@ metadata:
   annotations:
     github.com/project-slug: ${{ values.repoSlug }}
     {% if values.techDocsPath %}backstage.io/techdocs-ref: ${{ values.techDocsPath }}
-    {% endif %}
+    {%- endif %}
     {% if values.argoAppName %}argocd/app-name: ${{values.argoAppName }}
-    {% endif %}
+    {%- endif %}
     {% if values.pagerdutyServiceId %}pagerduty.com/service-id: ${{ values.pagerdutyServiceId }}
-    {% endif %}
+    {%- endif %}
   {% if values.entityTags %}tags:{% for tag in values.entityTags %}
     - ${{ tag }}{% endfor %}
-  {% endif %}
+  {%- endif %}
   {% if values.entityLabels %}labels: ${{ values.entityLabels }}
-  {% endif %}
+  {%- endif %}
   {% if values.entityLinks %}links:{% for link in values.entityLinks %}
     - {% for k, v in link %}${{ k }}: ${{ v }}
       {% endfor %}{% endfor %}
-  {% endif %}
+  {%- endif %}
 spec:
   type: ${{ values.type }}
   owner: ${{ values.owner }}
