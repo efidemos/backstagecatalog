@@ -311,16 +311,16 @@ spec:
           items:
             type: object
             properties:
-              linkUrl:
+              url:
                 title: URL
                 type: string
-              linkTitle:
+              title:
                 title: Title
                 type: string
-              linkIcon:
+              icon:
                 title: Icon
                 type: string
-              linkType:
+              type:
                 title: Type
                 type: string
 
