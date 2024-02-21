@@ -19,20 +19,27 @@ metadata:
   {% endif -%}
   {% if values.entityLinks %}links:{% for link in values.entityLinks %}
     - {% for k, v in link %}${{ k }}: ${{ v }}
-      {% endfor %}{% endfor -%}
+      {% endfor -%}{% endfor -%}
   {% endif -%}
 spec:
   type: ${{ values.type }}
   owner: ${{ values.owner }}
-  {% if values.productOwner %}productOwner: ${{ values.productOwner }}{%- endif %}
+  {% if values.productOwner %}productOwner: ${{ values.productOwner }}
+  {% endif -%}
   lifecycle: ${{ values.lifecycle }}
-  {% if values.system %}system: ${{ values.system }}{%- endif %}
-  {% if values.subcomponentOf %}subcomponentOf: ${{ values.subcomponentOf }}{%- endif %}
+  {% if values.system %}system: ${{ values.system }}
+  {% endif -%}
+  {% if values.subcomponentOf %}subcomponentOf: ${{ values.subcomponentOf }}
+  {% endif -%}
   {% if values.dependsOn %}dependsOn:{% for dependency in values.dependsOn %}
-    - ${{ dependency }}{% endfor %}{%- endif %}
+    - ${{ dependency }}{% endfor %}
+  {% endif -%}
   {% if values.providesApis %}providesApis:{% for providedApi in values.providesApis %}
-    - ${{ providedApi }}{% endfor %}{%- endif %}
+    - ${{ providedApi }}{% endfor %}
+  {% endif -%}
   {% if values.consumesApis %}consumesApis:{% for consumedApi in values.consumesApis %}
-    - ${{ consumedApi }}{% endfor %}{%- endif %}
+    - ${{ consumedApi }}{% endfor %}
+  {% endif -%}
   {% if values.definition %}definition: |
-    ${{values.definition}}{%- endif %}
+    ${{values.definition}}
+  {% endif -%}
