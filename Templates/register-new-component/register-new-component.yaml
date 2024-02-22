@@ -10,12 +10,11 @@ spec:
 
   # These are the steps which are rendered in the frontend with the form input.
   parameters:
-    - title: Entity Details # Title of the first step.
+    - title: General Entity Information
       required:
-        - name
         - kind
+        - name
         - description
-        - type
         - lifecycle
         - owner
       properties:
@@ -65,7 +64,7 @@ spec:
           type: string
           description: References to other entities, e.g. developer.astrazeneca.com/TAG
 
-    - title: Kind-Specific Entity Details
+    - title: Entity Details
       dependencies:
         kind:
           oneOf:
@@ -158,6 +157,8 @@ spec:
                     ui:options:
                       catalogFilter:
                         kind: API
+              required:
+                - type
 
             - properties:
                 kind:
@@ -221,6 +222,8 @@ spec:
                     ui:options:
                       catalogFilter:
                         kind: API
+              required:
+                - type
 
             - properties:
                 kind:
@@ -302,8 +305,10 @@ spec:
                     - api-management
                     - ai&ml
                     - product-management-design
+              required:
+                - type
 
-    - title: Entity Location # Title of the second step.
+    - title: Entity Location
       required:
         - repoSlug
       properties:
