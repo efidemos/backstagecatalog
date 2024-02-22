@@ -13,7 +13,7 @@ metadata:
 {% endif -%}
 {% if values.sentrySlug %}    sentry.io/project-slug: ${{ values.sentrySlug }}
 {% endif -%}
-{% if values.sonarqubeKey %}    sonarqube.org/project-key ${{ values.sonarqubeKey }}
+{% if values.sonarqubeKey %}    sonarqube.org/project-key: ${{ values.sonarqubeKey }}
 {% endif -%}
 {% if values.entityTags and values.entityTags|length > 0%}  tags:{% for tag in values.entityTags %}
     - ${{ tag }}{% endfor %}
