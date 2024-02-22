@@ -65,6 +65,7 @@ spec:
           type: string
           description: References to other entities, e.g. developer.astrazeneca.com/TAG
 
+    - title: Kind-Specific Entity Details
       dependencies:
         kind:
           oneOf:
