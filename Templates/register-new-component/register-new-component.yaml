@@ -454,6 +454,9 @@ spec:
           description: ${{ parameters.description }}
           repoSlug: ${{ parameters.repoSlug }}
           techDocsPath: '${{parameters.techDocsPathType}}:${{parameters.techDocsPath}}'
+          jenkinsJobName: ${{ parameters.jenkinsJobName }}
+          sentrySlug: ${{ parameters.sentrySlug }}
+          sonarqubeKey: ${{ parameters.sonarqubeKey }}
           entityTags: ${{ parameters.entityTags }}
           entityLabels: ${{ parameters.entityLabels }}
           entityLinks: ${{ parameters.entityLinks }}
