@@ -223,40 +223,65 @@ spec:
 
             - properties:
                 kind:
-                  const: "API"
+                  enum:
+                    - API
                 type:
                   title: API Type
                   type: string
                   default: openapi
                   enum: ['openapi', 'asyncapi', 'graphql', 'grpc', 'RAML']
-                
-                definition:
-                  title: API Definition
+
+                definitionType:
+                  title: API Definition Type
                   type: string
-                  description: API definition based on API type
-                  ui:widget: textarea
-                  ui:options:
-                    rows: 10
-                  ui:placeholder: |
-                    openapi: "3.0.0"
-                    info:
-                      version: 1.0.0
-                      title: Artist API
-                      license:
-                        name: MIT
-                    servers:
-                      - url: http://artist.spotify.net/v1
-                    paths:
-                      /artists:
-                        get:
-                          summary: List all artists
-                    ...
-              required:
-                - definition
+                  description: How the definition will be entered into the catalog
+                  enum: ['Provide URL', 'Provide text']
+
+              dependencies:
+                definitionType:
+                  oneOf:
+                    - properties:
+                        definitionType:
+                          const: "Provide URL"
+                        definitionUrl:
+                          title: URL
+                          type: string
+                          description: Link to the API definition
+                          ui:placeholder: http://github.com/Org/repo/blob/main/openapi.yaml
+                      required:
+                        - definitionUrl
+
+                    - properties:
+                        definitionType:
+                          const: "Provide text"
+                        definitionText:
+                          title: API Definition
+                          type: string
+                          description: API definition based on API type
+                          ui:widget: textarea
+                          ui:options:
+                            rows: 10
+                          ui:placeholder: |
+                            openapi: "3.0.0"
+                            info:
+                              version: 1.0.0
+                              title: Artist API
+                              license:
+                                name: MIT
+                            servers:
+                              - url: http://artist.spotify.net/v1
+                            paths:
+                              /artists:
+                                get:
+                                  summary: List all artists
+                            ...
+                      required:
+                        - definitionText
 
             - properties:
                 kind:
-                  const: "TBC"
+                  enum:
+                    - TBC
                 type:
                   title: TBC Type
                   type: string
