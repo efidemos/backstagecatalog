@@ -29,7 +29,7 @@ spec:
   owner: ${{ values.owner }}
 {% if values.productOwner %}  productOwner: ${{ values.productOwner }}
 {% endif -%}
-  {{ "lifecycle: ${{ values.lifecycle }}" | indent }}
+  {% filter indent(2) %}lifecycle: ${{ values.lifecycle }}{% endfilter %}
 {% if values.system %}  system: ${{ values.system }}
 {% endif -%}
 {% if values.subcomponentOf %}  subcomponentOf: ${{ values.subcomponentOf }}
