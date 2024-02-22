@@ -1,7 +1,7 @@
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
-  name: register-new-component
+  name: register-new-entity
   title: Register your software with Roadie Backstage
   description: "Create a new PR with a catalog-info.yaml file with your software's details. Optionally configure additional integrations and TechDocs to be created and associated at time of registration."
 spec:
@@ -29,7 +29,7 @@ spec:
         name:
           title: Name
           type: string
-          description: The name of the entity in Roadie Backstage, typically the same name used in the repository. This will be used to create a human readable title.
+          description: The name of the entity in Roadie Backstage, typically the same name used in the repository.
         
         title:
           title: Title
@@ -326,13 +326,20 @@ spec:
 
     - title: Integrations (optional) # Title of the fourth step.
       properties: #TODO: Specify any additional integrations associated with your repos.
-        argoAppName:
-          title: Argo CD App Name
+        jenkinsJobName:
+          title: Jenkins Job Name
           type: string
+          ui:placeholder: folder-name/job-name
 
-        pagerdutyServiceId:
-          title: PagerDuty Service ID
+        sentrySlug:
+          title: Sentry ID
           type: string
+          ui:placeholder: organization/project-slug or just project-slug
+        
+        sonarqubeKey:
+          title: SonarQube Key
+          type: string
+          ui:placeholder: project-key
 
         enableTechDocs:
           title: Enable TechDocs

@@ -8,9 +8,11 @@ metadata:
     github.com/project-slug: ${{ values.repoSlug }}
 {% if values.techDocsPath %}    backstage.io/techdocs-ref: ${{ values.techDocsPath }}
 {% endif -%}
-{% if values.argoAppName %}    argocd/app-name: ${{values.argoAppName }}
+{% if values.jenkinsJobName %}    jenkins.io/job-full-name: ${{ values.jenkinsJobName }}
 {% endif -%}
-{% if values.pagerdutyServiceId %}    pagerduty.com/service-id: ${{ values.pagerdutyServiceId }}
+{% if values.sentrySlug %}    sentry.io/project-slug: ${{ values.sentrySlug }}
+{% endif -%}
+{% if values.sonarqubeKey %}    sonarqube.org/project-key ${{ values.sonarqubeKey }}
 {% endif -%}
 {% if values.entityTags %}  tags:{% for tag in values.entityTags %}
     - ${{ tag }}{% endfor %}
@@ -19,27 +21,28 @@ metadata:
 {% endif -%}
 {% if values.entityLinks %}  links:{% for link in values.entityLinks %}
     - {% for k, v in link %}${{ k }}: ${{ v }}
-      {% endfor %}{% endfor %}
+      {% endfor %}
+{% endfor -%}
 {% endif -%}
 spec:
   type: ${{ values.type }}
   owner: ${{ values.owner }}
-  {% if values.productOwner %}productOwner: ${{ values.productOwner }}
-  {% endif -%}
+{% if values.productOwner %}  productOwner: ${{ values.productOwner }}
+{% endif -%}
   lifecycle: ${{ values.lifecycle }}
-  {% if values.system %}system: ${{ values.system }}
-  {% endif -%}
-  {% if values.subcomponentOf %}subcomponentOf: ${{ values.subcomponentOf }}
-  {% endif -%}
-  {% if values.dependsOn %}dependsOn:{% for dependency in values.dependsOn %}
+{% if values.system %}  system: ${{ values.system }}
+{% endif -%}
+{% if values.subcomponentOf %}  subcomponentOf: ${{ values.subcomponentOf }}
+{% endif -%}
+{% if values.dependsOn and values.dependsOn|length > 0 %}  dependsOn:{% for dependency in values.dependsOn %}
     - ${{ dependency }}{% endfor %}
-  {% endif -%}
-  {% if values.providesApis %}providesApis:{% for providedApi in values.providesApis %}
+{% endif -%}
+{% if values.providesApis and values.providesApis|length > 0 %}  providesApis:{% for providedApi in values.providesApis %}
     - ${{ providedApi }}{% endfor %}
-  {% endif -%}
-  {% if values.consumesApis %}consumesApis:{% for consumedApi in values.consumesApis %}
+{% endif -%}
+{% if values.consumesApis and values.consumesApis|length > 0%}  consumesApis:{% for consumedApi in values.consumesApis %}
     - ${{ consumedApi }}{% endfor %}
-  {% endif -%}
-  {% if values.definition %}definition: |
+{% endif -%}
+{% if values.definition %}definition: |
     ${{values.definition}}
-  {% endif -%}
+{% endif -%}
