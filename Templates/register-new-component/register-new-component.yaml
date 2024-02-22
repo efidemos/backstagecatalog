@@ -540,7 +540,6 @@ spec:
         templateFileExtension: .njk
         values:
           repoSlug: ${{ parameters.repoSlug }}
-          techDocsBody: ${{ parameters.techDocsBody }}
 
     - id: fetchTechDocsTemplate
       name: Write TechDocs to custom path
@@ -552,7 +551,6 @@ spec:
         targetPath: ./${{parameters.techDocsPath}}
         values:
           repoSlug: ${{ parameters.repoSlug }}
-          techDocsBody: ${{ parameters.techDocsBody }}
 
     - id: createPullRequest
       name: createPullRequest
