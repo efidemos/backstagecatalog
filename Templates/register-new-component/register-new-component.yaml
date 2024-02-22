@@ -236,6 +236,9 @@ spec:
                   type: string
                   description: How the definition will be entered into the catalog
                   enum: ['Provide URL', 'Provide text']
+              required:
+                - type
+                - definitionType
 
               dependencies:
                 definitionType:
@@ -504,7 +507,8 @@ spec:
           type: ${{ parameters.type }}
           lifecycle: ${{ parameters.lifecycle }}
           owner: ${{ parameters.owner }}
-          definition: ${{ parameters.definition }}
+          definitionUrl: ${{ parameters.definitionUrl }}
+          definitionText: ${{ parameters.definitionText }}
     
     - id: fetchCatalogTemplateTBC
       name: Write catalog entry for TBC

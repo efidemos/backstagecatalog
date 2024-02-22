@@ -43,6 +43,9 @@ spec:
 {% if values.consumesApis and values.consumesApis|length > 0%}  consumesApis:{% for consumedApi in values.consumesApis %}
     - ${{ consumedApi }}{% endfor %}
 {% endif -%}
-{% if values.definition %}definition: |
+{% if values.definitionUrl %}  definition:
+    $text: ${{ values.definitionUrl }}
+{% endif -%}
+{% if values.definitionText %}  definition: |
     ${{values.definition}}
 {% endif -%}
