@@ -2,7 +2,8 @@ apiVersion: backstage.io/v1alpha1
 kind: ${{ values.kind }}
 metadata:
   name: ${{ values.name | replace(" ", "-") | lower }}
-  title: ${{ values.title }}
+  {% if values.title %}title: ${{ values.title }}
+  {% endif -%}
   description: ${{ values.description }}
   annotations:
     github.com/project-slug: ${{ values.repoSlug }}
@@ -14,22 +15,22 @@ metadata:
 {% endif -%}
 {% if values.sonarqubeKey %}    sonarqube.org/project-key ${{ values.sonarqubeKey }}
 {% endif -%}
-{% if values.entityTags %}  tags:{% for tag in values.entityTags %}
+{% if values.entityTags and values.entityTags|length > 0%}  tags:{% for tag in values.entityTags %}
     - ${{ tag }}{% endfor %}
 {% endif -%}
 {% if values.entityLabels %}  labels: ${{ values.entityLabels }}
 {% endif -%}
-{% if values.entityLinks %}  links:{% for link in values.entityLinks %}
+{% if values.entityLinks and values.entityLinks|length > 0%}  links:{% for link in values.entityLinks %}
     - {% for k, v in link %}${{ k }}: ${{ v }}
       {% endfor %}
 {% endfor -%}
 {% endif %}
 spec:
   type: ${{ values.type }}
+  lifecycle: ${{ values.lifecycle }}
   owner: ${{ values.owner }}
 {% if values.productOwner %}  productOwner: ${{ values.productOwner }}
-{% endif %}
-  lifecycle: ${{ values.lifecycle }}
+{% endif -%}
 {% if values.system %}  system: ${{ values.system }}
 {% endif -%}
 {% if values.subcomponentOf %}  subcomponentOf: ${{ values.subcomponentOf }}
