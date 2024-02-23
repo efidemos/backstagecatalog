@@ -47,5 +47,5 @@ spec:
     $text: ${{ values.definitionUrl }}
 {% endif -%}
 {% if values.definitionInput == 'Text' and values.definitionText %}  definition: |
-    ${{ values.definitionText }}
+    ${{ values.definitionText | indent }}
 {% endif -%}
