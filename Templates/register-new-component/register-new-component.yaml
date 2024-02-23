@@ -10,7 +10,7 @@ spec:
 
   # These are the steps which are rendered in the frontend with the form input.
   parameters:
-    - title: General Entity Information
+    - title: General Entity Information # First step
       required:
         - kind
         - name
@@ -64,7 +64,7 @@ spec:
           type: string
           description: References to other entities, e.g. developer.astrazeneca.com/TAG
 
-    - title: Entity Details
+    - title: Entity Details # Second step
       dependencies:
         kind:
           oneOf:
@@ -236,10 +236,10 @@ spec:
                   enum: ['openapi', 'asyncapi', 'graphql', 'grpc', 'RAML']
 
                 definitionType:
-                  title: API Definition Type
+                  title: API Definition Input
                   type: string
                   description: How the definition will be entered into the catalog
-                  enum: ['Provide URL', 'Provide text']
+                  enum: ['URL', 'Text']
               required:
                 - type
                 - definitionType
@@ -249,18 +249,18 @@ spec:
                   oneOf:
                     - properties:
                         definitionType:
-                          const: "Provide URL"
+                          const: "URL"
                         definitionUrl:
                           title: URL
                           type: string
-                          description: Link to the API definition
+                          description: Link to the API spec
                           ui:placeholder: http://github.com/Org/repo/blob/main/openapi.yaml
                       required:
                         - definitionUrl
 
                     - properties:
                         definitionType:
-                          const: "Provide text"
+                          const: "Text"
                         definitionText:
                           title: API Definition
                           type: string
@@ -308,7 +308,7 @@ spec:
               required:
                 - type
 
-    - title: Entity Location
+    - title: Entity Location # Third step
       required:
         - repoSlug
       properties:
@@ -358,7 +358,7 @@ spec:
                 title: Type
                 type: string
 
-    - title: Integrations (optional) # Title of the fourth step.
+    - title: Integrations (optional) # Fourth step
       properties: #TODO: Specify any additional integrations associated with your repos.
         jenkinsJobName:
           title: Jenkins Job Name
