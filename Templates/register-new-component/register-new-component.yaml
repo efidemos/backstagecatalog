@@ -235,20 +235,20 @@ spec:
                   default: openapi
                   enum: ['openapi', 'asyncapi', 'graphql', 'grpc', 'RAML']
 
-                definitionType:
+                definitionInput:
                   title: API Definition Input
                   type: string
                   description: How the definition will be entered into the catalog
                   enum: ['URL', 'Text']
               required:
                 - type
-                - definitionType
+                - definitionInput
 
               dependencies:
-                definitionType:
+                definitionInput:
                   oneOf:
                     - properties:
-                        definitionType:
+                        definitionInput:
                           const: "URL"
                         definitionUrl:
                           title: URL
@@ -259,7 +259,7 @@ spec:
                         - definitionUrl
 
                     - properties:
-                        definitionType:
+                        definitionInput:
                           const: "Text"
                         definitionText:
                           title: API Definition
@@ -516,6 +516,7 @@ spec:
           type: ${{ parameters.type }}
           lifecycle: ${{ parameters.lifecycle }}
           owner: ${{ parameters.owner }}
+          definitionInput: ${{ parameters.definitionInput }}
           definitionUrl: ${{ parameters.definitionUrl }}
           definitionText: ${{ parameters.definitionText }}
     
