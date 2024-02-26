@@ -63,7 +63,7 @@ spec:
           title: Labels
           type: array
           minItems: 0
-          description: References to other entities in the form of key-value pair
+          description: "References to other entities in the form of key-value pair, e.g. developer.astrazeneca.com/name: mysql"
           ui:options:
             addable: true
             removable: true
