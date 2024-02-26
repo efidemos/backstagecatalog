@@ -323,7 +323,7 @@ spec:
           ui:options:
             title: Repository
             description: Choose the repository to be registered in your catalog.
-            path: "proxy/github/api/orgs/azu-enterprise/repos"
+            path: "proxy/github/api/orgs/efidemos/repos" # "proxy/github/api/orgs/<org name>/repos"
             params:
               per_page: '100'
               page: '{{ parameters.repoPage }}'
