@@ -420,29 +420,8 @@ spec:
                         }
                       )"
 
-    - id: fetchCatalogTemplateSystem
-      name: Write catalog entry for System
-      if: ${{ parameters.kind == 'System' }}
-      action: fetch:template
-      input:
-        url: ./skeleton
-        templateFileExtension: .njk
-        values:
-          kind: ${{ parameters.kind }}
-          name: ${{ parameters.name }}
-          title: ${{ parameters.title }}
-          description: ${{ parameters.description }}
-          repoSlug: ${{ parameters.repoSlug }}
-          techDocsPath: '${{parameters.techDocsPathType}}:${{parameters.techDocsPath}}'
-          entityTags: ${{ parameters.entityTags }}
-          entityLabels: ${{ parameters.entityLabels }}
-          entityLinks: ${{ parameters.entityLinks }}
-          owner: ${{ parameters.owner }}
-          cmdb-id: ${{ parameters.cmdb-id }}
-
-    - id: fetchCatalogTemplateComponent
-      name: Write catalog entry for Component
-      if: ${{ parameters.kind == 'Component' }}
+    - id: fetchCatalogTemplate
+      name: Write catalog entry
       action: fetch:template
       input:
         url: ./skeleton
@@ -460,86 +439,19 @@ spec:
           entityTags: ${{ parameters.entityTags }}
           entityLabels: ${{ parameters.entityLabels }}
           entityLinks: ${{ parameters.entityLinks }}
+          owner: ${{ parameters.owner }}
+          cmdb-id: ${{ parameters.cmdb-id }}
           type: ${{ parameters.type }}
           lifecycle: ${{ parameters.lifecycle }}
-          owner: ${{ parameters.owner }}
           productOwner: ${{ parameters.productOwner }}
           system: ${{ parameters.system }}
           subcomponentOf: ${{ parameters.subcomponentOf }}
           dependsOn: ${{ parameters.dependsOn }}
           providesApis: ${{ parameters.providesApis }}
           consumesApis: ${{ parameters.consumesApis }}
-    
-    - id: fetchCatalogTemplateResource
-      name: Write catalog entry for Resource
-      if: ${{ parameters.kind == 'Resource' }}
-      action: fetch:template
-      input:
-        url: ./skeleton
-        templateFileExtension: .njk
-        values:
-          kind: ${{ parameters.kind }}
-          name: ${{ parameters.name }}
-          title: ${{ parameters.title }}
-          description: ${{ parameters.description }}
-          repoSlug: ${{ parameters.repoSlug }}
-          techDocsPath: '${{parameters.techDocsPathType}}:${{parameters.techDocsPath}}'
-          entityTags: ${{ parameters.entityTags }}
-          entityLabels: ${{ parameters.entityLabels }}
-          entityLinks: ${{ parameters.entityLinks }}
-          type: ${{ parameters.type }}
-          lifecycle: ${{ parameters.lifecycle }}
-          owner: ${{ parameters.owner }}
-          system: ${{ parameters.system }}
-          subcomponentOf: ${{ parameters.subcomponentOf }}
-          dependsOn: ${{ parameters.dependsOn }}
-          providesApis: ${{ parameters.providesApis }}
-          consumesApis: ${{ parameters.consumesApis }}
-
-    - id: fetchCatalogTemplateApi
-      name: Write catalog entry for API
-      if: ${{ parameters.kind == 'API' }}
-      action: fetch:template
-      input:
-        url: ./skeleton
-        templateFileExtension: .njk
-        values:
-          kind: ${{ parameters.kind }}
-          name: ${{ parameters.name }}
-          title: ${{ parameters.title }}
-          description: ${{ parameters.description }}
-          repoSlug: ${{ parameters.repoSlug }}
-          techDocsPath: '${{parameters.techDocsPathType}}:${{parameters.techDocsPath}}'
-          entityTags: ${{ parameters.entityTags }}
-          entityLabels: ${{ parameters.entityLabels }}
-          entityLinks: ${{ parameters.entityLinks }}
-          type: ${{ parameters.type }}
-          lifecycle: ${{ parameters.lifecycle }}
-          owner: ${{ parameters.owner }}
           definitionInput: ${{ parameters.definitionInput }}
           definitionUrl: ${{ parameters.definitionUrl }}
           definitionText: ${{ parameters.definitionText }}
-    
-    - id: fetchCatalogTemplateTBC
-      name: Write catalog entry for TBC
-      if: ${{ parameters.kind == 'TBC' }}
-      action: fetch:template
-      input:
-        url: ./skeleton
-        templateFileExtension: .njk
-        values:
-          kind: ${{ parameters.kind }}
-          name: ${{ parameters.name }}
-          title: ${{ parameters.title }}
-          description: ${{ parameters.description }}
-          repoSlug: ${{ parameters.repoSlug }}
-          techDocsPath: '${{parameters.techDocsPathType}}:${{parameters.techDocsPath}}'
-          entityTags: ${{ parameters.entityTags }}
-          entityLabels: ${{ parameters.entityLabels }}
-          entityLinks: ${{ parameters.entityLinks }}
-          type: ${{ parameters.type }}
-          lifecycle: ${{ parameters.lifecycle }}
-          owner: ${{ parameters.owner }}
 
     - id: fetchTechDocsTemplate
       name: Write TechDocs to root path
