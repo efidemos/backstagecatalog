@@ -24,7 +24,7 @@ metadata:
     - {% for k, v in link %}${{ k }}: ${{ v }}
       {% endfor %}{% endfor -%}
 {% endif -%}
-{% if values.cmdb-id %}  cmdb-id: ${{ values.cmdb-id }}
+{% if values.cmdbId %}  cmdbId: ${{ values.cmdbId }}
 {% endif %}
 spec:
 {% if values.type %}  type: ${{ values.type }}

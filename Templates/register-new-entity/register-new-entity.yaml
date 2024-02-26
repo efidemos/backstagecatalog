@@ -61,8 +61,14 @@ spec:
 
         entityLabels:
           title: Labels
-          type: string
+          type: array
           description: References to other entities, e.g. developer.astrazeneca.com/TAG
+          ui:options:
+            addable: true
+            orderable: true
+            removable: true
+          items:
+            type: string
 
     - title: Entity Details # Second step
       dependencies:
@@ -72,7 +78,7 @@ spec:
                 kind:
                   enum:
                     - System
-                cmdb-id:
+                cmdbId:
                   title: CMDB-ID
                   type: number
                   description: Enter the Service Now ID for the Business Service
@@ -440,7 +446,7 @@ spec:
           entityLabels: ${{ parameters.entityLabels }}
           entityLinks: ${{ parameters.entityLinks }}
           owner: ${{ parameters.owner }}
-          cmdb-id: ${{ parameters.cmdb-id }}
+          cmdbId: ${{ parameters.cmdbId }}
           type: ${{ parameters.type }}
           lifecycle: ${{ parameters.lifecycle }}
           productOwner: ${{ parameters.productOwner }}
