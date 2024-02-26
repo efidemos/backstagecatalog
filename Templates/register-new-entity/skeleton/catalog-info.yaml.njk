@@ -15,12 +15,13 @@ metadata:
 {% endif -%}
 {% if values.sonarqubeKey %}    sonarqube.org/project-key: ${{ values.sonarqubeKey }}
 {% endif -%}
-{% if values.entityTags and values.entityTags|length > 0%}  tags:{% for tag in values.entityTags %}
+{% if values.entityTags and values.entityTags|length > 0 %}  tags:{% for tag in values.entityTags %}
     - ${{ tag }}{% endfor %}
 {% endif -%}
-{% if values.entityLabels %}  labels: ${{ values.entityLabels }}
+{% if values.entityLabels and values.entityLinks|length > 0 %}  labels:{% for label in values.entityLabels %}
+    - ${{ values.entityLabels }}{% endfor %}
 {% endif -%}
-{% if values.entityLinks and values.entityLinks|length > 0%}  links:{% for link in values.entityLinks %}
+{% if values.entityLinks and values.entityLinks|length > 0 %}  links:{% for link in values.entityLinks %}
     - {% for k, v in link %}${{ k }}: ${{ v }}
       {% endfor %}{% endfor -%}
 {% endif -%}
@@ -45,7 +46,7 @@ spec:
 {% if values.providesApis and values.providesApis|length > 0 %}  providesApis:{% for providedApi in values.providesApis %}
     - ${{ providedApi }}{% endfor %}
 {% endif -%}
-{% if values.consumesApis and values.consumesApis|length > 0%}  consumesApis:{% for consumedApi in values.consumesApis %}
+{% if values.consumesApis and values.consumesApis|length > 0 %}  consumesApis:{% for consumedApi in values.consumesApis %}
     - ${{ consumedApi }}{% endfor %}
 {% endif -%}
 {% if values.definitionInput == 'URL' and values.definitionUrl %}  definition:
