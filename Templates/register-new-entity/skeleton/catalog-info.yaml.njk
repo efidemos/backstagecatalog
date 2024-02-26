@@ -23,9 +23,9 @@ metadata:
 {% endif -%}
 {% if values.entityLinks and values.entityLinks|length > 0 %}  links:{% for link in values.entityLinks %}
     - {% for k, v in link %}${{ k }}: ${{ v }}
-      {% endfor %}{% endfor -%}{%- endif %}
+      {% endfor %}{%- endfor -%}{%- endif %}
 {% if values.cmdbId %}  cmdbId: ${{ values.cmdbId }}
-{% endif %}
+{% endif -%}
 spec:
 {% if values.type %}  type: ${{ values.type }}
 {% endif -%}
