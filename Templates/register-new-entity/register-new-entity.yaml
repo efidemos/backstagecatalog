@@ -370,6 +370,8 @@ spec:
               type:
                 title: Type
                 type: string
+            required:
+              - url
 
     - title: Integrations (optional) # Fourth step
       properties: #TODO: Specify any additional integrations associated with your repos.
