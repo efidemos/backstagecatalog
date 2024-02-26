@@ -18,11 +18,12 @@ metadata:
 {% if values.entityTags and values.entityTags|length > 0 %}  tags:{% for tag in values.entityTags %}
     - ${{ tag }}{% endfor %}
 {% endif -%}
-{% if values.entityLabels and values.entityLinks|length > 0 %}  labels:{% for label in values.entityLabels %}{% for k, v in label %}
-    - ${{ k }}: %{{ v }}{% endfor %}{% endfor %}
+{% if values.entityLabels and values.entityLabels|length > 0 %}  labels:{% for label in values.entityLabels %}
+    - ${{ values.key }}: %{{ values.value }}{% endfor %}
 {% endif -%}
-{% if values.entityLinks and values.entityLinks|length > 0 %}  links:{% for link in values.entityLinks %}{% for k, v in link %}
-    - ${{ k }}: ${{ v }}{% endfor %}{% endfor %}
+{% if values.entityLinks and values.entityLinks|length > 0 %}  links:{% for link in values.entityLinks %}
+    - {% for k, v in link %}${{ k }}: ${{ v }}
+    {% endfor %}{% endfor %}
 {% endif -%}
 {% if values.cmdbId %}  cmdbId: ${{ values.cmdbId }}
 {% endif %}
