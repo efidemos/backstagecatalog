@@ -62,13 +62,20 @@ spec:
         entityLabels:
           title: Labels
           type: array
-          description: References to other entities, e.g. developer.astrazeneca.com/TAG
+          minItems: 0
+          description: References to other entities in the form of key-value pair
           ui:options:
             addable: true
-            orderable: true
             removable: true
           items:
-            type: string
+            type: object
+            properties:
+              key:
+                title: Key
+                type: string
+              value:
+                title: Value
+                type: string
 
     - title: Entity Details # Second step
       dependencies:
