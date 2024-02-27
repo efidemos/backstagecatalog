@@ -56,7 +56,7 @@ spec:
           title: Labels
           type: array
           minItems: 0
-          description: "References to other entities in the form of key-value pair, e.g. developer.astrazeneca.com/name: mysql"
+          description: "Key-value pair to attach additional information to the entity"
           ui:options:
             addable: true
             removable: true
@@ -66,9 +66,14 @@ spec:
               key:
                 title: Key
                 type: string
+                ui:placeholder: app.example.com/version
               value:
                 title: Value
                 type: string
+                ui:placeholder: app-example-2.5.11
+            required:
+              - key
+              - value
 
     - title: Entity Details # Second step
       dependencies:
@@ -374,17 +379,17 @@ spec:
             properties:
               url:
                 title: URL
-                description: Follow standard URI format, e.g. http://example.com
                 type: string
+                description: Follow standard URI format
                 ui:placeholder: http://example.com
               title:
                 title: Title
                 type: string
+                description: Link title
               icon:
                 title: Icon
-                description: A semantic key that will map to a specific icon
                 type: string
-                ui:placeholder: github
+                description: Keyword that maps to a specific icon to be displayed in the UI
               type:
                 title: Type
                 type: string
