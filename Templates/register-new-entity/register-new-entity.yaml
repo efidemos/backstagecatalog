@@ -286,7 +286,7 @@ spec:
                           title: URL
                           type: string
                           description: Link to the API spec
-                          ui:placeholder: http://github.com/Org/repo/blob/main/openapi.yaml
+                          ui:placeholder: https://github.com/OrgName/repo/blob/main/openapi.yaml
                       required:
                         - definitionUrl
 
@@ -381,7 +381,7 @@ spec:
                 title: URL
                 type: string
                 description: Follow standard URI format
-                ui:placeholder: http://example.com
+                ui:placeholder: https://example.com
               title:
                 title: Title
                 type: string
