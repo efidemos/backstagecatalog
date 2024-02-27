@@ -25,13 +25,13 @@ metadata:
 {%- for item in values.entityLinks %}
 {%- for k, v in item %}
 {%- if loop.first %}
-    - {{ k }}: {{ v }}
+    - ${{ k }}: ${{ v }}
 {%- else %}
-      {{ k }}: {{ v }}
+      ${{ k }}: ${{ v }}
 {%- endif %}
 {%- endfor %}
 {%- endfor %}
-{% endif %}
+{% endif -%}
 {% if values.cmdbId %}  cmdbId: ${{ values.cmdbId }}
 {% endif -%}
 spec:
