@@ -21,11 +21,17 @@ metadata:
 {% if values.entityLabels and values.entityLabels|length > 0 %}  labels:{% for label in values.entityLabels %}
     ${{ label.key }}: ${{ label.value }}{% endfor %}
 {% endif -%}
-{% if values.entityLinks and values.entityLinks|length > 0 %}  links:{% for link in values.entityLinks %}
-    - {% for k, v in link %}${{ k }}: ${{ v }}
-      {% endfor -%}
-{% endfor -%}
-{% endif -%}
+{% if values.entityLinks and values.entityLinks|length > 0 %}  links:
+{%- for item in values.entityLinks %}
+{%- for k, v in item %}
+{%- if loop.first %}
+    - {{ k }}: {{ v }}
+{%- else %}
+      {{ k }}: {{ v }}
+{%- endif %}
+{%- endfor %}
+{%- endfor %}
+{% endif %}
 {% if values.cmdbId %}  cmdbId: ${{ values.cmdbId }}
 {% endif -%}
 spec:
