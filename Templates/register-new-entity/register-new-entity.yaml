@@ -103,7 +103,7 @@ spec:
                   type: string
                   default: production
                   enum: ['production', 'development', 'experimental', 'deprecated']
-                
+
                 productOwner:
                   title: Product Owner
                   type: string
@@ -111,10 +111,10 @@ spec:
                   ui:options:
                     catalogFilter:
                       kind: User
-                        
+
                 system:
                   title: System
-                  description: System to which the entity belongs
+                  description: System to which the component belongs
                   type: string
                   ui:field: EntityPicker
                   ui:options:
@@ -193,6 +193,15 @@ spec:
                   default: production
                   enum: ['production', 'development', 'experimental', 'deprecated']
 
+                system:
+                  title: System
+                  description: System to which the resource belongs
+                  type: string
+                  ui:field: EntityPicker
+                  ui:options:
+                    catalogFilter:
+                      kind: System
+
                 subcomponentOf:
                   title: Subcomponent of
                   type: string
@@ -265,6 +274,15 @@ spec:
                   type: string
                   default: production
                   enum: ['production', 'development', 'experimental', 'deprecated']
+                        
+                system:
+                  title: System
+                  description: System to which the API belongs
+                  type: string
+                  ui:field: EntityPicker
+                  ui:options:
+                    catalogFilter:
+                      kind: System
 
                 definitionInput:
                   title: API Definition Input
