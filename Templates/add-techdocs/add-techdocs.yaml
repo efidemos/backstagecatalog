@@ -149,19 +149,20 @@ spec:
       if: ${{ parameters.techDocsPath == '.' and parameters.techDocsPathType == 'dir' }}
       action: fetch:template
       input:
-        url: .
+        url: ./skeleton
         templateFileExtension: .njk
         values:
-          repoSlug: ${{ steps["identifyRepoAndOwner"].output.result.repo }}
+          repoSlug: ${{ steps["identifyRepoAndOwner"].output.result.slug }}
     - id: fetchMkdocsTemplate
       name: Write Mkdocs to custom path
       if: ${{ parameters.techDocsPath != '.' and parameters.techDocsPathType == 'dir' }}
       action: fetch:template
       input:
-        url: .
+        url: ./skeleton
         templateFileExtension: .njk
+        targetPath: ./${{parameters.techDocsPath}}
         values:
-          repoSlug: ${{ steps["identifyRepoAndOwner"].output.result.repo }}
+          repoSlug: ${{ steps["identifyRepoAndOwner"].output.result.slug }}
     - id: writeTechDocsContentsToFile
       name: Write TechDocs to root path
       if: ${{ parameters.techDocsPath == '.' and parameters.techDocsPathType == 'dir' }}
