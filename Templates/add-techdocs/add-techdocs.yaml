@@ -144,7 +144,7 @@ spec:
       action: debug:log
       input:
         message: 'Catalog Manifest content: ${{ steps["parseCatalogManifest"].output.content }}'
-    - id: fetchMkdocsTemplate
+    - id: fetchMkdocsTemplateRoot
       name: Write Mkdocs to root path
       if: ${{ parameters.techDocsPath == '.' and parameters.techDocsPathType == 'dir' }}
       action: fetch:template
@@ -152,9 +152,9 @@ spec:
         url: ./skeleton
         templateFileExtension: .njk
         values:
-          entity: ${{ parameters.entity }}
+          entity: ${{ steps["parseCatalogManifest"].output.content.metadata.name }}
           description: ${{ steps["parseCatalogManifest"].output.content.metadata.description }}
-    - id: fetchMkdocsTemplate
+    - id: fetchMkdocsTemplateCustom
       name: Write Mkdocs to custom path
       if: ${{ parameters.techDocsPath != '.' and parameters.techDocsPathType == 'dir' }}
       action: fetch:template
@@ -163,16 +163,16 @@ spec:
         templateFileExtension: .njk
         targetPath: ./${{parameters.techDocsPath}}
         values:
-          entity: ${{ parameters.entity }}
+          entity: ${{ steps["parseCatalogManifest"].output.content.metadata.name }}
           description: ${{ steps["parseCatalogManifest"].output.content.metadata.description }}
-    - id: writeTechDocsContentsToFile
+    - id: writeTechDocsContentsToFileRoot
       name: Write TechDocs to root path
       if: ${{ parameters.techDocsPath == '.' and parameters.techDocsPathType == 'dir' }}
       action: roadiehq:utils:fs:write
       input:
         path: ./docs/index.md
         content: ${{ parameters.contents }}
-    - id: writeTechDocsContentsToFile
+    - id: writeTechDocsContentsToFileCustom
       name: Write TechDocs to custom path
       if: ${{ parameters.techDocsPath != '.' and parameters.techDocsPathType == 'dir' }}
       action: roadiehq:utils:fs:write
