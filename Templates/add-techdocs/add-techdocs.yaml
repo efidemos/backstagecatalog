@@ -129,7 +129,7 @@ spec:
         path: './manifest-folder/catalog-info.yaml'
         expression: '$ ~> | $.metadata.annotations | { "backstage.io/techdocs-ref": "${{parameters.techDocsPathType}}:${{parameters.techDocsPath}}" } |' 
     - id: writeTechDocsAnnotationToFile
-      name: Overwrite the existing name with new contents
+      name: Write TechDocs annotation to file
       action: roadiehq:utils:fs:write
       input:
         path: './manifest-folder/catalog-info.yaml'
@@ -146,7 +146,7 @@ spec:
         message: 'Catalog Manifest content: ${{ steps["parseCatalogManifest"].output.content }}'
     - id: fetchMkdocsTemplate
       name: Write Mkdocs to root path
-      if: ${{ parameters.enableTechDocs and parameters.techDocsPath == '.' and parameters.techDocsPathType == 'dir' }}
+      if: ${{ parameters.techDocsPath == '.' and parameters.techDocsPathType == 'dir' }}
       action: fetch:template
       input:
         url: .
@@ -155,7 +155,7 @@ spec:
           repoSlug: ${{ steps["identifyRepoAndOwner"].output.result.repo }}
     - id: fetchMkdocsTemplate
       name: Write Mkdocs to custom path
-      if: ${{ parameters.enableTechDocs and parameters.techDocsPath != '.' and parameters.techDocsPathType == 'dir' }}
+      if: ${{ parameters.techDocsPath != '.' and parameters.techDocsPathType == 'dir' }}
       action: fetch:template
       input:
         url: .
@@ -164,14 +164,14 @@ spec:
           repoSlug: ${{ steps["identifyRepoAndOwner"].output.result.repo }}
     - id: writeTechDocsContentsToFile
       name: Write TechDocs to root path
-      if: ${{ parameters.enableTechDocs and parameters.techDocsPath == '.' and parameters.techDocsPathType == 'dir' }}
+      if: ${{ parameters.techDocsPath == '.' and parameters.techDocsPathType == 'dir' }}
       action: roadiehq:utils:fs:write
       input:
         path: ./docs/index.md
         content: ${{ parameters.content }}
     - id: writeTechDocsContentsToFile
       name: Write TechDocs to custom path
-      if: ${{ parameters.enableTechDocs and parameters.techDocsPath != '.' and parameters.techDocsPathType == 'dir' }}
+      if: ${{ parameters.techDocsPath != '.' and parameters.techDocsPathType == 'dir' }}
       action: roadiehq:utils:fs:write
       input:
         path: ./${{parameters.techDocsPath}}/index.md
