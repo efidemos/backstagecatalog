@@ -168,14 +168,14 @@ spec:
       if: ${{ parameters.techDocsPath == '.' and parameters.techDocsPathType == 'dir' }}
       action: roadiehq:utils:fs:write
       input:
-        path: ./docs/index.md
+        path: ./docs
         content: ${{ parameters.content }}
     - id: writeTechDocsContentsToFile
       name: Write TechDocs to custom path
       if: ${{ parameters.techDocsPath != '.' and parameters.techDocsPathType == 'dir' }}
       action: roadiehq:utils:fs:write
       input:
-        path: ./${{parameters.techDocsPath}}/index.md
+        path: ./${{ parameters.techDocsPath }}
         content: ${{ parameters.content }}
     - id: createPullRequest
       name: Create a pull request
