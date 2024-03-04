@@ -145,25 +145,26 @@ spec:
       action: debug:log
       input:
         message: 'Catalog Manifest content: ${{ steps["parseCatalogManifest"].serialize.output.content }}'
-    - id: fetchMkdocsTemplateRoot
-      name: Write Mkdocs to root path
+    - id: fetchDocsTemplateRoot
+      name: Write TechDocs to root path
       if: ${{ parameters.techDocsPath == '.' and parameters.techDocsPathType == 'dir' }}
       action: fetch:template
       input:
         url: ./skeleton
         templateFileExtension: .njk
+        targetPath: ./manifest-folder
         values:
           entity: ${{ steps["parseCatalogManifest"].output.content.metadata.name }}
           description: ${{ steps["parseCatalogManifest"].output.content.metadata.description }}
           contents: ${{ parameters.contents }}
-    - id: fetchMkdocsTemplateCustom
-      name: Write Mkdocs to custom path
+    - id: fetchDocsTemplateCustom
+      name: Write TechDocs to custom path
       if: ${{ parameters.techDocsPath != '.' and parameters.techDocsPathType == 'dir' }}
       action: fetch:template
       input:
         url: ./skeleton
         templateFileExtension: .njk
-        targetPath: ./${{parameters.techDocsPath}}
+        targetPath: ./manifest-folder/${{parameters.techDocsPath}}
         values:
           entity: ${{ steps["parseCatalogManifest"].output.content.metadata.name }}
           description: ${{ steps["parseCatalogManifest"].output.content.metadata.description }}
