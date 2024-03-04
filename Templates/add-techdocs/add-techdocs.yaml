@@ -139,6 +139,7 @@ spec:
       action: roadiehq:utils:fs:parse
       input:
         path: './manifest-folder/catalog-info.yaml'
+        parser: yaml
     - id: logResult
       name: Display modified catalog manifest
       action: debug:log
@@ -170,14 +171,14 @@ spec:
       if: ${{ parameters.techDocsPath == '.' and parameters.techDocsPathType == 'dir' }}
       action: roadiehq:utils:fs:write
       input:
-        path: ./docs/index.md
+        path: './docs/index.md'
         content: ${{ parameters.contents }}
     - id: writeTechDocsContentsToFileCustom
       name: Write TechDocs to custom path
       if: ${{ parameters.techDocsPath != '.' and parameters.techDocsPathType == 'dir' }}
       action: roadiehq:utils:fs:write
       input:
-        path: ./${{ parameters.techDocsPath }}/index.md
+        path: './${{ parameters.techDocsPath }}/index.md'
         content: ${{ parameters.contents }}
     - id: createPullRequest
       name: Create a pull request
