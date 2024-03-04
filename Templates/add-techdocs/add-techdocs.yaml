@@ -152,7 +152,8 @@ spec:
         url: ./skeleton
         templateFileExtension: .njk
         values:
-          repoSlug: ${{ steps["identifyRepoAndOwner"].output.result.slug }}
+          entity: ${{ parameters.entity }}
+          description: ${{ steps["parseCatalogManifest"].output.content.metadata.description }}
     - id: fetchMkdocsTemplate
       name: Write Mkdocs to custom path
       if: ${{ parameters.techDocsPath != '.' and parameters.techDocsPathType == 'dir' }}
@@ -162,21 +163,22 @@ spec:
         templateFileExtension: .njk
         targetPath: ./${{parameters.techDocsPath}}
         values:
-          repoSlug: ${{ steps["identifyRepoAndOwner"].output.result.slug }}
+          entity: ${{ parameters.entity }}
+          description: ${{ steps["parseCatalogManifest"].output.content.metadata.description }}
     - id: writeTechDocsContentsToFile
       name: Write TechDocs to root path
       if: ${{ parameters.techDocsPath == '.' and parameters.techDocsPathType == 'dir' }}
       action: roadiehq:utils:fs:write
       input:
-        path: ./docs
-        content: ${{ parameters.content }}
+        path: ./docs/index.md
+        content: ${{ parameters.contents }}
     - id: writeTechDocsContentsToFile
       name: Write TechDocs to custom path
       if: ${{ parameters.techDocsPath != '.' and parameters.techDocsPathType == 'dir' }}
       action: roadiehq:utils:fs:write
       input:
-        path: ./${{ parameters.techDocsPath }}
-        content: ${{ parameters.content }}
+        path: ./${{ parameters.techDocsPath }}/index.md
+        content: ${{ parameters.contents }}
     - id: createPullRequest
       name: Create a pull request
       action: publish:github:pull-request
