@@ -144,9 +144,9 @@ spec:
       name: Display modified catalog manifest
       action: debug:log
       input:
-        message: 'Catalog Manifest content: ${{ steps["parseCatalogManifest"].serialize.output.content }}'
-    - id: fetchDocsTemplateRoot
-      name: Write TechDocs to root path
+        message: 'Catalog Manifest content: ${{ steps["parseCatalogManifest"].serialize.output.content.body }}'
+    - id: fetchMkdocsTemplateRoot
+      name: Write Mkdocs to root path
       if: ${{ parameters.techDocsPath == '.' and parameters.techDocsPathType == 'dir' }}
       action: fetch:template
       input:
@@ -156,9 +156,8 @@ spec:
         values:
           entity: ${{ steps["parseCatalogManifest"].output.content.metadata.name }}
           description: ${{ steps["parseCatalogManifest"].output.content.metadata.description }}
-          contents: ${{ parameters.contents }}
-    - id: fetchDocsTemplateCustom
-      name: Write TechDocs to custom path
+    - id: fetchMkdocsTemplateCustom
+      name: Write Mkdocs to custom path
       if: ${{ parameters.techDocsPath != '.' and parameters.techDocsPathType == 'dir' }}
       action: fetch:template
       input:
@@ -168,7 +167,20 @@ spec:
         values:
           entity: ${{ steps["parseCatalogManifest"].output.content.metadata.name }}
           description: ${{ steps["parseCatalogManifest"].output.content.metadata.description }}
-          contents: ${{ parameters.contents }}
+    - id: writeTechDocsContentsToFileRoot
+      name: Write TechDocs to root path
+      if: ${{ parameters.techDocsPath == '.' and parameters.techDocsPathType == 'dir' }}
+      action: roadiehq:utils:fs:write
+      input:
+        path: ./manifest-folder/docs/index.md
+        content: ${{ parameters.contents }}
+    - id: writeTechDocsContentsToFileCustom
+      name: Write TechDocs to custom path
+      if: ${{ parameters.techDocsPath != '.' and parameters.techDocsPathType == 'dir' }}
+      action: roadiehq:utils:fs:write
+      input:
+        path: ./manifest-folder/${{parameters.techDocsPath}}/docs/index.md
+        content: ${{ parameters.contents }}
     - id: createPullRequest
       name: Create a pull request
       action: publish:github:pull-request
